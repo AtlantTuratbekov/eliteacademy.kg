@@ -1,0 +1,1668 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: 'Damn';
+  src: url('https://media.uprock.school/fonts/Damn/DAMN.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+    font-family:  "Manrope", sans-serif;
+    line-height: 1.6;
+    padding: 0 40px; /* Отступы по бокам для всего сайта */
+    background-color: #064066;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Разделение элементов */
+  align-items: center; /* Выравнивание элементов по вертикали */
+  padding: 20px 40px; /* Отступы */
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #ddd;
+  border-radius: 20px;
+  transition: height 0.3s ease, padding 0.3s ease; /* Анимация */
+  height: 100px; /* Изначальная высота */
+}
+
+/* Логотип и текстовая секция */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Контейнер для логотипа */
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 1.5s ease-in-out;
+  transform-origin: left;
+  z-index: 1;
+}
+
+.logo-box img {
+  width: 120%;
+  height: 120%;
+}
+
+/* Название академии */
+.logo-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #5cb1e0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.logo-name.animate {
+  opacity: 1;
+}
+
+
+  .content {
+    position: relative; /* Для управления положением */
+    left: -100px; /* Смещает содержимое влево */
+  }
+
+    /* Контейнер */
+  .text-section {
+    position: relative;
+    display: inline-block;
+    font-family:  "Manrope", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #ffffff00;
+    color: #064066;
+    padding: 5px 10px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  /* Название Академии */
+  .academy-name {
+    opacity: 0; /* Изначально текст невидим */
+    transform: translateY(-20px); /* Начальное положение немного выше */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .academy-name::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #064066;
+    margin-top: -5px;
+    opacity: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Эффект при наведении */
+  .academy-name:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  /* Хайлайтер */
+  .text-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5cb1e0;
+    transform: scaleY(0); /* Изначально хайлайтер невидим */
+    transform-origin: top; /* Начало анимации сверху */
+    transition: transform 1.2s ease, opacity 0.5s ease 1.2s;
+    z-index: 1; /* Хайлайтер выше текста */
+  }
+
+  /* Появление хайлайтера */
+  .text-section.active::before {
+    transform: scaleY(1); /* Заполнение блока сверху вниз */
+    z-index: 1;
+  }
+
+  /* Исчезновение хайлайтера */
+  .text-section.done::before {
+    transform: scaleY(0); /* Исчезновение вниз */
+    transform-origin: bottom; /* Исчезает снизу */
+  }
+
+  /* Появление текста */
+  .text-section.done .academy-name {
+    opacity: 1; /* Текст становится видимым */
+    transform: translateY(0); /* Становится на место */
+    z-index: 2; /* Выше хайлайтера */
+  }
+
+  /* Текст изначально невидим */
+  .text-bottom {
+    opacity: 0; /* Текст изначально прозрачный */
+    transition: opacity 2s ease; /* Плавный переход для появления */
+    font-size: 24px; /* Размер текста */
+    color: #fff; /* Белый текст */
+    margin-top: 20px; /* Отступ сверху */
+    text-align: left; /* Выравнивание текста по левому краю */
+    max-width: 800px; /* Ограничиваем ширину текста, если нужно */
+  }
+
+
+  /* Навигация */
+  .nav-links {
+    font-size: 18px; /* Увеличенный размер шрифта */
+    display: flex;
+    gap: 20px; /* Расстояние между ссылками */
+  }
+
+  /* Ссылки */
+  .nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #444; /* Цвет текста по умолчанию */
+    font-weight: 300;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links :hover {
+    color: #5cb1e0;
+  }
+
+  /* Эффект для активной ссылки */
+  .nav-links a.active::after {
+    width:90%; /* Линия полностью появляется */
+  }
+
+  .nav-links a.active {
+    color: #5cb1e0; /* Текст также подсвечивается */
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 7px;
+    background-color: #5cb1e0; /* Цвет линии */
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-links a:hover::after {
+    width: 80%;
+  }
+
+  /* Фон с изображением */
+    /* Фон с изображением */
+  .background-image {
+    background: url('.image/header.jpg') no-repeat center center/cover;
+    height: 100vh; /* Высота на весь экран */
+    width: 100%; /* Ширина на весь экран */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    position: relative; /* Обеспечиваем правильное позиционирование элементов внутри */
+  }
+
+/* Темный оверлей для контраста */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000011, rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  /* Контент */
+  .content {
+    z-index: 2; /* Поверх оверлея */
+    max-width: 700px;
+  }
+
+  /* Подзаголовок */
+  .subtitle {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #ddd;
+  }
+
+  /* Кнопка */
+  .cta-button {
+    background-color: #5cb1e0;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход */
+  }
+
+  .cta-button:hover {
+    transform: scale(1.1);
+    background-color: #53a0c9;
+    color: white;
+  }
+
+  /* Контейнер текста */
+  .highlighted-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Текст размещаем слева */
+    justify-content: center;
+    padding-left: -200px;
+    margin-top: 100px;
+  }
+
+  /* Строки текста */
+  .line {
+    position: relative;
+    font-weight: 3px;
+    font-family: "Manrope", sans-serif;
+    color: #064066;
+    overflow: hidden;
+    font-size: 36px;
+    line-height: 1;
+    opacity: 0;
+    transform-origin: left;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+
+  /* Хайлайтер */
+  .line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.2s ease;
+    z-index: -1;
+  }
+
+  /* Анимация появления текста и хайлайтера */
+  .line.show::before {
+    transform: scaleX(1);
+  }
+
+  .line.show {
+    opacity: 1;
+  }
+
+  /* Для нижнего текста меньший размер и белый цвет */
+  .line.description {
+    line-height: 0.8;
+    font-family: "Manrope", sans-serif;
+    font-size: 7px;
+    color: #fff;
+    /* margin: 0px;
+    padding: 0px; */
+    transition: opacity 1.5s ease;
+  }
+
+
+  .form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #003366;
+    color: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border: solid 2px white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .form-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .form-container input {
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+  }
+
+  .form-container input::placeholder {
+    color: #cccccc;
+  }
+
+  .form-container input:focus {
+    outline: none;
+    border-bottom: 2px solid #87CEEB;
+  }
+
+  .form-container button {
+    background-color: #5cb1e0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .form-container button:hover {
+    background-color: #005cbf;
+  }
+
+  /* Затенение фона при открытии формы */
+  .overlay-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.548);
+    z-index: 1000;
+  }
+
+  .close-button {
+    display: none; /* Скрыть кнопку по умолчанию */
+    position: absolute; /* Разместить относительно контейнера */
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+  }
+
+  .close-button:hover {
+      color: #87CEEB;
+  }
+
+  /* Когда форма активна, показать кнопку */
+  .form-container.active .close-button {
+      display: block;
+  }
+
+
+  header.shrink-header {
+    height: 60px;
+    padding: 10px 25px; /* Уменьшенные отступы */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Закрепляем на верхней части */
+    width: 100%; /* Ширина на весь экран */
+    z-index: 10; /* Убедитесь, что хедер будет выше остальных элементов */
+  }
+
+  .logo-box {
+    transition: all 0.3s ease; /* Плавное уменьшение */
+  }
+
+  header.shrink-header .logo-box {
+    width: 50px; /* Уменьшаем логотип */
+    height: 50px;
+  }
+
+  .academy-name {
+    transition: font-size 0.3s ease; /* Плавное изменение шрифта */
+  }
+
+  header.shrink-header .academy-name {
+    font-size: 20px; /* Уменьшаем шрифт у названия */
+  }
+
+  .nav-links {
+    transition: gap 0.3s ease; /* Плавное уменьшение расстояния между ссылками */
+  }
+
+  header.shrink-header .nav-links {
+    gap: 20px; /* Уменьшаем расстояние между ссылками */
+  }
+
+  .nav-links a {
+    transition: font-size 0.3s ease; /* Плавное уменьшение шрифта у ссылок */
+  }
+
+  header.shrink-header .nav-links a {
+    font-size: 14px; /* Уменьшенный шрифт у ссылок */
+  }
+
+  .white-text {
+    font-size: 1.5em;
+  }
+
+
+
+.news-section {
+  padding: 60px 20px;
+  background-color: #000011;
+}
+
+.section-title {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  font-weight: 95; /* Самый тонкий вес шрифта, если он поддерживается */
+  margin: 20px 0;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.news-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-title {
+    font-size: 24px;
+    font-family: "Manrope", sans-serif;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.news-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    background-color: #064066;
+    padding: 10px 20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: #0000006f;
+}
+
+.read-more:hover {
+    background-color: #3d009c;
+}
+
+.read-more-red {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 10px 20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-red:hover {
+    background-color: #830000;
+}
+
+.toggle-text {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.toggle-text:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+
+.section {
+  background-color: #000011;
+  background-size: cover;
+  min-height: 130vh;
+}
+
+.section h1 {
+    position: relative;
+    top: 15px;
+    text-align: center;
+    color: white;
+    font-family: "Damn", sans-serif;
+    font-size: 7em;
+    font-weight: 95;
+    margin:0;
+    text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 50%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для увеличения и тени */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.532); /* Начальная тень */
+}
+
+.info-item:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+    box-shadow: 0 2px 30px rgba(144, 151, 255, 0.837); /* Более выраженная тень при наведении */
+}
+
+.tag {
+    color: #064066;
+    font-weight: bold;
+    margin-bottom: 10px; /* Отступ снизу, чтобы отделить от текста */
+}
+
+.info-item p {
+    color: #333;
+    margin-top: 10px; /* Отступ сверху, чтобы отделить от tag */
+}
+
+.info-item img {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin-left: 150px;
+}
+
+/* .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: #eef7ff;
+    padding: 10px 20px;
+    border: 0.5px darkblue;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.step-number {
+    background-color: #6ec3f7;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.step p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+} */
+
+.carousel-container {
+    background-color: #000011;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    max-height: 160vh;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  font-weight: 95;
+  margin: 20px 0;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+.section2 h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  font-weight: 95;
+  margin: 20px 0;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.univers h2 {
+    position: relative;
+    text-align: center;
+    color: azure;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  min-width: 300px;
+  min-height: 80px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(230, 230, 230, 0.911);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.64);
+  text-align: center;
+  /* font-family: 'Ubuntu'; */
+  color: rgb(72, 72, 72);
+  transition: transform 0.3s ease; /* Плавное увеличение */
+  text-decoration: none;
+}
+
+/* Эффект увеличения карточки при наведении */
+.card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку на 5% */
+}
+
+/* Стиль для кнопок */
+.card .btn {
+    background-color: #5cb1e0;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .btn:hover {
+  background-color: #000011;
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card .btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    background-color: #a3a3a3be;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект увеличения кнопки при наведении */
+.nav-button:hover {
+    background-color: #555;
+    transform: scale(1.0); /* Только увеличиваем кнопку без изменения положения */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Эффект при нажатии */
+.nav-button:active {
+    transform: scale(1); /* Поддерживает стабильный размер при нажатии */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+.nav-button.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* колледжи */
+.carousel-container {
+    min-height: 108vh;
+    background-color: #000011;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  margin: 20px 0;
+  font-weight: 95;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+} 
+.section3 h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  margin: 20px 0;
+  font-weight: 95;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Разделение на верхнюю и нижнюю части */
+    justify-content: space-between; /* Кнопка уходит вниз */
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    min-width: 300px;
+    min-height: 80px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(230, 230, 230, 0.911);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.64);
+    text-align: center;
+    font-family:  "Manrope", sans-serif;
+    color: rgb(72, 72, 72);
+    transition: transform 0.3s ease; /* Плавное увеличение */
+    text-decoration: none;
+    position: relative;
+}
+
+/* Эффект увеличения карточки при наведении */
+.card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку на 5% */
+}
+
+/* Стиль для кнопок */
+.card .btn {
+    margin-top: auto; /* Отталкивает кнопку вниз */
+    display: flex;
+    justify-content: center;
+    background-color: #5cb1e0;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.01);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card .btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    background-color: #a3a3a3be;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект увеличения кнопки при наведении */
+.nav-button:hover {
+    background-color: #555;
+    transform: scale(1.0); /* Только увеличиваем кнопку без изменения положения */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Эффект при нажатии */
+.nav-button:active {
+    transform: scale(1); /* Поддерживает стабильный размер при нажатии */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+.nav-button.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Общие стили для секции */
+.programs {
+  background-color: #000011;
+  padding: 80px 20px;
+  text-align: center;
+  font-family:  "Manrope", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Заголовок секции */
+.programs h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  margin: 20px 0;
+  font-weight: 95;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.programs-container {
+  display: flex;
+  flex-wrap: wrap; /* Разрешить перенос на новую строку */
+  justify-content: center; /* Центровка карточек */
+  gap: 20px; /* Отступы между карточками */
+}
+
+
+/* Карточка программы */
+.program-item {
+  background-color: #ffffff;
+  border: 5px solid #5cb1e0;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0px 20px rgba(51, 0, 181, 0.5);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.program-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Заголовок программы */
+.program-header h2 {
+  font-size: 1.6em;
+  font-family: 'Manrope', sans-serif;
+  background-color: #5cb1e0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для нумерованного списка */
+.program-item ol {
+  padding-left: 20px;
+  list-style-type: decimal;
+  color: #fff;
+}
+
+.program-item ol li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #000000;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Адаптивность для мобильных устройств
+@media (max-width: 768px) {
+  .program-item {
+    width: 90%;
+  }
+
+  .programs h1 {
+    font-size: 2em;
+  }
+} */
+
+
+
+.section4 {
+  background-color: #000011;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section4 h1 {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  margin: 20px 0;
+  font-weight: 95;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.section4 h2 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  color: #dcdcdc;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #ffffff00, #000000);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.gallery-item:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.show-more, .hide-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #5cb1e0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.show-more:hover, .hide-more:hover {
+  background-color: #376f8e;
+}
+
+
+
+.site-footer {
+  background: linear-gradient(to bottom, #032a42 ,#064066);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #5cb1e0;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.map-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #5cb1e0;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  text-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-contact ul {
+  font-family: "Manrope", sans-serif;
+  list-style: none;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.8;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-contact .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5cb2e0d0;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background-color: #5cb1e0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.593);
+}
+
+.footer-about p {
+
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #dcdcdc;
+}
+
+.map-container {
+  width: 60%; /* Ширина карты 60% */
+  height: 300px; /* Высота карты */
+  background-color: #ffffff;
+  margin: 20px auto; /* Центрирование карты */
+  border-radius: 15px; /* Закругление краев */
+  border: solid 2px white;
+  overflow: hidden;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.map-overlay p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.map-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.map-container.active .map-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.map-container.active .map-content {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* Нижняя часть футера */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Основная секция */
+.students-in-usa {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-header h1 {
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 1.5em;
+  color: #555;
+}
+
+/* Галерея видео */
+#video-gallery {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.video-track {
+  position: relative;
+  justify-tracks: center;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease; /* Плавный переход между видео */
+}
+
+.video-container {
+  text-align: center;
+  flex-shrink: 0; /* Не уменьшается при сжатии */
+  margin: 0 10px;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.video-container.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.video-container video {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-container p {
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 5px;
+}
+
+
+
+
+
+.admission-steps {
+    font-family:  "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000011;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.admission-header {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Damn", sans-serif;
+  font-size: 7em;
+  margin: 20px 0;
+  font-weight: 95;
+  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+}
+
+.admission-step {
+    position: relative;
+    display: none;
+    width: 60%;
+    margin: 0 auto;
+    border: solid 5px #5cb1e0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 11, 131, 0.684);
+}
+
+.admission-step.active {
+    display: block;
+}
+
+.admission-step-background {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.admission-step-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgb(1, 1, 1), rgba(255, 255, 255, 0));
+}
+
+.admission-step-title {
+    position: relative;
+    left: -25px;
+    font-family:  "Manrope", sans-serif;
+    font-size: 34px;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.admission-step-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(255, 255, 255);
+    color: #064066;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 2;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.admission-step-description {
+    position: relative;
+    /* left: 0px; */
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.admission-navigation {
+    margin-top: 20px;
+}
+
+.admission-navigation button {
+    padding: 10px 20px;
+    font-family:  "Manrope", sans-serif;
+    font-size: 16px;
+    background-color: #5cb1e0;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.admission-navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.admission-navigation button:hover:enabled {
+    background-color: #053453;
+}
+
+.admission-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.admission-indicator {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.admission-indicator.active {
+    background-color: #064066;
+    transform: scale(1.3);
+}
+
+.admission-indicator:hover{
+  transform: scale(1.3);
+}
+
+
+
+/* блоки с университетами */
+.university-btn {
+  margin-top: auto; /* Отталкивает кнопку вниз */
+  display: flex;
+  justify-content: center;
+  background-color: #5cb1e0;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.university-btn:hover {
+  background-color: #0056b3;
+}
+
+.info-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.info-popup {
+  background: white;
+  width: 60%;
+  max-width: 800px;
+  height: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  overflow: hidden;
+
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.info-popup.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: row; /* Ряд для изображения и текста */
+  gap: 20px;
+  align-items: center; /* Центровка контента по вертикали */
+}
+
+.image-container {
+  flex: 0 0 30%; /* Ширина контейнера 30% */
+  height: 100%; /* Полная высота блока */
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+              url(".image/northpark.jpg") center/cover no-repeat;
+  transition: background 0.5s ease; /* Плавный переход */
+}
+
+.image-container:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), 
+              url(".image/northpark.jpg") center/cover no-repeat;
+}
+.image-container img {
+  width: 100%; /* Масштабирует изображение */
+  height: 100%; /* Заполняет высоту контейнера */
+  object-fit: cover; /* Урезает изображение, чтобы оно соответствовало контейнеру */
+}
+
+.popup-body .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.popup-body .content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.popup-body .content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  background: none;
+  color: #ff0000;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.close-btn:hover {
+  color: #570000;
+}
+
+.official-site-btn {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.official-site-btn:hover {
+  background-color: #1e7e34;
+}

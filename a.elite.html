@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ab.style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anton&family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Questrial&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Questrial&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Oswald:wght@200..700&family=Pacifico&family=Questrial&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">    <title>Elite Academy</title>
+    <link rel="icon" href=".png">
+</head>
+<body>
+
+    <header>
+        <!-- Логотип и текстовая секция -->
+        <div class="logo-section">
+          <div class="logo-box">
+            <img src=".image/logo1.jpg" alt="Elite Academy Logo">
+          </div>
+          <div class="text-section">
+            <div class="academy-name">ELITE ACADEMY</div>
+          </div>
+        </div>
+        <!-- Навигация -->
+        <nav class="nav-links">
+            <button class="cta-button" onclick="toggleForm()">Консультация</button>
+          <a href="#home" class="nav-item">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="#news" class="nav-item">Новости</a>
+          <a href="#univers" class="nav-item">ВУЗы</a>
+          <a href="#about" class="nav-item">О нас</a>
+          <a href="#students" class="nav-item">Cтуденты</a>
+          <a href="#contact" class="nav-item">Контакты</a>
+        </nav>
+      </header>
+      <!-- ТЕКСТ С ФОНОМ -->
+    <section id="home" class="background-image">
+        <div class="overlay">
+            <div class="content">
+                <div class="highlighted-head">
+                    <div class="line top">Мечтаешь учиться в Америке?</div>
+                    <div class="line bottom">Elite Academy cделает это</div>
+                    <div class="line bottom">реальностью!</div>
+                    <div class="text-bottom">Получи уникальный опыт, качественное образование и начни строить будущее своей мечты!
+                    </div>
+                  </div>                                   
+            </div>
+        </div>
+    </section>
+    
+    <!-- ФОРМА -->
+      <div class="overlay-bg" id="overlay" onclick="toggleForm()"></div>
+      <button class="close-button" onclick="toggleForm()">×</button>
+      <div class="form-container" id="form-container">
+        <h2>ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.</h2>
+        <form>
+          <input type="text" placeholder="Имя" required>
+          <input type="number" placeholder="Возраст" required>
+          <input list="english-levels" placeholder="Уровень английского" required>
+          <datalist id="english-levels">
+            <option value="А1 (Beginner) начальный уровень">
+            <option value="А2 (Elementary) элементарный уровень">
+            <option value="В1 (Pre-Intermediate) ниже-среднего">
+            <option value="В2 (Intermediate) средний уровень">
+            <option value="С1 (Upper-Intermediate) или выше-среднего">
+            <option value="С2 (Advanced) продвинутый уровень">
+          </datalist>
+          <input list="regions" placeholder="Область проживания" required>
+          <datalist id="regions">
+            <option value="г. Бишкек">
+            <option value="Чуйская область">
+            <option value="Ошская область">
+            <option value="г. Ош">
+            <option value="Джалал-Абадская область">
+            <option value="Нарынская область">
+            <option value="Таласская область">
+            <option value="Иссык-Кульская область">
+            <option value="Баткенская область">
+          </datalist>
+          <input type="tel" placeholder="Номер телефона" required>
+          <button type="submit">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+        </form>
+      </div>
+
+      <!-- НОВОСТИ -->
+      <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title"> ELITE - NEWS </h2>
+            <div class="news-items">
+                <div class="news-item">
+                    <img src=".image/gifka.jpg" alt="Новость 1" class="news-image">
+                    <h3 class="news-title">Поступи в США и получи КРУТЫЕ ПРИЗЫ</h3>
+                    <p class="news-description">
+                        Мы проводим конкурс в честь Нового Года, где вы сможете выиграть много крутых подарков.
+                        <span class="hidden-text" style="display: none;">Условия конкурса у нас в Instagram!</span>
+                    </p>
+                    <button class="toggle-text">Читать больше</button>
+                    <a href="https://www.instagram.com/p/DDMSRFAoCDi/?img_index=1&igsh=MW5jejJiMWc5djA1OA==" class="read-more-red">КОНКУРС И УСЛОВИЯ</a>
+                    <span class="hidden-text" style="display: none;">Условия конкурса у нас в Instagram!</span>
+                </div>
+                <div class="news-item">
+                    <img src=".image/trump.jpg" alt="Новость 2" class="news-image">
+                    <h3 class="news-title">НОВЫЙ ПРЕЗИДЕНТ Возможно ли получить визу в США?</h3>
+                    <p class="news-description">
+                        На фоне изменений в политике США многие задумываются, возможно ли сейчас получить студенческую визу. Ответ — 
+                        <span class="hidden-text" style="display: none;">да, студенческая виза продолжает действовать. Главное — подготовиться и соблюдать правила</span>    
+                    </p>
+                    <button class="toggle-text">Читать больше</button>
+                    <a href="https://www.instagram.com/p/DCi_YfcIGHy/?igsh=czVhMXZxNXppN3h5" class="read-more">Подробнее</a>
+                </div>
+                <div class="news-item">
+                    <img src=".image/blackfr.jpg" alt="Новость 3" class="news-image">
+                    <h3 class="news-title">ЧЕРНАЯ ПЯТНИЦА</h3>
+                    <p class="news-description">
+                        Поступи с нами в США и получи бесплатный купон на Duolingo Test🇺🇸
+                    </p>
+                    <a href="https://www.instagram.com/p/DC3qelnoQvG/?igsh=MTRhbjY4bmg5czdsaA==" class="read-more">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="univers" class="section2">
+        <div class="carousel-container">
+            <div class="univers">
+                <h1 class="section-title">UNIVERSITIES</h1>
+                <h2 class="section-subtitle">Elite-Academy позаботится о поступлении в топовые ВУЗы Америки</h2>
+            </div>
+            <button class="nav-button left" onclick="prevSlide()">‹</button>
+            <div class="carousel-track">
+            
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/northpark.jpg" alt="Image 5">
+                    <h2>North Park University</h2>
+                    <p>город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo()">Подробнее</button>
+
+                    <div class="info-overlay" id="universityOverlay">
+                        <div class="info-popup" id="universityPopup">
+                            <button class="close-btn" onclick="closeUniversityInfo()">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                  <img src=".image/northpark.jpg" alt="North Park University">
+                                </div>
+                                <div class="content">
+                                  <h2>North Park University</h2>
+                                  <p><strong>Цена:</strong> $30,000 в год</p>
+                                  <p><strong>Плюсы:</strong></p>
+                                  <ul>
+                                    <li>Удобное расположение в Чикаго</li>
+                                    <li>Широкий выбор программ</li>
+                                    <li>Сильное сообщество студентов</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            <a href="https://www.northpark.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/missouri.jpg" alt="Image 6">
+                    <h2>Missouri University ST</h2>
+                    <p>город Ролла, штат Миссури</p>
+                    <button class="btn" onclick="window.location.href='https://www.mst.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/pacificlutheran.jpg" alt="Image 7">
+                    <h2>Pacific Lutheran University</h2>
+                    <p>город Такома, штат Вашингтон</p>
+                    <button class="btn" onclick="window.location.href='https://www.plu.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/saintmartins.jpg" alt="Image 8">
+                    <h2>Saint Martins University</h2>
+                    <p>город Лэйси, штат Вашингтон</p>
+                    <button class="btn" onclick="window.location.href='https://www.stmartin.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/concord.jpg" alt="Image 9">
+                    <h2>Concord University</h2>
+                    <p>город Афинс, штат Западная Вирджиния</p>
+                    <button class="btn" onclick="window.location.href='https://www.concord.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/lewis.jpg" alt="Image 10">
+                    <h2>Lewis University</h2>
+                    <p>город Ромеовилл, штат Иллинойс</p>
+                    <button class="btn" onclick="window.location.href='https://www.lewisu.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/alfred.jpg" alt="Image 11">
+                    <h2>Alfred University</h2>
+                    <p>город Альфред, штат Нью-Йорк</p>
+                    <button class="btn" onclick="window.location.href='https://www.alfred.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/canisius.jpg" alt="Image 12">
+                    <h2>Canisius University</h2>
+                    <p>город Буффало, штат Нью-Йорк</p>
+                    <button class="btn" onclick="window.location.href='https://www.canisius.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/saintlouis.jpg" alt="Image 13">
+                    <h2>Saint Louis University</h2>
+                    <p>город Сент-Луис, штат Миссури</p>
+                    <button class="btn" onclick="window.location.href='https://www.slu.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/scranton.jpg" alt="Image 14">
+                    <h2>University of Scranton</h2>
+                    <p>г.Скрэнтон, шт.Пенсильвания</p>
+                    <button class="btn" onclick="window.location.href='https://www.scranton.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/duquesne.jpg" alt="Image 15">
+                    <h2>Duquesne University</h2>
+                    <p>город Питтсбург, штат Пенсильвания</p>
+                    <button class="btn" onclick="window.location.href='https://www.duq.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/nationallouis.jpg" alt="Image 16">
+                    <h2>National Louis University</h2>
+                    <p>город Чикаго, штат Иллинойс</p>
+                    <button class="btn" onclick="window.location.href='https://www.nl.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/roosevelt.jpg" alt="Image 17">
+                    <h2>Roosevelt University</h2>
+                    <p>город Чикаго, штат Иллинойс</p>
+                    <button class="btn" onclick="window.location.href='https://www.roosevelt.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/californiastatesanbernardino.jpg" alt="Image 18">
+                    <h2>California State University</h2>
+                    <p>штат Калифорния</p>
+                    <button class="btn" onclick="window.location.href='https://www.csusb.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/radford.jpg" alt="Image 19">
+                    <h2>Radford University</h2>
+                    <p>город Радфорд, штат Вирджиния</p>
+                    <button class="btn" onclick="window.location.href='https://www.radford.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/westcliff.jpg" alt="Image 20">
+                    <h2>Westcliff University</h2>
+                    <p>город Ирвин, штат Калифорния</p>
+                    <button class="btn" onclick="window.location.href='https://www.westcliff.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/trine.jpg" alt="Image 21">
+                    <h2>Trine University</h2>
+                    <p>город Ангола, штат Индиана</p>
+                    <button class="btn" onclick="window.location.href='https://www.trine.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/floridainstitute.jpg" alt="Image 22">
+                    <h2>Florida Institute of Technology</h2>
+                    <p>город Мельбурн, штат Флорида</p>
+                    <button class="btn" onclick="window.location.href='https://www.fit.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/goldengate.jpg" alt="Image 23">
+                    <h2>GoldenGate University</h2>
+                    <p>г.Сан-Франциско,Калифорния</p>
+                    <button class="btn" onclick="window.location.href='https://www.ggu.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/arizona.jpg" alt="Image 24">
+                    <h2>Arizona University</h2>
+                    <p>Лэйк Хавасу сити, штат Аризона</p>
+                    <button class="btn" onclick="window.location.href='https://www.arizona.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/truman.jpg" alt="Image 25">
+                    <h2>Truman University</h2>
+                    <p>город Кирксвилле, штат Миссури</p>
+                    <button class="btn" onclick="window.location.href='https://www.truman.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/depaul.jpg" alt="Image 26">
+                    <h2>De Paul University</h2>
+                    <p>город Чикаго, штат Иллинойс</p>
+                    <button class="btn" onclick="window.location.href='https://www.depaul.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/marymount.jpg" alt="Image 27">
+                    <h2>Marymount University</h2>
+                    <p>город Арлингтон, штат Вирджиния</p>
+                    <button class="btn" onclick="window.location.href='https://marymount.edu/';">Подробнее</button>
+                </div>
+                
+            </div>
+            <button class="nav-button right" onclick="nextSlide()">›</button>
+        </div>
+    </section>
+
+    <div id='colleges' class="section3">
+        <div class="carousel-container">
+            <div class="univers">
+                <h1>COLLEGES</h1>
+                <h2>Elite-Academy поможет с поступлением в ведущие колледжи Америки</h2>
+            </div>
+            <button class="nav-button left" onclick="prevSlideColleges()">‹</button>
+            <div class="carousel-track">
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/menlo.jpg" alt="Menlo College">
+                    <h2>Menlo College</h2>
+                    <p>город Атертон, штат Калифорния</p>
+                    <button class="btn" onclick="window.location.href='https://www.menlo.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/stfrancis.jpg" alt="St. Francis College">
+                    <h2>St. Francis College</h2>
+                    <p>город Бруклин, штат Нью-Йорк</p>
+                    <button class="btn" onclick="window.location.href='https://www.sfc.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/lakewit.jpg" alt="Lake WIT">
+                    <h2>Lake Wit</h2>
+                    <p>город Милуоки, штат Висконсин</p>
+                    <button class="btn" onclick="window.location.href='https://www.wit.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/bellevue.jpg" alt="Bellevue College">
+                    <h2>Bellevue College</h2>
+                    <p>город Бельвью, штат Вашингтон</p>
+                    <button class="btn" onclick="window.location.href='https://www.bellevuecollege.edu/';">Подробнее</button>
+                </div>
+                <div class="card" style="background-color: #ffffff;">
+                    <img src=".image/deanza.jpg" alt="De Anza College">
+                    <h2>De Anza College</h2>
+                    <p>город Купертино, штат Калифорния</p>
+                    <button class="btn" onclick="window.location.href='https://www.deanza.edu/';">Подробнее</button>
+                </div>
+            </div>
+            <button class="nav-button right" onclick="nextSlideColleges()">›</button>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <h1 class="section-title">ПОЧЕМУ ELITE ACADEMY?</h1>
+
+        <div class="info-block">
+            <div class="info-item">
+                <span class="tag">#ОТПРАВИЛИ БОЛЕЕ 500 СТУДЕНТОВ В АМЕРИКУ!</span>
+                <p>Наша компания помогла уже более 500 студентам сдать правильно документы и поступить в лучшие вузы.</p>
+            </div>
+            <div class="info-item">
+                <span class="tag">#ЗАЧИСЛЕНИЕ В ТОПОВЫЕ ВУЗЫ Со СКИДКОЙ</span>
+                <p>Мы помогаем студентам не только поступить, но и получить гранты и стипендии.</p>
+            </div>
+            <div class="info-item">
+                <span class="tag">#ПОДАЧА В НЕОГРАНИЧЕННОЕ КОЛИЧЕСТВО УНИВЕРСИТЕТОВ</span>
+                <p>Наши ментора подадут вас более чем в 10 топовых вузов.</p>
+            </div>
+            <div class="info-item">
+                <span class="tag">#ЭКСПЕРТ ПО ДУОЛИНГО - ЛЕГКАЯ СДАЧА ТЕСТА</span>
+                <p>Подача студентов в рейтинговые ВУЗы Америки и Италии.</p>
+            </div>
+            <div class="info-item">
+                <span class="tag">#ПОЛНОЕ ПРОХОЖДЕНИЕ ВСЕГО ПРОЦЕССА СТРОГО ИНДИВИДУАЛЬНО</span>
+                <p>Мы предоставим вам на каждый этап вашего поступления отдельного ментора.</p>
+            </div>
+            <div class="info-item">
+                <span class="tag">#ИНДИВИДУАЛЬНАЯ И ПРАВИЛЬНАЯ ПОДГОТОВКА К ИНТЕРВЬЮ - МОСК ИНТЕРВЬЮ</span>
+                <p>Квалифицированные ментора найдут индивидуальный подход к каждому ученику.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="programs">
+        <h1>ПРОГРАММЫ ОБУЧЕНИЯ</h1>
+        <div class="programs-container">
+        <!-- Bachelor's Degree -->
+        <div class="program-item">
+            <div class="program-header">
+            <h2>Bachelor's Degree</h2>
+            </div>
+            <ol>
+            <li>4 года обучения</li>
+            <li>Гибкий график</li>
+            <li>Скидки до 90%</li>
+            <li>Высшее образование</li>
+            <li>Контракт: $10k, $15k и выше</li>
+            </ol>
+        </div>
+    
+        <!-- Associate Degree -->
+        <div class="program-item">
+            <div class="program-header">
+            <h2>Associate Degree</h2>
+            </div>
+            <ol>
+            <li>Схема 2+2: 2 года в колледже, 2 года в университете</li>
+            <li>Минимальные требования по документам</li>
+            <li>Контракт: $8k, $10k</li>
+            </ol>
+        </div>
+    
+        <!-- High School Completion -->
+        <div class="program-item">
+            <div class="program-header">
+            <h2>High School Completion</h2>
+            </div>
+            <ol>
+            <li>2 года обучения + 1 год колледжа</li>
+            <li>100% продолжение обучения в топовых ВУЗах</li>
+            <li>Контракт: $8k, $12k</li>
+            </ol>
+        </div>
+    
+        <!-- Master's Degree -->
+        <div class="program-item">
+            <div class="program-header">
+            <h2>Master' s    Degree</h2>
+            </div>
+            <ol>
+            <li>2 года обучения</li>
+            <li>Возможность смены профессии</li>
+            <li>1-2 года на поиск работы и стажировку</li>
+            <li>Контракт: $15k, $20k</li>
+            </ol>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="admission-steps">
+        <h1 class="admission-header">ПРОЦЕСС ПОСТУПЛЕНИЯ</h1>
+    
+        <div class="admission-step active" id="admission-step-1">
+            <div class="admission-step-number">1</div>
+            <div class="admission-step-background" style="background-image: url('.image/step1.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Подписание договора</h2>
+                <p class="admission-step-description">Чтобы закрепить наши договоренности и приступить к подготовке.</p>
+            </div>
+        </div>
+    
+        <!-- Шаг 2 -->
+        <div class="admission-step" id="admission-step-2">
+            <div class="admission-step-number">2</div>
+            <div class="admission-step-background" style="background-image: url('.image/step2.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Английские курсы</h2>
+                <p class="admission-step-description">Укрепляем знания английского языка, чтобы вы уверенно сдали международные тесты.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-3">
+            <div class="admission-step-number">3</div>
+            <div class="admission-step-background" style="background-image: url('.image/step3.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Подготовка к тесту DUOLINGO</h2>
+                <p class="admission-step-description">Помогаем подготовиться к сдаче международного языкового экзамена.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-4">
+            <div class="admission-step-number">4</div>
+            <div class="admission-step-background" style="background-image: url('.image/step4.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Сбор документов</h2>
+                <p class="admission-step-description">Собираем все документы для подачи в университеты.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-5">
+            <div class="admission-step-number">5</div>
+            <div class="admission-step-background" style="background-image: url('.image/step5.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Подбор программы и университета</h2>
+                <p class="admission-step-description">Выбираем подходящие программы и учебные заведения.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-6">
+            <div class="admission-step-number">6</div>
+            <div class="admission-step-background" style="background-image: url('.image/step6.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Отправка документов</h2>
+                <p class="admission-step-description">Подготавливаем и отправляем все необходимые документы в университеты.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-7">
+            <div class="admission-step-number">7</div>
+            <div class="admission-step-background" style="background-image: url('.image/step7.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Получение пригласительных писем</h2>
+                <p class="admission-step-description">Ожидаем и обрабатываем официальные приглашения от университетов.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-8">
+            <div class="admission-step-number">8</div>
+            <div class="admission-step-background" style="background-image: url('.image/step8.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Заполнение анкеты DS-160</h2>
+                <p class="admission-step-description">Помогаем заполнить анкету для визового собеседования.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-9">
+            <div class="admission-step-number">9</div>
+            <div class="admission-step-background" style="background-image: url('.image/step9.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Подготовка к визовому интервью</h2>
+                <p class="admission-step-description">Проводим тренировки для успешного прохождения интервью.</p>
+            </div>
+        </div>
+    
+        <div class="admission-step" id="admission-step-10">
+            <div class="admission-step-number">10</div>
+            <div class="admission-step-background" style="background-image: url('.image/step10.jpg');"></div>
+            <div class="admission-step-content">
+                <h2 class="admission-step-title">Отправка в США</h2>
+                <p class="admission-step-description">Готовимся к вашему отъезду и началу обучения в Америке.</p>
+            </div>
+        </div>
+    
+        <div class="admission-indicators">
+            <span class="admission-indicator active"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+            <span class="admission-indicator"></span>
+        </div>
+    
+        <div class="admission-navigation">
+            <button id="admission-prevBtn">Назад</button>
+            <button id="admission-nextBtn">Далее</button>
+        </div>
+    </section>
+
+    <section id="students" class="section4">
+        <div class="container">
+            <h1 class="section-title">STUDENTS IN USA</h1>
+            <h2 class="section-subtitle">Узнайте, как наши студенты наслаждаются жизнью и учёбой в США</h2>
+            <h2 class="section-subtitle">Наведите на фотографию для информации ⊡</h2>
+            <div class="gallery" id="gallery">
+                <!-- First 4 photos -->
+                <div class="gallery-item">
+                    <img src=".image/student1.jpg" alt="Баель">
+                    <div class="overlay">
+                        <p>Баель - парень с Нооката, проходил полное обучение в онлайн формате, сдал Duolingo тест на 105 баллов и учится в Bellevue college</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src=".image/student2.jpg" alt="Амир">
+                    <div class="overlay">
+                        <p>Амир - за счет своих навыков по Баскетболу поступил в более 20 вузов и получил огромные скидки. На данный момент учится в Kalamazoo college</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src=".image/student3.jpg" alt="Student 3">
+                    <div class="overlay">
+                        <p>Айбек - все процессы поступления прошел всего за полтора месяца и улетел. Учится в Bellevue college</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src=".image/student4.jpg" alt="Ислам">
+                    <div class="overlay">
+                        <p>Ислам - не смотря на то что у него Российское гражданство, получил визу. Сдал Duolingo на 115 баллов и улетел в Чикаго</p>
+                    </div>
+                </div>
+            </div>
+            <button id="show-more" class="show-more">Показать больше▼</button>
+            <button id="hide-more" class="hide-more" style="display: none;">Скрыть⮌</button>
+        </div>
+    </section>
+      
+      
+    
+        
+      <footer id="contact">
+        <footer class="site-footer">
+            <div class="footer-container">
+                <!-- О компании -->
+                <div class="footer-section footer-about">
+                    <h2>О нас</h2>
+                    <p>Elite Academy помогает студентам достигать мечты, получая образование в США. Мы предлагаем профессиональный подход, индивидуальную поддержку и помощь на всех этапах поступления.</p>
+                </div>
+    
+                <!-- Контактная информация -->
+                <div class="footer-section footer-contact">
+                    <h2>Контакты</h2>
+                    <ul>
+                        <li><strong>Телефон:</strong> <a href="tel:+996555720712">+996 555 720 712</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:apply@eliteacademy.international">eliteacademykg@gmail.com</a></li>
+                        <li><strong>Адрес:</strong> Исы Ахунбаева 169, бизнес центр Binocl, Бишкек, Кыргызстан</li>
+                    </ul>
+                </div>
+    
+                <!-- Социальные сети -->
+                <div class="footer-section footer-social">
+                    <h2>Мы в соцсетях</h2>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@eliteacademy_kg?_t=8rWpZgdTbnO&_r=1" target="_blank" class="social-icon">
+                            <img src=".image/logo-tiktok.png" alt="TikTok">
+                        </a>
+                        <a href="https://www.instagram.com/eliteacademy.kg?igsh=MWFvNmgza2hhMnNnYw==" target="_blank" class="social-icon">
+                            <img src=".image/inst.png" alt="Instagram">
+                        </a>
+                        <a href="t.me/+lkQYOY2DD41lM2E6" target="_blank" class="social-icon">
+                            <img src=".image/telegram1.png" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Карта -->
+            <div class="map-container">
+                <h2>Мы на карте</h2>
+                <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script charset="utf-8">
+                    new DGWidgetLoader({
+                        "width": "100%",
+                        "height": "100%",
+                        "borderColor": "#a3a3a3",
+                        "pos": {
+                            "lat": 42.84576511714769,
+                            "lon": 74.59038734436037,
+                            "zoom": 16
+                        },
+                        "opt": {
+                            "city": "bishkek"
+                        },
+                        "org": [{
+                            "id": "70000001083998736"
+                        }]
+                    });
+                </script>
+                <noscript style="color:#c00;font-size:16px;font-weight:bold;">
+                    Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
+                </noscript>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite Academy. Все права защищены.</p>
+            </div>
+        </footer>
+    </footer>
+    
+    
+    
+</body>
+<script src="abc.js"></script>
+</html>
