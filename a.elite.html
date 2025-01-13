@@ -136,6 +136,7 @@
             <div class="univers">
                 <h1 class="section-title">UNIVERSITIES</h1>
                 <h2 class="section-subtitle">Elite-Academy позаботится о поступлении в топовые ВУЗы Америки</h2>
+                <h4 class="section-subtitle">Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.</h4>
             </div>
             <button class="nav-button left" onclick="prevSlide()">‹</button>
             <div class="carousel-track">
@@ -144,26 +145,26 @@
                     <img src=".image/northpark.jpg" alt="Image 5">
                     <h2>North Park University</h2>
                     <p>город Чикаго, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo()">Подробнее</button>
-
-                    <div class="info-overlay" id="universityOverlay">
-                        <div class="info-popup" id="universityPopup">
-                            <button class="close-btn" onclick="closeUniversityInfo()">🞬</button>
+                    <button class="university-btn" onclick="openUniversityInfo('northparkOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="northparkOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('northparkOverlay')">🞬</button>
                             <div class="popup-body">
                                 <div class="image-container">
-                                  <img src=".image/northpark.jpg" alt="North Park University">
+                                    <img src=".image/northpark.jpg" alt="North Park University">
                                 </div>
                                 <div class="content">
-                                  <h2>North Park University</h2>
-                                  <p><strong>Цена:</strong> $30,000 в год</p>
-                                  <p><strong>Плюсы:</strong></p>
-                                  <ul>
-                                    <li>Удобное расположение в Чикаго</li>
-                                    <li>Широкий выбор программ</li>
-                                    <li>Сильное сообщество студентов</li>
-                                  </ul>
+                                    <h2>North Park University</h2>
+                                    <p><strong>Цена:</strong> $30,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Удобное расположение в Чикаго</li>
+                                        <li>Широкий выбор программ</li>
+                                        <li>Сильное сообщество студентов</li>
+                                    </ul>
                                 </div>
-                              </div>
+                            </div>
                             <a href="https://www.northpark.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
                         </div>
                     </div>
@@ -172,134 +173,636 @@
                     <img src=".image/missouri.jpg" alt="Image 6">
                     <h2>Missouri University ST</h2>
                     <p>город Ролла, штат Миссури</p>
-                    <button class="btn" onclick="window.location.href='https://www.mst.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('missouriOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="missouriOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('missouriOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/missouri.jpg" alt="Missouri University ST">
+                                </div>
+                                <div class="content">
+                                    <h2>Missouri University ST</h2>
+                                    <p><strong>Цена:</strong> $25,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Высококачественное техническое образование</li>
+                                        <li>Современная инфраструктура</li>
+                                        <li>Отличные карьерные перспективы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.mst.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/pacificlutheran.jpg" alt="Image 7">
                     <h2>Pacific Lutheran University</h2>
                     <p>город Такома, штат Вашингтон</p>
-                    <button class="btn" onclick="window.location.href='https://www.plu.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('pacificlutheranOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="pacificlutheranOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('pacificlutheranOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/pacificlutheran.jpg" alt="Pacific Lutheran University">
+                                </div>
+                                <div class="content">
+                                    <h2>Pacific Lutheran University</h2>
+                                    <p><strong>Цена:</strong> $28,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Спокойная и безопасная атмосфера</li>
+                                        <li>Программы гуманитарных и естественных наук</li>
+                                        <li>Поддержка международных студентов</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.plu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/saintmartins.jpg" alt="Image 8">
                     <h2>Saint Martins University</h2>
                     <p>город Лэйси, штат Вашингтон</p>
-                    <button class="btn" onclick="window.location.href='https://www.stmartin.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('saintmartinsOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="saintmartinsOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('saintmartinsOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/saintmartins.jpg" alt="Saint Martins University">
+                                </div>
+                                <div class="content">
+                                    <h2>Saint Martins University</h2>
+                                    <p><strong>Цена:</strong> $29,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Традиционные программы обучения</li>
+                                        <li>Активное участие студентов в жизни кампуса</li>
+                                        <li>Индивидуальный подход к обучению</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.stmartin.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/concord.jpg" alt="Image 9">
                     <h2>Concord University</h2>
                     <p>город Афинс, штат Западная Вирджиния</p>
-                    <button class="btn" onclick="window.location.href='https://www.concord.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('concordOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="concordOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('concordOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/concord.jpg" alt="Concord University">
+                                </div>
+                                <div class="content">
+                                    <h2>Concord University</h2>
+                                    <p><strong>Цена:</strong> $20,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Доступное обучение</li>
+                                        <li>Живописное местоположение</li>
+                                        <li>Маленькие классы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.concord.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/lewis.jpg" alt="Image 10">
                     <h2>Lewis University</h2>
                     <p>город Ромеовилл, штат Иллинойс</p>
-                    <button class="btn" onclick="window.location.href='https://www.lewisu.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('lewisOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="lewisOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('lewisOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/lewis.jpg" alt="Lewis University">
+                                </div>
+                                <div class="content">
+                                    <h2>Lewis University</h2>
+                                    <p><strong>Цена:</strong> $35,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Близость к Чикаго</li>
+                                        <li>Широкий спектр инженерных и авиационных программ</li>
+                                        <li>Дружелюбная атмосфера кампуса</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.lewisu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/alfred.jpg" alt="Image 11">
                     <h2>Alfred University</h2>
                     <p>город Альфред, штат Нью-Йорк</p>
-                    <button class="btn" onclick="window.location.href='https://www.alfred.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('alfredOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="alfredOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('alfredOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/alfred.jpg" alt="Alfred University">
+                                </div>
+                                <div class="content">
+                                    <h2>Alfred University</h2>
+                                    <p><strong>Цена:</strong> $30,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Программы по искусству и дизайну</li>
+                                        <li>Уютная атмосфера небольшого городка</li>
+                                        <li>Доступная стоимость обучения</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.alfred.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/canisius.jpg" alt="Image 12">
                     <h2>Canisius University</h2>
                     <p>город Буффало, штат Нью-Йорк</p>
-                    <button class="btn" onclick="window.location.href='https://www.canisius.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('canisiusOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="canisiusOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('canisiusOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/canisius.jpg" alt="Canisius University">
+                                </div>
+                                <div class="content">
+                                    <h2>Canisius University</h2>
+                                    <p><strong>Цена:</strong> $34,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Сильные программы MBA</li>
+                                        <li>Расположение рядом с Ниагарским водопадом</li>
+                                        <li>Культурное разнообразие</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.canisius.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/saintlouis.jpg" alt="Image 13">
                     <h2>Saint Louis University</h2>
                     <p>город Сент-Луис, штат Миссури</p>
-                    <button class="btn" onclick="window.location.href='https://www.slu.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('saintlouisOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="saintlouisOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('saintlouisOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/saintlouis.jpg" alt="Saint Louis University">
+                                </div>
+                                <div class="content">
+                                    <h2>Saint Louis University</h2>
+                                    <p><strong>Цена:</strong> $38,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Исторический кампус</li>
+                                        <li>Медицинские программы высокого уровня</li>
+                                        <li>Активная студенческая жизнь</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.slu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/scranton.jpg" alt="Image 14">
                     <h2>University of Scranton</h2>
-                    <p>г.Скрэнтон, шт.Пенсильвания</p>
-                    <button class="btn" onclick="window.location.href='https://www.scranton.edu/';">Подробнее</button>
+                    <p>г. Скрэнтон, шт. Пенсильвания</p>
+                    <button class="university-btn" onclick="openUniversityInfo('scrantonOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="scrantonOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('scrantonOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/scranton.jpg" alt="University of Scranton">
+                                </div>
+                                <div class="content">
+                                    <h2>University of Scranton</h2>
+                                    <p><strong>Цена:</strong> $36,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Сильные гуманитарные программы</li>
+                                        <li>Уютный кампус</li>
+                                        <li>Развитая сеть выпускников</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.scranton.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/duquesne.jpg" alt="Image 15">
                     <h2>Duquesne University</h2>
                     <p>город Питтсбург, штат Пенсильвания</p>
-                    <button class="btn" onclick="window.location.href='https://www.duq.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('duquesneOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="duquesneOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('duquesneOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/duquesne.jpg" alt="Duquesne University">
+                                </div>
+                                <div class="content">
+                                    <h2>Duquesne University</h2>
+                                    <p><strong>Цена:</strong> $37,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Красивая архитектура кампуса</li>
+                                        <li>Сильные программы в области здравоохранения</li>
+                                        <li>Развитая студенческая инфраструктура</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.duq.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/nationallouis.jpg" alt="Image 16">
                     <h2>National Louis University</h2>
                     <p>город Чикаго, штат Иллинойс</p>
-                    <button class="btn" onclick="window.location.href='https://www.nl.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('nationallouisOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="nationallouisOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('nationallouisOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/nationallouis.jpg" alt="National Louis University">
+                                </div>
+                                <div class="content">
+                                    <h2>National Louis University</h2>
+                                    <p><strong>Цена:</strong> $32,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Расположение в центре Чикаго</li>
+                                        <li>Гибкие программы обучения</li>
+                                        <li>Сильная поддержка студентов</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.nl.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/roosevelt.jpg" alt="Image 17">
                     <h2>Roosevelt University</h2>
                     <p>город Чикаго, штат Иллинойс</p>
-                    <button class="btn" onclick="window.location.href='https://www.roosevelt.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('rooseveltOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="rooseveltOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('rooseveltOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/roosevelt.jpg" alt="Roosevelt University">
+                                </div>
+                                <div class="content">
+                                    <h2>Roosevelt University</h2>
+                                    <p><strong>Цена:</strong> $33,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Программы в области бизнеса и искусства</li>
+                                        <li>Удобное расположение</li>
+                                        <li>Кампус с современными удобствами</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.roosevelt.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/californiastatesanbernardino.jpg" alt="Image 18">
                     <h2>California State University</h2>
                     <p>штат Калифорния</p>
-                    <button class="btn" onclick="window.location.href='https://www.csusb.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('californiastateOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="californiastateOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('californiastateOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/californiastatesanbernardino.jpg" alt="California State University">
+                                </div>
+                                <div class="content">
+                                    <h2>California State University</h2>
+                                    <p><strong>Цена:</strong> $28,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Разнообразные программы обучения</li>
+                                        <li>Красивая природа Калифорнии</li>
+                                        <li>Развитая инфраструктура</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.csusb.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/radford.jpg" alt="Image 19">
                     <h2>Radford University</h2>
                     <p>город Радфорд, штат Вирджиния</p>
-                    <button class="btn" onclick="window.location.href='https://www.radford.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('radfordOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="radfordOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('radfordOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/radford.jpg" alt="Radford University">
+                                </div>
+                                <div class="content">
+                                    <h2>Radford University</h2>
+                                    <p><strong>Цена:</strong> $27,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Индивидуальный подход к обучению</li>
+                                        <li>Уютный кампус</li>
+                                        <li>Сильные программы в области науки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.radford.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/westcliff.jpg" alt="Image 20">
                     <h2>Westcliff University</h2>
                     <p>город Ирвин, штат Калифорния</p>
-                    <button class="btn" onclick="window.location.href='https://www.westcliff.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('westcliffOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="westcliffOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('westcliffOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/westcliff.jpg" alt="Westcliff University">
+                                </div>
+                                <div class="content">
+                                    <h2>Westcliff University</h2>
+                                    <p><strong>Цена:</strong> $29,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Современные программы MBA</li>
+                                        <li>Разнообразие международных студентов</li>
+                                        <li>Инновационный подход к обучению</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.westcliff.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/trine.jpg" alt="Image 21">
                     <h2>Trine University</h2>
                     <p>город Ангола, штат Индиана</p>
-                    <button class="btn" onclick="window.location.href='https://www.trine.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('trineOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="trineOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('trineOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/trine.jpg" alt="Trine University">
+                                </div>
+                                <div class="content">
+                                    <h2>Trine University</h2>
+                                    <p><strong>Цена:</strong> $26,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Сильные инженерные программы</li>
+                                        <li>Маленькие классы</li>
+                                        <li>Дружелюбное сообщество</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.trine.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/floridainstitute.jpg" alt="Image 22">
                     <h2>Florida Institute of Technology</h2>
                     <p>город Мельбурн, штат Флорида</p>
-                    <button class="btn" onclick="window.location.href='https://www.fit.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('floridainstituteOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="floridainstituteOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('floridainstituteOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/floridainstitute.jpg" alt="Florida Institute of Technology">
+                                </div>
+                                <div class="content">
+                                    <h2>Florida Institute of Technology</h2>
+                                    <p><strong>Цена:</strong> $37,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Сильные программы в области технологий и авиации</li>
+                                        <li>Прекрасное расположение на побережье</li>
+                                        <li>Возможности для исследований</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.fit.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/goldengate.jpg" alt="Image 23">
                     <h2>GoldenGate University</h2>
                     <p>г.Сан-Франциско,Калифорния</p>
-                    <button class="btn" onclick="window.location.href='https://www.ggu.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('goldengateOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="goldengateOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('goldengateOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/goldengate.jpg" alt="GoldenGate University">
+                                </div>
+                                <div class="content">
+                                    <h2>GoldenGate University</h2>
+                                    <p><strong>Цена:</strong> $30,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Расположение в центре Сан-Франциско</li>
+                                        <li>Гибкие графики обучения</li>
+                                        <li>Поддержка студентов на высоком уровне</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.ggu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/arizona.jpg" alt="Image 24">
                     <h2>Arizona University</h2>
                     <p>Лэйк Хавасу сити, штат Аризона</p>
-                    <button class="btn" onclick="window.location.href='https://www.arizona.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('arizonaOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="arizonaOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('arizonaOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/arizona.jpg" alt="Arizona University">
+                                </div>
+                                <div class="content">
+                                    <h2>Arizona University</h2>
+                                    <p><strong>Цена:</strong> $29,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Красивое расположение возле озера</li>
+                                        <li>Разнообразные учебные программы</li>
+                                        <li>Современные лаборатории</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.arizona.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/truman.jpg" alt="Image 25">
                     <h2>Truman University</h2>
                     <p>город Кирксвилле, штат Миссури</p>
-                    <button class="btn" onclick="window.location.href='https://www.truman.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('trumanOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="trumanOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('trumanOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/truman.jpg" alt="Truman University">
+                                </div>
+                                <div class="content">
+                                    <h2>Truman University</h2>
+                                    <p><strong>Цена:</strong> $25,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Высокий уровень преподавания</li>
+                                        <li>Поддержка талантливых студентов</li>
+                                        <li>Тесное сообщество студентов</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.truman.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/depaul.jpg" alt="Image 26">
                     <h2>De Paul University</h2>
                     <p>город Чикаго, штат Иллинойс</p>
-                    <button class="btn" onclick="window.location.href='https://www.depaul.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('depaulOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="depaulOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('depaulOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/depaul.jpg" alt="De Paul University">
+                                </div>
+                                <div class="content">
+                                    <h2>De Paul University</h2>
+                                    <p><strong>Цена:</strong> $34,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Удобное расположение в центре города</li>
+                                        <li>Программы в области бизнеса и технологий</li>
+                                        <li>Современные кампусы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.depaul.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card" style="background-color: #ffffff;">
                     <img src=".image/marymount.jpg" alt="Image 27">
                     <h2>Marymount University</h2>
                     <p>город Арлингтон, штат Вирджиния</p>
-                    <button class="btn" onclick="window.location.href='https://marymount.edu/';">Подробнее</button>
+                    <button class="university-btn" onclick="openUniversityInfo('marymountOverlay')">Подробнее</button>
+                
+                    <div class="info-overlay" id="marymountOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('marymountOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/marymount.jpg" alt="Marymount University">
+                                </div>
+                                <div class="content">
+                                    <h2>Marymount University</h2>
+                                    <p><strong>Цена:</strong> $31,000 в год</p>
+                                    <p><strong>Плюсы:</strong></p>
+                                    <ul>
+                                        <li>Близость к Вашингтону</li>
+                                        <li>Сильные программы в области медицины</li>
+                                        <li>Технологическая инфраструктура</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://marymount.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                        </div>
+                    </div>
                 </div>
+                
                 
             </div>
             <button class="nav-button right" onclick="nextSlide()">›</button>

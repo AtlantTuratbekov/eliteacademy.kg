@@ -488,27 +488,23 @@ document.querySelectorAll('.toggle-text').forEach(button => {
 
 
 
-// блок универы 
-function openUniversityInfo() {
-  const overlay = document.getElementById('universityOverlay');
-  const popup = document.getElementById('universityPopup');
+function openUniversityInfo(overlayId) {
+  const overlay = document.getElementById(overlayId);
+  const popup = overlay.querySelector('.info-popup');
 
-  // Перемещаем overlay в конец body
   document.body.appendChild(overlay);
 
   overlay.style.display = 'block';
   setTimeout(() => popup.classList.add('active'), 10);
 }
 
-function closeUniversityInfo() {
-  const overlay = document.getElementById('universityOverlay');
-  const popup = document.getElementById('universityPopup');
+function closeUniversityInfo(overlayId) {
+  const overlay = document.getElementById(overlayId);
+  const popup = overlay.querySelector('.info-popup');
 
   popup.classList.remove('active');
   setTimeout(() => (overlay.style.display = 'none'), 300);
 }
- 
-
 
 
 

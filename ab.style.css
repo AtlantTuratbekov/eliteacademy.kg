@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-/* @font-face {
-  font-family: 'Damn';
-  src: url('https://media.uprock.school/fonts/Damn/DAMN.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-} */
 
 body {
     font-family:  "Manrope", sans-serif;
@@ -34,7 +28,6 @@ header {
   padding: 20px 40px; /* Отступы */
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #ddd;
-  border-radius: 20px;
   transition: height 0.3s ease, padding 0.3s ease; /* Анимация */
   height: 100px; /* Изначальная высота */
 }
@@ -175,34 +168,48 @@ header {
 
   /* Навигация */
   .nav-links {
-    font-size: 18px; /* Увеличенный размер шрифта */
+    font-size: 18px;
     display: flex;
-    gap: 20px; /* Расстояние между ссылками */
+    flex-wrap: wrap; /* Позволяет перенос ссылок */
+    gap: 20px;
+    justify-content: space-between; /* Равномерное распределение */
   }
-
-  /* Ссылки */
+  
   .nav-links a {
     position: relative;
     text-decoration: none;
-    color: #444; /* Цвет текста по умолчанию */
+    color: #444;
     font-weight: 300;
     padding: 10px 15px;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Ссылки не будут переноситься */
   }
-
-  .nav-links :hover {
+  
+  .nav-links a:hover {
     color: #5cb1e0;
   }
-
+  
+  /* Текст кнопки Home */
+  .nav-links .nav-text {
+    margin-left: 5px; /* Отступ от значка */
+  }
+  
+  /* Медиазапрос для планшетов и телефонов */
+  @media (max-width: 768px) {
+    .nav-links .nav-text {
+      display: none; /* Скрывает текст "Home" */
+    }
+  }
+  
   /* Эффект для активной ссылки */
   .nav-links a.active::after {
-    width:90%; /* Линия полностью появляется */
+    width: 90%; /* Линия полностью появляется */
   }
-
+  
   .nav-links a.active {
-    color: #5cb1e0; /* Текст также подсвечивается */
+    color: #5cb1e0;
   }
-
+  
   .nav-links a::after {
     content: '';
     position: absolute;
@@ -210,14 +217,15 @@ header {
     left: 50%;
     width: 0%;
     height: 7px;
-    background-color: #5cb1e0; /* Цвет линии */
+    background-color: #5cb1e0;
     transition: width 0.3s ease;
     transform: translateX(-50%);
   }
-
+  
   .nav-links a:hover::after {
     width: 80%;
   }
+  
 
   /* Фон с изображением */
     /* Фон с изображением */
@@ -738,6 +746,13 @@ header {
     text-align: center;
     color: azure;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.univers h4 {
+  position: relative;
+  text-align: center;
+  color: azure;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -1595,23 +1610,17 @@ header {
 }
 
 .image-container {
-  flex: 0 0 30%; /* Ширина контейнера 30% */
-  height: 100%; /* Полная высота блока */
+  flex: 0 0 30%;
+  height: 100%; 
   position: relative;
   border-radius: 10px 0 0 10px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
-              url(".image/northpark.jpg") center/cover no-repeat;
-  transition: background 0.5s ease; /* Плавный переход */
+  transition: background 0.5s ease;
 }
 
-.image-container:hover {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), 
-              url(".image/northpark.jpg") center/cover no-repeat;
-}
 .image-container img {
-  width: 100%; /* Масштабирует изображение */
-  height: 100%; /* Заполняет высоту контейнера */
-  object-fit: cover; /* Урезает изображение, чтобы оно соответствовало контейнеру */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
 }
 
 .popup-body .content {
