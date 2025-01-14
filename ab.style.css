@@ -6,10 +6,10 @@
 
 
 body {
-    font-family:  "Manrope", sans-serif;
+    font-family:  "Manrope";
     line-height: 1.6;
     padding: 0 40px; /* Отступы по бокам для всего сайта */
-    background-color: #064066;
+    background-color: #ffffff;
 }
 
 html {
@@ -230,10 +230,12 @@ header {
   /* Фон с изображением */
     /* Фон с изображением */
   .background-image {
-    background: url('.image/header.jpg') no-repeat center center/cover;
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), /* Прозрачный градиент снизу */
+      url('.image/header.jpg') no-repeat center center / cover; /* Фон-изображение */
     height: 100vh; /* Высота на весь экран */
     width: 100%; /* Ширина на весь экран */
-    margin: 0; /* Убираем внешние отступы */
+    margin: 0; /* Убираем отступы */
     padding: 0; /* Убираем внутренние отступы */
     position: relative; /* Обеспечиваем правильное позиционирование элементов внутри */
   }
@@ -245,7 +247,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #000011, rgba(0, 0, 0, 0));
+    /* background: linear-gradient(to top, #000036, rgba(0, 0, 0, 0)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,7 +496,9 @@ header {
 
 .news-section {
   padding: 60px 20px;
-  background-color: #000011;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
 }
 
 .section-title {
@@ -506,7 +510,7 @@ header {
   font-size: 7em;
   font-weight: 95; /* Самый тонкий вес шрифта, если он поддерживается */
   margin: 20px 0;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .news-items {
@@ -516,7 +520,7 @@ header {
 }
 
 .news-item {
-    background-color: #fff;
+    background-color: #ffffffc6;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -559,7 +563,6 @@ header {
     color: #fff;
     background-color: #064066;
     padding: 10px 20px;
-    border: 3px solid rgb(255, 255, 255);
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -576,7 +579,6 @@ header {
     color: #fff;
     background-color: #ff0000;
     padding: 10px 20px;
-    border: 3px solid rgb(255, 255, 255);
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -604,8 +606,9 @@ header {
 
 
 .section {
-  background-color: #000011;
-  background-size: cover;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
   min-height: 130vh;
 }
 
@@ -618,7 +621,7 @@ header {
     font-size: 7em;
     font-weight: 95;
     margin:0;
-    text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .info-block {
@@ -706,12 +709,14 @@ header {
 } */
 
 .carousel-container {
-    background-color: #000011;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    max-height: 160vh;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  max-height: 160vh;
 }
 .carousel-track {
     display: flex;
@@ -727,7 +732,7 @@ header {
   font-size: 7em;
   font-weight: 95;
   margin: 20px 0;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 .section2 h1 {
   position: relative;
@@ -738,7 +743,7 @@ header {
   font-size: 7em;
   font-weight: 95;
   margin: 20px 0;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .univers h2 {
@@ -764,7 +769,6 @@ header {
   border: 2px solid rgba(230, 230, 230, 0.911);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.64);
   text-align: center;
-  /* font-family: 'Ubuntu'; */
   color: rgb(72, 72, 72);
   transition: transform 0.3s ease; /* Плавное увеличение */
   text-decoration: none;
@@ -778,7 +782,7 @@ header {
 /* Стиль для кнопок */
 .card .btn {
     background-color: #5cb1e0;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 30px;
     padding: 15px 20px;
@@ -874,7 +878,7 @@ header {
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 } 
 .section3 h1 {
   position: relative;
@@ -885,7 +889,7 @@ header {
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .card {
@@ -995,7 +999,9 @@ header {
 
 /* Общие стили для секции */
 .programs {
-  background-color: #000011;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
   padding: 80px 20px;
   text-align: center;
   font-family:  "Manrope", sans-serif;
@@ -1013,7 +1019,7 @@ header {
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .programs-container {
@@ -1027,7 +1033,7 @@ header {
 /* Карточка программы */
 .program-item {
   background-color: #ffffff;
-  border: 5px solid #5cb1e0;
+  border: 3px solid #5cb1e0;
   border-radius: 20px;
   width: 300px;
   padding: 20px;
@@ -1036,10 +1042,12 @@ header {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.468);
 }
 
 .program-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.826);
   z-index: 1;
 }
 
@@ -1086,7 +1094,9 @@ header {
 
 
 .section4 {
-  background-color: #000011;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
   color: white;
   text-align: center;
   padding: 50px 20px;
@@ -1101,7 +1111,7 @@ header {
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .section4 h2 {
@@ -1180,7 +1190,9 @@ header {
 
 
 .site-footer {
-  background: linear-gradient(to bottom, #032a42 ,#064066);
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
   color: #ffffff;
   font-family: 'Arial', sans-serif;
   padding: 40px 20px;
@@ -1360,48 +1372,6 @@ header {
   color: #555;
 }
 
-/* Галерея видео */
-#video-gallery {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.video-track {
-  position: relative;
-  justify-tracks: center;
-  display: flex;
-  align-items: center;
-  transition: transform 0.5s ease; /* Плавный переход между видео */
-}
-
-.video-container {
-  text-align: center;
-  flex-shrink: 0; /* Не уменьшается при сжатии */
-  margin: 0 10px;
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.video-container.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.video-container video {
-  width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.video-container p {
-  font-size: 0.9em;
-  color: #333;
-  margin-top: 5px;
-}
 
 
 
@@ -1411,7 +1381,9 @@ header {
     font-family:  "Manrope", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000011;
+    background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+    background-size: cover; /* Растягиваем изображение на весь экран */
+    height: 100%;
     max-width: 100%;
     padding: 20px;
     text-align: center;
@@ -1434,10 +1406,10 @@ header {
     display: none;
     width: 60%;
     margin: 0 auto;
-    border: solid 5px #5cb1e0;
+    border: solid 3px #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 11, 131, 0.684);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.719);
 }
 
 .admission-step.active {
@@ -1455,7 +1427,7 @@ header {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(to top, rgb(1, 1, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to top, rgb(0, 15, 48), rgba(255, 255, 255, 0));
 }
 
 .admission-step-title {
@@ -1529,14 +1501,15 @@ header {
     width: 15px;
     height: 15px;
     margin: 0 5px;
-    background-color: #ccc;
+    background-color: #ccccccaf;
     border-radius: 50%;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
 }
 
 .admission-indicator.active {
-    background-color: #064066;
+    background-color: #5cb1e0;
+    border: solid 1px white;
     transform: scale(1.3);
 }
 
@@ -1628,7 +1601,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 100px;
+  padding: 0 150px;
 }
 
 .popup-body .content p {
@@ -1660,11 +1633,11 @@ header {
 
 .official-site-btn {
   margin-top: 20px;
-  background-color: #28a745;
+  background-color: #075183;
   color: white;
   padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
@@ -1673,5 +1646,5 @@ header {
 }
 
 .official-site-btn:hover {
-  background-color: #1e7e34;
+  background-color: #064066;
 }

@@ -394,7 +394,7 @@ const additionalPhotos = `
     </div>
     <div class="gallery-item">
         <img src=".image/student10.jpg" alt="Student 10">
-        <div class="overlay"><p>Адилет</p></div>
+        <div class="overlay"><p>Адилет - поступил на магистратуру в National Louis University,который находится в Чикаго</p></div>
     </div>
     <div class="gallery-item">
         <img src=".image/student5.jpg" alt="Student 5">
@@ -418,7 +418,7 @@ const additionalPhotos = `
     </div>
     <div class="gallery-item">
         <img src=".image/student12.jpg" alt="Student 12">
-        <div class="overlay"><p>Ислам</p></div>
+        <div class="overlay"><p>Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление </p></div>
     </div>
     <div class="gallery-item">
         <img src=".image/student13.jpg" alt="Student 13">
@@ -438,11 +438,12 @@ const additionalPhotos = `
     </div>
     <div class="gallery-item">
         <img src=".image/student17.jpg" alt="Student 17">
-        <div class="overlay"><p>Курманбек</p></div>
+        <div class="overlay"><p>Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес,
+Westcliff university </p></div>
     </div>
     <div class="gallery-item">
         <img src=".image/student18.jpg" alt="Student 18">
-        <div class="overlay"><p>Влада</p></div>
+        <div class="overlay"><p>Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo</p></div>
     </div>
     <div class="gallery-item">
         <img src=".image/student19.jpg" alt="Student 19">
@@ -496,6 +497,14 @@ function openUniversityInfo(overlayId) {
 
   overlay.style.display = 'block';
   setTimeout(() => popup.classList.add('active'), 10);
+
+  // Добавление обработчика события для закрытия при клике на оверлей
+  overlay.addEventListener('click', function(event) {
+    // Проверяем, был ли клик сделан на самом оверлее (а не внутри попапа)
+    if (event.target === overlay) {
+      closeUniversityInfo(overlayId);
+    }
+  });
 }
 
 function closeUniversityInfo(overlayId) {
@@ -505,7 +514,6 @@ function closeUniversityInfo(overlayId) {
   popup.classList.remove('active');
   setTimeout(() => (overlay.style.display = 'none'), 300);
 }
-
 
 
 
