@@ -6,10 +6,21 @@
 
 
 body {
-    font-family:  "Manrope";
-    line-height: 1.6;
-    padding: 0 40px; /* Отступы по бокам для всего сайта */
-    background-color: #ffffff;
+  font-family: "Manrope";
+  line-height: 1.6;
+  padding: 0 40px; /* Отступы по бокам для всего сайта */
+  background: 
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Темный полупрозрачный слой */
+      url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
+}
+
+
+@media (max-width: 984px) {
+  body {
+    display: none; /* Скрыть сайт для мобильных и планшетов */
+  }
 }
 
 html {
@@ -128,7 +139,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #5cb1e0;
+    background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), /* Прозрачный градиент снизу */
+    url('.image/all.bg.jpg') no-repeat center center / cover; /* Фон-изображение */
     transform: scaleY(0); /* Изначально хайлайтер невидим */
     transform-origin: top; /* Начало анимации сверху */
     transition: transform 1.2s ease, opacity 0.5s ease 1.2s;
@@ -226,6 +239,35 @@ header {
     width: 80%;
   }
   
+  /* Медиазапросы для уменьшения текста навигации на планшетах */
+@media (max-width: 1124px) {
+  .nav-links {
+    gap: 15px; /* Уменьшаем расстояние между ссылками */
+  }
+
+  .nav-links a {
+    font-size: 15px; /* Уменьшаем размер текста */
+  }
+}
+
+/* Медиазапросы для уменьшения текста навигации на телефонах */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 10px; /* Еще меньшее расстояние между ссылками */
+  }
+
+  .nav-links a {
+    font-size: 10px; /* Еще меньше размер текста */
+  }
+}
+
+/* Медиазапросы для очень маленьких экранов (например, 480px и меньше) */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 12px; /* Минимальный размер текста */
+  }
+}
+
 
   /* Фон с изображением */
     /* Фон с изображением */
@@ -274,7 +316,7 @@ header {
 
   /* Кнопка */
   .cta-button {
-    background-color: #5cb1e0;
+    background: #5cb1e0;
     color: #ffffff;
     padding: 10px 20px;
     font-size: 18px;
@@ -289,6 +331,17 @@ header {
     background-color: #53a0c9;
     color: white;
   }
+
+  @media (max-width: 1124px) {
+    .cta-button {
+      gap: 10px; /* Уменьшаем расстояние между ссылками */
+    }
+  
+    .cta-button {
+      font-size: 16px; /* Уменьшаем размер текста */
+    }
+  }
+  
 
   /* Контейнер текста */
   .highlighted-head {
@@ -1214,6 +1267,7 @@ header {
   text-transform: uppercase;
   font-family: "Manrope", sans-serif;
   text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.562);
 }
 
 .map-container h2 {
@@ -1281,7 +1335,7 @@ header {
 }
 
 .footer-about p {
-
+  font-family: "Manrope", sans-serif;
   font-size: 1em;
   line-height: 1.6;
   margin: 0;
@@ -1398,7 +1452,7 @@ header {
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
-  text-shadow: 0px 0px 20px rgba(0, 119, 255, 0.892);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .admission-step {
@@ -1406,7 +1460,7 @@ header {
     display: none;
     width: 60%;
     margin: 0 auto;
-    border: solid 3px #ffffff;
+    border: solid 3px #5cb1e0;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.719);
@@ -1578,30 +1632,33 @@ header {
 .popup-body {
   display: flex;
   flex-direction: row; /* Ряд для изображения и текста */
-  gap: 20px;
+  gap: 120px; /* Увеличьте расстояние между картинкой и текстом */
   align-items: center; /* Центровка контента по вертикали */
 }
 
 .image-container {
-  flex: 0 0 30%;
+  flex: 0 0 30%; /* Оставляем фиксированную ширину для картинки */
   height: 100%; 
   position: relative;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), white); /* Градиент */
+  overflow: hidden;
   transition: background 0.5s ease;
 }
 
 .image-container img {
   width: 100%; 
   height: 100%; 
-  object-fit: cover; 
+  object-fit: cover;
 }
+
 
 .popup-body .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 150px;
+  padding: 0 20px;
 }
 
 .popup-body .content p {

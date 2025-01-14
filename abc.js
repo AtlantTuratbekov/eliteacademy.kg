@@ -396,7 +396,32 @@ const additionalPhotos = `
         <img src=".image/student10.jpg" alt="Student 10">
         <div class="overlay"><p>Адилет - поступил на магистратуру в National Louis University,который находится в Чикаго</p></div>
     </div>
+        <div class="gallery-item">
+        <img src=".image/student12.jpg" alt="Student 12">
+        <div class="overlay"><p>Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление </p></div>
+    </div>
     <div class="gallery-item">
+        <img src=".image/student13.jpg" alt="Student 13">
+        <div class="overlay"><p>Встреча наших студентов в Америке</p></div>
+    </div>
+        <div class="gallery-item">
+        <img src=".image/student16.jpg" alt="Student 16">
+        <div class="overlay"><p>Милана - Получила 140 баллов по Duolingo,поступила в 11 университетов и получила скидки более 858000$</p></div>
+    </div>
+    <div class="gallery-item">
+        <img src=".image/student17.jpg" alt="Student 17">
+        <div class="overlay"><p>Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес,
+Westcliff university </p></div>
+    </div>
+    <div class="gallery-item">
+        <img src=".image/student18.jpg" alt="Student 18">
+        <div class="overlay"><p>Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo</p></div>
+    </div>
+    <div class="gallery-item">
+        <img src=".image/student19.jpg" alt="Student 19">
+        <div class="overlay"><p>Афтандиль - Ранее виза была отклонена, но с нами визовый процесс прошел успешно с первой попытки</p></div>
+    </div>
+        <div class="gallery-item">
         <img src=".image/student5.jpg" alt="Student 5">
         <div class="overlay"><p>Нурислам</p></div>
     </div>
@@ -417,37 +442,12 @@ const additionalPhotos = `
         <div class="overlay"><p>Азирет</p></div>
     </div>
     <div class="gallery-item">
-        <img src=".image/student12.jpg" alt="Student 12">
-        <div class="overlay"><p>Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление </p></div>
-    </div>
-    <div class="gallery-item">
-        <img src=".image/student13.jpg" alt="Student 13">
-        <div class="overlay"><p>Встреча наших студентов в Америке</p></div>
-    </div>
-    <div class="gallery-item">
         <img src=".image/student14.jpg" alt="Student 14">
         <div class="overlay"><p>Айдана</p></div>
     </div>
     <div class="gallery-item">
         <img src=".image/student15.jpg" alt="Student 15">
         <div class="overlay"><p>Иса</p></div>
-    </div>
-    <div class="gallery-item">
-        <img src=".image/student16.jpg" alt="Student 16">
-        <div class="overlay"><p>Милана</p></div>
-    </div>
-    <div class="gallery-item">
-        <img src=".image/student17.jpg" alt="Student 17">
-        <div class="overlay"><p>Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес,
-Westcliff university </p></div>
-    </div>
-    <div class="gallery-item">
-        <img src=".image/student18.jpg" alt="Student 18">
-        <div class="overlay"><p>Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo</p></div>
-    </div>
-    <div class="gallery-item">
-        <img src=".image/student19.jpg" alt="Student 19">
-        <div class="overlay"><p>Афтандиль</p></div>
     </div>`;
 
 showMoreButton.addEventListener('click', () => {
@@ -530,113 +530,63 @@ function showMap() {
 
 
 
-// /*
-// snowFlurry JS - version 2.0
-// Copyright Ð’Â© 2015 S.W. Clough (https://www.html5andbeyond.com)
-// Licensed Under MIT
-// */
-// (function ($) {
-//   $.fn.snowFlurry = function (options) {
-//     var s = $.extend({
-//       maxSize: 5,
-//       numberOfFlakes: 25,
-//       minSpeed: 10,
-//       maxSpeed: 15,
-//       color: '#fff',
-//       timeout: 0
-//     }, options);
-//     var windowWidth = $(window).innerWidth(),
-//       WidthArray = [],
-//       DelayArray = [],
-//       animateArray = [],
-//       flakeSize = [],
-//       snowInterval;
-//     if (s.maxSize <= 10) {
-//       for (var i = 1; i < s.maxSize; i++) {
-//         flakeSize.push(i);
-//       }
-//     } else {
-//       for (var i = 1; i < 10; i++) {
-//         flakeSize.push(i);
-//       }
-//     }
-//     for (var i = 0; i < windowWidth - 20; i++) {
-//       WidthArray.push(i);
-//     }
-//     for (var i = 0; i < s.numberOfFlakes; i++) {
-//       $('<div class="sf-snow-flake"></div>').appendTo('body');
-//     }
-//     for (var i = 0; i < 10; i++) {
-//       DelayArray.push(i);
-//     }
-//     for (var i = s.minSpeed; i < s.maxSpeed; i++) {
-//       animateArray.push(i);
-//     }
-//     function getRandomFlakeSize() {
-//       var item = flakeSize[Math.floor(Math.random() * flakeSize.length)];
-//       return item;
-//     }
-//     function getRandomPosition() {
-//       var item = WidthArray[Math.floor(Math.random() * WidthArray.length)];
-//       return item;
-//     }
-//     function getRandomDelay() {
-//       var item = DelayArray[Math.floor(Math.random() * DelayArray.length)];
-//       return item * 1000;
-//     }
-//     function getRandomAnimation() {
-//       var item = animateArray[Math.floor(Math.random() * animateArray.length)];
-//       return item * 1000;
-//     }
-//     $('.sf-snow-flake').each(function () {
-//       var elem = $(this);
-//       elem.attr('data-speed', getRandomAnimation());
-//       elem.attr('data-delay', getRandomDelay());
-//       var elemSpeed = elem.attr('data-speed'),
-//         elemDelay = elem.attr('data-delay');
-//       var flakeSize = getRandomFlakeSize();
-//       elem.css({
-//         'width': flakeSize,
-//         'height': flakeSize,
-//         'border-radius': flakeSize / 2,
-//         'background-color': s.color,
-//         'box-shadow': '0 0 2px 1px' + s.color
-//       })
-//       function activateAnim() {
-//         setTimeout(function () {
-//           elem.css('left', getRandomPosition());
-//           elem.addClass('sf-snow-anim');
-//           elem.css('transition', 'top ' + elemSpeed / 1000 + 's linear');
-//           setTimeout(function () {
-//             elem.css('transition', '');
-//             elem.removeClass('sf-snow-anim');
-//           }, elemSpeed);
-//         }, elemDelay);
-//       }
-//       if (device.mobile() || device.tablet() || Modernizr.touch || $('html').hasClass('no-csstransitions')) { } else if (device.desktop()) {
-//         activateAnim();
-//         snowInterval = setInterval(function () {
-//           activateAnim();
-//         }, +elemDelay + +elemSpeed);
-//       }
-//       if (s.timeout != 0) {
-//         setTimeout(function () {
-//           clearInterval(snowInterval);
-//           $('.sf-snow-flake').fadeOut(1500, function () {
-//             $(this).remove();
-//           })
-//         }, s.timeout * 1000);
-//       }
-//     });
-//   };
-// }(jQuery));
-// jQuery(document).ready(function ($) {
-//   $(document).snowFlurry({
-//     maxSize: 10,
-//     numberOfFlakes: 100,
-//     minSpeed: 10,
-//     maxSpeed: 20,
-//     color: '#fff',
-//     timeout: 0
-//   });
-// });
+if (window.innerWidth <= 984) {
+  document.body.innerHTML = `
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+      <img src=".image/logo1.png" alt="Логотип" style="width: 150px; margin-bottom: 20px;">
+      <h1>Сайт недоступен на мобильных устройствах и планшетах</h1>
+      <p>Пожалуйста, посетите нас с компьютера или ноутбука для лучшего опыта.</p>
+    </div>
+  `;
+  document.body.style.backgroundColor = "#f4f4f4";
+}
+
+
+
+
+
+  // Функция для отправки данных на сервер
+
+
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Получаем данные с формы
+    let formData = {
+      name: document.querySelector("input[type='text']").value,
+      age: document.querySelector("input[type='number']").value,
+      englishLevel: document.querySelector("input[list='english-levels']").value,
+      region: document.querySelector("input[list='regions']").value,
+      phone: document.querySelector("input[type='tel']").value
+    };
+
+    // Данные для отправки в AmoCRM
+    const amoData = {
+      name: formData.name,
+      custom_fields_values: [
+        { field_id: '12345', values: [{ value: formData.age }] },
+        { field_id: '67890', values: [{ value: formData.englishLevel }] },
+        { field_id: '11223', values: [{ value: formData.region }] },
+        { field_id: '44556', values: [{ value: formData.phone }] }
+      ]
+    };
+
+    // Отправка данных через API
+    fetch('https://your-amocrm-api-endpoint.com/api/v4/leads', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(amoData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Заявка успешно отправлена!');
+      toggleForm();  // Закрыть форму после отправки
+    })
+    .catch(error => {
+      console.error('Ошибка при отправке данных:', error);
+      alert('Ошибка при отправке данных. Попробуйте снова.');
+    });
+  });
