@@ -590,3 +590,39 @@ if (window.innerWidth <= 984) {
       alert('Ошибка при отправке данных. Попробуйте снова.');
     });
   });
+
+
+
+  // интро 
+  document.addEventListener("DOMContentLoaded", function () {
+    const introOverlay = document.querySelector(".intro-overlay");
+    const logo = document.querySelector(".logo");
+  
+    // Этап 1: Увеличение логотипа
+    setTimeout(() => {
+      logo.style.transform = "scale(3)"; // Логотип увеличивается
+      logo.style.opacity = "0"; // Логотип исчезает
+    }, 1000); // Задержка перед началом анимации
+  
+    // Этап 2: Исчезновение фона
+    setTimeout(() => {
+      introOverlay.style.opacity = "0"; // Фон исчезает
+      introOverlay.style.visibility = "hidden"; // Скрываем блок
+    }, 2000); // Полное исчезновение через 3 секунды
+  });
+  
+
+
+
+
+  window.addEventListener("load", function () {
+    // Убираем загрузочный экран
+    document.getElementById("loading-screen").style.display = "none";
+    // Показываем основной сайт
+    document.getElementById("main-content").style.display = "block";
+  });
+
+
+
+
+

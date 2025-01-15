@@ -1349,8 +1349,8 @@ header {
 }
 
 .map-container {
-  width: 60%; /* Ширина карты 60% */
-  height: 300px; /* Высота карты */
+  width: 600px; /* Ширина карты 60% */
+  height: 400px; /* Высота карты */
   background-color: #ffffff;
   margin: 20px auto; /* Центрирование карты */
   border-radius: 15px; /* Закругление краев */
@@ -1404,7 +1404,7 @@ header {
   text-align: center;
   padding-top: 20px;
   font-size: 14px;
-  color: #666;
+  color: #d6d6d6;
 }
 
 /* Основная секция */
@@ -1705,3 +1705,78 @@ header {
 .official-site-btn:hover {
   background-color: #064066;
 }
+
+
+
+
+
+
+
+/* Общий фон для интро */
+.intro-overlay {
+  position: fixed; /* Поверх всего содержимого */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('.image/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Очень высокий z-index */
+  overflow: hidden; /* Убираем влияние на края */
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Логотип */
+.logo {
+  width: 300px; /* Начальный размер */
+  height: auto;
+  transition: transform 2s ease, opacity 1s ease;
+}
+
+
+
+
+
+
+/* Общий стиль для загрузочного экрана */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #002f5d; /* Синий фон */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Поверх всего */
+  overflow: hidden;
+}
+
+/* Контейнер для контента в загрузке */
+.loading-content {
+  text-align: center;
+}
+
+.loading-content img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.loading-content p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+
+
+
