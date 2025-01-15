@@ -384,71 +384,102 @@ const showMoreButton = document.getElementById('show-more');
 const hideMoreButton = document.getElementById('hide-more');
 
 const additionalPhotos = `
-    <div class="gallery-item">
-        <img src=".image/student20.jpg" alt="Student 20">
-        <div class="overlay"><p>Анара - 135 баллов по тесту Duolingo, поступила в 4 ВУЗа и получила огромную скидку в размере 312 000$, выбрала Rovan University</p></div>
+<div class="gallery-item">
+    <img src=".image/student20.jpg" alt="Student 20">
+    <div class="overlay">
+        <p data-lang-en="Anara - 135 points on the Duolingo test, got into 4 universities and received a huge discount of $312,000, chose Rovan University" data-lang-ru="Анара - 135 баллов по тесту Duolingo, поступила в 4 ВУЗа и получила огромную скидку в размере 312 000$, выбрала Rovan University">Анара - 135 баллов по тесту Duolingo, поступила в 4 ВУЗы и получила огромную скидку в размере 312 000$, выбрала Rovan University</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student11.jpg" alt="Student 11">
-        <div class="overlay"><p>Каныбек - студент который получил визу в 31 год и поступил в Saint Francis College по программе Bachelor's Degree</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student11.jpg" alt="Student 11">
+    <div class="overlay">
+        <p data-lang-en="Kanibek - a student who received a visa at 31 years old and got into Saint Francis College for the Bachelor's Degree program" data-lang-ru="Каныбек - студент который получил визу в 31 год и поступил в Saint Francis College по программе Bachelor's Degree">Каныбек - студент который получил визу в 31 год и поступил в Saint Francis College по программе Bachelor's Degree</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student10.jpg" alt="Student 10">
-        <div class="overlay"><p>Адилет - поступил на магистратуру в National Louis University,который находится в Чикаго</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student10.jpg" alt="Student 10">
+    <div class="overlay">
+        <p data-lang-en="Adilet - got into the Master's program at National Louis University in Chicago" data-lang-ru="Адилет - поступил на магистратуру в National Louis University, который находится в Чикаго">Адилет - поступил на магистратуру в National Louis University, который находится в Чикаго</p>
     </div>
-        <div class="gallery-item">
-        <img src=".image/student12.jpg" alt="Student 12">
-        <div class="overlay"><p>Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление </p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student12.jpg" alt="Student 12">
+    <div class="overlay">
+        <p data-lang-en="Baibol - got into Roosevelt University with a $6,000 discount, Business Management faculty" data-lang-ru="Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление">Байбол - поступил в Roosevelt University со скидкой $6.000, факультет бизнес-управление</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student13.jpg" alt="Student 13">
-        <div class="overlay"><p>Встреча наших студентов в Америке</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student13.jpg" alt="Student 13">
+    <div class="overlay">
+        <p data-lang-en="Meeting of our students in America" data-lang-ru="Встреча наших студентов в Америке">Встреча наших студентов в Америке</p>
     </div>
-        <div class="gallery-item">
-        <img src=".image/student16.jpg" alt="Student 16">
-        <div class="overlay"><p>Милана - Получила 140 баллов по Duolingo,поступила в 11 университетов и получила скидки более 858000$</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student16.jpg" alt="Student 16">
+    <div class="overlay">
+        <p data-lang-en="Milana - Got 140 points on Duolingo, got into 11 universities and received discounts over $858,000" data-lang-ru="Милана - Получила 140 баллов по Duolingo, поступила в 11 университетов и получила скидки более 858000$">Милана - Получила 140 баллов по Duolingo, поступила в 11 университетов и получила скидки более 858000$</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student17.jpg" alt="Student 17">
-        <div class="overlay"><p>Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес,
-Westcliff university </p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student17.jpg" alt="Student 17">
+    <div class="overlay">
+        <p data-lang-en="Nursultan - 25 years old, got into the Master's program at Westcliff University in Los Angeles" data-lang-ru="Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес, Westcliff university">Нурсултан - 25 лет поступил на магистратуру в Лос-Анджелес, Westcliff university</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student18.jpg" alt="Student 18">
-        <div class="overlay"><p>Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student18.jpg" alt="Student 18">
+    <div class="overlay">
+        <p data-lang-en="Nurbek - previously had a visa denial, worked as a Duolingo teacher at Elite Academy" data-lang-ru="Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo">Нурбек - получал отказ ранее в визе, работал в Elite Academy преподавателем Duolingo</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student19.jpg" alt="Student 19">
-        <div class="overlay"><p>Афтандиль - Ранее виза была отклонена, но с нами визовый процесс прошел успешно с первой попытки</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student19.jpg" alt="Student 19">
+    <div class="overlay">
+        <p data-lang-en="Aftandil - previously had his visa rejected, but with us the visa process went smoothly on the first attempt" data-lang-ru="Афтандиль - Ранее виза была отклонена, но с нами визовый процесс прошел успешно с первой попытки">Афтандиль - Ранее виза была отклонена, но с нами визовый процесс прошел успешно с первой попытки</p>
     </div>
-        <div class="gallery-item">
-        <img src=".image/student5.jpg" alt="Student 5">
-        <div class="overlay"><p>Нурислам</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student5.jpg" alt="Student 5">
+    <div class="overlay">
+        <p data-lang-en="Nurislam" data-lang-ru="Нурислам">Нурислам</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student6.jpg" alt="Student 6">
-        <div class="overlay"><p>Эльдар</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student6.jpg" alt="Student 6">
+    <div class="overlay">
+        <p data-lang-en="Eldar" data-lang-ru="Эльдар">Эльдар</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student7.jpg" alt="Саадат">
-        <div class="overlay"><p>Асыл</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student7.jpg" alt="Saadat">
+    <div class="overlay">
+        <p data-lang-en="Asyl" data-lang-ru="Асыл">Асыл</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student8.jpg" alt="Медина">
-        <div class="overlay"><p>Медина</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student8.jpg" alt="Medina">
+    <div class="overlay">
+        <p data-lang-en="Medina" data-lang-ru="Медина">Медина</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student9.jpg" alt="Азирет">
-        <div class="overlay"><p>Азирет</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student9.jpg" alt="Aziret">
+    <div class="overlay">
+        <p data-lang-en="Aziret" data-lang-ru="Азирет">Азирет</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student14.jpg" alt="Student 14">
-        <div class="overlay"><p>Айдана</p></div>
+</div>
+<div class="gallery-item">
+    <img src=".image/student14.jpg" alt="Student 14">
+    <div class="overlay">
+        <p data-lang-en="Aydana" data-lang-ru="Айдана">Айдана</p>
     </div>
-    <div class="gallery-item">
-        <img src=".image/student15.jpg" alt="Student 15">
-        <div class="overlay"><p>Иса</p></div>
-    </div>`;
+</div>
+<div class="gallery-item">
+    <img src=".image/student15.jpg" alt="Student 15">
+    <div class="overlay">
+        <p data-lang-en="Isa" data-lang-ru="Иса">Иса</p>
+    </div>
+</div>`; 
 
 showMoreButton.addEventListener('click', () => {
     gallery.insertAdjacentHTML('beforeend', additionalPhotos);
@@ -622,6 +653,23 @@ if (window.innerWidth <= 984) {
     document.getElementById("main-content").style.display = "block";
   });
 
+
+
+
+
+// Функция переключения языка
+function switchLanguage(lang) {
+  // Находим все элементы с атрибутами data-lang
+  const elements = document.querySelectorAll("[data-lang-en], [data-lang-ru]");
+
+  elements.forEach((el) => {
+    // Берем значение из соответствующего атрибута (например, data-lang-ru или data-lang-en)
+    const text = el.getAttribute(`data-lang-${lang}`);
+    if (text) {
+      el.textContent = text; // Обновляем текст элемента
+    }
+  });
+}
 
 
 

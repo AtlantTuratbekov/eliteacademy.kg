@@ -20,8 +20,8 @@
     <link rel="icon" href=".png">
 </head>
 <body>
-
-    <div id="loading-screen">
+    
+    <!-- <div id="loading-screen">
         <div class="loading-content">
           <img src=".image/logo-large.png" alt="Logo">
           <p>Загрузка...</p>
@@ -29,11 +29,9 @@
       </div>
 
       <div class="intro-overlay">
-        <!-- Логотип -->
         <img src=".image/logo-large.png" alt="Large Logo" class="logo">
-      </div>
-      
-      
+      </div> -->
+
     <header>
         <!-- Логотип и текстовая секция -->
         <div class="logo-section">
@@ -44,17 +42,21 @@
             <div class="academy-name">ELITE ACADEMY</div>
           </div>
         </div>
+
         <!-- Навигация -->
         <nav class="nav-links">
-            <button class="cta-button" onclick="toggleForm()">Консультация</button>
-          <a href="#home" class="nav-item">
-            <i class="fas fa-home"></i> Home
-          </a>
-          <a href="#news" class="nav-item">Новости</a>
-          <a href="#univers" class="nav-item">ВУЗы</a>
-          <a href="#about" class="nav-item">О нас</a>
-          <a href="#students" class="nav-item">Cтуденты</a>
-          <a href="#contact" class="nav-item">Контакты</a>
+          <div>
+            <button class="lang-switcher" onclick="switchLanguage('ru')">RU</button>
+            <button class="lang-switcher" onclick="switchLanguage('en')">EN</button>
+          </div>
+            <a href="#home" class="nav-item">
+                <i class="fas fa-home"></i> 
+                <span data-lang-en="Home" data-lang-ru="Главная">Главная</span>
+          <a data-lang-en="News" data-lang-ru="Новости" href="#news" class="nav-item">Новости</a>
+          <a data-lang-en="Universities" data-lang-ru="ВУЗы" href="#univers" class="nav-item">ВУЗы</a>
+          <a data-lang-en="About us" data-lang-ru="О нас" href="#about" class="nav-item">О нас</a>
+          <a data-lang-en="Students" data-lang-ru="Студенты" href="#students" class="nav-item">Cтуденты</a>
+          <a data-lang-en="Contact" data-lang-ru="Контакты" href="#contact" class="nav-item">Контакты</a>
         </nav>
       </header>
       <!-- ТЕКСТ С ФОНОМ -->
@@ -62,10 +64,10 @@
         <div class="overlay">
             <div class="content">
                 <div class="highlighted-head">
-                    <div class="line top">Мечтаешь учиться в Америке?</div>
-                    <div class="line bottom">Elite Academy cделает это</div>
-                    <div class="line bottom">реальностью!</div>
-                    <div class="text-bottom">Получи уникальный опыт, качественное образование и начни строить будущее своей мечты!
+                    <div data-lang-en="Do you dream of studying in America?" data-lang-ru="Мечтаешь учиться в Америке?" class="line top">Мечтаешь учиться в Америке?</div>
+                    <div data-lang-en="Elite Academy will make this" data-lang-ru="Elite Academy cделает это" class="line bottom">Elite Academy cделает это</div>
+                    <div data-lang-en="a reality" data-lang-ru="реальностью!" class="line bottom">реальностью!</div>
+                    <div data-lang-en="Get a unique experience, quality education and start building the future of your dreams!" data-lang-ru="Получи уникальный опыт, качественное образование и начни строить будущее своей мечты!" class="text-bottom">Получи уникальный опыт, качественное образование и начни строить будущее своей мечты!
                     </div>
                   </div>                                   
             </div>
@@ -76,11 +78,11 @@
       <div class="overlay-bg" id="overlay" onclick="toggleForm()"></div>
       <button class="close-button" onclick="toggleForm()">×</button>
       <div class="form-container" id="form-container">
-        <h2>ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.</h2>
+        <h2 data-lang-en="" data-lang-ru="">ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.</h2>
         <form>
-          <input type="text" placeholder="Имя" required>
-          <input type="number" placeholder="Возраст" required>
-          <input list="english-levels" placeholder="Уровень английского" required>
+          <input data-lang-en="" data-lang-ru="" type="text" placeholder="Имя" required>
+          <input data-lang-en="" data-lang-ru="" type="number" placeholder="Возраст" required>
+          <input data-lang-en="" data-lang-ru="" list="english-levels" placeholder="Уровень английского" required>
           <datalist id="english-levels">
             <option value="А1 (Beginner) начальный уровень">
             <option value="А2 (Elementary) элементарный уровень">
@@ -101,42 +103,41 @@
             <option value="Иссык-Кульская область">
             <option value="Баткенская область">
           </datalist>
-          <input type="tel" placeholder="Номер телефона" required>
-          <button type="submit">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+          <input data-lang-en="" data-lang-ru="" type="tel" placeholder="Номер телефона" required>
+          <button data-lang-en="" data-lang-ru="" type="submit">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
         </form>
       </div>
 
       <!-- НОВОСТИ -->
       <section id="news" class="news-section">
         <div class="container">
-            <h2 class="section-title"> ELITE - NEWS </h2>
+            <h2 data-lang-en="ELITE - NEWS" data-lang-ru="ELITE - НОВОСТИ" class="section-title"> ELITE - НОВОСТИ </h2>
             <div class="news-items">
                 <div class="news-item">
                     <img src=".image/gifka.jpg" alt="Новость 1" class="news-image">
-                    <h3 class="news-title">Поступи в США и получи КРУТЫЕ ПРИЗЫ</h3>
-                    <p class="news-description">
-                        Мы проводим конкурс в честь Нового Года, где вы сможете выиграть много крутых подарков.
-                        <span class="hidden-text" style="display: none;">Условия конкурса у нас в Instagram!</span>
+                    <h3 data-lang-en="Enter the USA and get COOL PRIZES" data-lang-ru="Поступи в США и получи КРУТЫЕ ПРИЗЫ" class="news-title">Поступи в США и получи КРУТЫЕ ПРИЗЫ</h3>
+                    <p data-lang-en="We are holding a competition in honor of the New Year, where you can win a lot of cool gifts. The terms of the competition are on our Instagram!" data-lang-ru="Мы проводим конкурс в честь Нового Года, где вы сможете выиграть много крутых подарков. Условия конкурса у нас в Instagram!" class="news-description">
+                        Мы проводим конкурс в честь Нового Года, где вы сможете выиграть много крутых подарков. Условия конкурса у нас в Instagram!
                     </p>
-                    <button class="toggle-text">Читать больше</button>
-                    <a href="https://www.instagram.com/p/DDMSRFAoCDi/?img_index=1&igsh=MW5jejJiMWc5djA1OA==" class="read-more-red">КОНКУРС И УСЛОВИЯ</a>
-                    <span class="hidden-text" style="display: none;">Условия конкурса у нас в Instagram!</span>
+                    <a data-lang-en="COMPETITION AND CONDITIONS" data-lang-ru="КОНКУРС И УСЛОВИЯ" href="https://www.instagram.com/p/DDMSRFAoCDi/?img_index=1&igsh=MW5jejJiMWc5djA1OA==" class="read-more-red">КОНКУРС И УСЛОВИЯ</a>
+                    <span data-lang-en="" data-lang-ru="" class="hidden-text" style="display: none;">Условия конкурса у нас в Instagram!</span>
                 </div>
                 <div class="news-item">
                     <img src=".image/trump.jpg" alt="Новость 2" class="news-image">
-                    <h3 class="news-title">НОВЫЙ ПРЕЗИДЕНТ Возможно ли получить визу в США?</h3>
-                    <p class="news-description">
+                    <h3 class="news-title" data-lang-en="NEW PRESIDENT: Is it possible to get a U.S. visa?" data-lang-ru="НОВЫЙ ПРЕЗИДЕНТ: Возможно ли получить визу в США?">НОВЫЙ ПРЕЗИДЕНТ: Возможно ли получить визу в США?</h3>
+                    <p class="news-description" 
+                        data-lang-en="Amid changes in U.S. policies, many wonder if it is still possible to obtain a student visa. The answer is — yes, the student visa is still available. The key is to prepare and follow the rules."
+                        data-lang-ru="На фоне изменений в политике США многие задумываются, возможно ли сейчас получить студенческую визу. Ответ — да, студенческая виза продолжает действовать. Главное — подготовиться и соблюдать правила.">
                         На фоне изменений в политике США многие задумываются, возможно ли сейчас получить студенческую визу. Ответ — 
-                        <span class="hidden-text" style="display: none;">да, студенческая виза продолжает действовать. Главное — подготовиться и соблюдать правила</span>    
                     </p>
-                    <button class="toggle-text">Читать больше</button>
+
                     <a href="https://www.instagram.com/p/DCi_YfcIGHy/?igsh=czVhMXZxNXppN3h5" class="read-more">Подробнее</a>
                 </div>
                 <div class="news-item">
                     <img src=".image/blackfr.jpg" alt="Новость 3" class="news-image">
-                    <h3 class="news-title">ЧЕРНАЯ ПЯТНИЦА</h3>
-                    <p class="news-description">
-                        Поступи с нами в США и получи бесплатный купон на Duolingo Test🇺🇸
+                    <h3 data-lang-en="BLACK FRIDAY" data-lang-ru="ЧЕРНАЯ ПЯТНИЦА" class="news-title">ЧЕРНАЯ ПЯТНИЦА</h3>
+                    <p data-lang-en="Join us in the US and get a free coupon for Duolingo Test" data-lang-ru="Поступи с нами в США и получи бесплатный купон на Дуолинго Тест" class="news-description">
+                        Поступи с нами в США и получи бесплатный купон на Дуолинго Тест
                     </p>
                     <a href="https://www.instagram.com/p/DC3qelnoQvG/?igsh=MTRhbjY4bmg5czdsaA==" class="read-more">Подробнее</a>
                 </div>
@@ -147,304 +148,399 @@
     <section id="univers" class="section2">
         <div class="carousel-container">
             <div class="univers">
-                <h1 class="section-title">UNIVERSITIES</h1>
-                <h2 class="section-subtitle">Elite-Academy позаботится о поступлении в топовые ВУЗы Америки</h2>
-                <h4 class="section-subtitle">Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.</h4>
-            </div>
+                <h1 class="section-title" 
+                    data-lang-en="UNIVERSITIES" 
+                    data-lang-ru="УНИВЕРСИТЕТЫ">
+                  УНИВЕРСИТЕТЫ
+                </h1>
+                <h2 class="section-subtitle" 
+                    data-lang-en="Elite Academy will ensure admission to top American universities" 
+                    data-lang-ru="Elite-Academy позаботится о поступлении в топовые ВУЗы Америки">
+                  Elite-Academy позаботится о поступлении в топовые ВУЗы Америки
+                </h2>
+                <h4 class="section-subtitle" 
+                    data-lang-en="Here you can find out which universities are more convenient for you to apply to and which options suit you best." 
+                    data-lang-ru="Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.">
+                  Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.
+                </h4>
+              </div>
+              
             <button class="nav-button left" onclick="prevSlide()">‹</button>
             <div class="carousel-track">
             
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/northpark.jpg" alt="Image 5">
-                    <h2>North Park University</h2>
-                    <p>город Чикаго, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo('northparkOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="North Park University" data-lang-ru="North Park University">
+                      North Park University
+                    </h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">
+                      город Чикаго, штат Иллинойс
+                    </p>
+                    <button class="university-btn" onclick="openUniversityInfo('northparkOverlay')" 
+                            data-lang-en="Learn More" data-lang-ru="Подробнее">
+                      Подробнее
+                    </button>
+                  
                     <div class="info-overlay" id="northparkOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('northparkOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/northpark.jpg" alt="North Park University">
-                                </div>
-                                <div class="content">
-                                    <h2>North Park University</h2>
-                                    <p><strong>Цена:</strong> $30,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Удобное расположение в Чикаго</li>
-                                        <li>Широкий выбор программ</li>
-                                        <li>Сильное сообщество студентов</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.northpark.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('northparkOverlay')" 
+                                data-lang-en="🞬" data-lang-ru="🞬">
+                          🞬
+                        </button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/northpark.jpg" alt="North Park University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="North Park University" data-lang-ru="North Park University">
+                              North Park University
+                            </h2>
+                            <p>
+                                <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                                <span data-lang-en="$30,000 per year" data-lang-ru="$30,000 в год">$30,000 в год</span>
+                              </p>
+                              
+                              <p>
+                                <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                              </p>
+                              
+                            </p>
+                            <ul>
+                              <li data-lang-en="Convenient location in Chicago" data-lang-ru="Удобное расположение в Чикаго">
+                                Удобное расположение в Чикаго
+                              </li>
+                              <li data-lang-en="Wide variety of programs" data-lang-ru="Широкий выбор программ">
+                                Широкий выбор программ
+                              </li>
+                              <li data-lang-en="Strong student community" data-lang-ru="Сильное сообщество студентов">
+                                Сильное сообщество студентов
+                              </li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.northpark.edu/" target="_blank" class="official-site-btn" 
+                           data-lang-en="Official Website" data-lang-ru="Официальный сайт">
+                          Официальный сайт
+                        </a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/missouri.jpg" alt="Image 6">
-                    <h2>Missouri University ST</h2>
-                    <p>город Ролла, штат Миссури</p>
-                    <button class="university-btn" onclick="openUniversityInfo('missouriOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Missouri University ST" data-lang-ru="Missouri University ST">Missouri University ST</h2>
+                    <p data-lang-en="City: Rolla, Missouri" data-lang-ru="город Ролла, штат Миссури">город Ролла, штат Миссури</p>
+                    <button class="university-btn" onclick="openUniversityInfo('missouriOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="missouriOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('missouriOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/missouri.jpg" alt="Missouri University ST">
-                                </div>
-                                <div class="content">
-                                    <h2>Missouri University ST</h2>
-                                    <p><strong>Цена:</strong> $25,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Высококачественное техническое образование</li>
-                                        <li>Современная инфраструктура</li>
-                                        <li>Отличные карьерные перспективы</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.mst.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('missouriOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/missouri.jpg" alt="Missouri University ST">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Missouri University ST" data-lang-ru="Missouri University ST">Missouri University ST</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$25,000 per year" data-lang-ru="$25,000 в год">$25,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="High-quality technical education" data-lang-ru="Высококачественное техническое образование">
+                                Высококачественное техническое образование
+                              </li>
+                              <li data-lang-en="Modern infrastructure" data-lang-ru="Современная инфраструктура">Современная инфраструктура</li>
+                              <li data-lang-en="Excellent career prospects" data-lang-ru="Отличные карьерные перспективы">Отличные карьерные перспективы</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.mst.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/pacificlutheran.jpg" alt="Image 7">
-                    <h2>Pacific Lutheran University</h2>
-                    <p>город Такома, штат Вашингтон</p>
-                    <button class="university-btn" onclick="openUniversityInfo('pacificlutheranOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Pacific Lutheran University" data-lang-ru="Pacific Lutheran University">Pacific Lutheran University</h2>
+                    <p data-lang-en="City: Tacoma, Washington" data-lang-ru="город Такома, штат Вашингтон">город Такома, штат Вашингтон</p>
+                    <button class="university-btn" onclick="openUniversityInfo('pacificlutheranOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="pacificlutheranOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('pacificlutheranOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/pacificlutheran.jpg" alt="Pacific Lutheran University">
-                                </div>
-                                <div class="content">
-                                    <h2>Pacific Lutheran University</h2>
-                                    <p><strong>Цена:</strong> $28,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Спокойная и безопасная атмосфера</li>
-                                        <li>Программы гуманитарных и естественных наук</li>
-                                        <li>Поддержка международных студентов</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.plu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('pacificlutheranOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/pacificlutheran.jpg" alt="Pacific Lutheran University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Pacific Lutheran University" data-lang-ru="Pacific Lutheran University">Pacific Lutheran University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$28,000 per year" data-lang-ru="$28,000 в год">$28,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Calm and safe atmosphere" data-lang-ru="Спокойная и безопасная атмосфера">Спокойная и безопасная атмосфера</li>
+                              <li data-lang-en="Humanities and sciences programs" data-lang-ru="Программы гуманитарных и естественных наук">Программы гуманитарных и естественных наук</li>
+                              <li data-lang-en="Support for international students" data-lang-ru="Поддержка международных студентов">Поддержка международных студентов</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.plu.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
                 
-                <div class="card" style="background-color: #ffffffc1;">
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/saintmartins.jpg" alt="Image 8">
-                    <h2>Saint Martins University</h2>
-                    <p>город Лэйси, штат Вашингтон</p>
-                    <button class="university-btn" onclick="openUniversityInfo('saintmartinsOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Saint Martins University" data-lang-ru="Saint Martins University">Saint Martins University</h2>
+                    <p data-lang-en="City: Lacey, Washington" data-lang-ru="город Лэйси, штат Вашингтон">город Лэйси, штат Вашингтон</p>
+                    <button class="university-btn" onclick="openUniversityInfo('saintmartinsOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="saintmartinsOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('saintmartinsOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/saintmartins.jpg" alt="Saint Martins University">
-                                </div>
-                                <div class="content">
-                                    <h2>Saint Martins University</h2>
-                                    <p><strong>Цена:</strong> $29,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Традиционные программы обучения</li>
-                                        <li>Активное участие студентов в жизни кампуса</li>
-                                        <li>Индивидуальный подход к обучению</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.stmartin.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('saintmartinsOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/saintmartins.jpg" alt="Saint Martins University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Saint Martins University" data-lang-ru="Saint Martins University">Saint Martins University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$29,000 per year" data-lang-ru="$29,000 в год">$29,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Traditional educational programs" data-lang-ru="Традиционные программы обучения">Традиционные программы обучения</li>
+                              <li data-lang-en="Active student involvement on campus" data-lang-ru="Активное участие студентов в жизни кампуса">Активное участие студентов в жизни кампуса</li>
+                              <li data-lang-en="Individual approach to education" data-lang-ru="Индивидуальный подход к обучению">Индивидуальный подход к обучению</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.stmartin.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/concord.jpg" alt="Image 9">
-                    <h2>Concord University</h2>
-                    <p>город Афинс, штат Западная Вирджиния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('concordOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Concord University" data-lang-ru="Concord University">Concord University</h2>
+                    <p data-lang-en="City: Athens, West Virginia" data-lang-ru="город Афинс, штат Западная Вирджиния">город Афинс, штат Западная Вирджиния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('concordOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="concordOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('concordOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/concord.jpg" alt="Concord University">
-                                </div>
-                                <div class="content">
-                                    <h2>Concord University</h2>
-                                    <p><strong>Цена:</strong> $20,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Доступное обучение</li>
-                                        <li>Живописное местоположение</li>
-                                        <li>Маленькие классы</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.concord.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('concordOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/concord.jpg" alt="Concord University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Concord University" data-lang-ru="Concord University">Concord University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$20,000 per year" data-lang-ru="$20,000 в год">$20,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Affordable tuition" data-lang-ru="Доступное обучение">Доступное обучение</li>
+                              <li data-lang-en="Scenic location" data-lang-ru="Живописное местоположение">Живописное местоположение</li>
+                              <li data-lang-en="Small class sizes" data-lang-ru="Маленькие классы">Маленькие классы</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.concord.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/lewis.jpg" alt="Image 10">
-                    <h2>Lewis University</h2>
-                    <p>город Ромеовилл, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo('lewisOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Lewis University" data-lang-ru="Lewis University">Lewis University</h2>
+                    <p data-lang-en="City: Romeoville, Illinois" data-lang-ru="город Ромеовилл, штат Иллинойс">город Ромеовилл, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('lewisOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="lewisOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('lewisOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/lewis.jpg" alt="Lewis University">
-                                </div>
-                                <div class="content">
-                                    <h2>Lewis University</h2>
-                                    <p><strong>Цена:</strong> $35,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Близость к Чикаго</li>
-                                        <li>Широкий спектр инженерных и авиационных программ</li>
-                                        <li>Дружелюбная атмосфера кампуса</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.lewisu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('lewisOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/lewis.jpg" alt="Lewis University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Lewis University" data-lang-ru="Lewis University">Lewis University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$35,000 per year" data-lang-ru="$35,000 в год">$35,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Close to Chicago" data-lang-ru="Близость к Чикаго">Близость к Чикаго</li>
+                              <li data-lang-en="Wide range of engineering and aviation programs" data-lang-ru="Широкий спектр инженерных и авиационных программ">Широкий спектр инженерных и авиационных программ</li>
+                              <li data-lang-en="Friendly campus atmosphere" data-lang-ru="Дружелюбная атмосфера кампуса">Дружелюбная атмосфера кампуса</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.lewisu.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/alfred.jpg" alt="Image 11">
-                    <h2>Alfred University</h2>
-                    <p>город Альфред, штат Нью-Йорк</p>
-                    <button class="university-btn" onclick="openUniversityInfo('alfredOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Alfred University" data-lang-ru="Alfred University">Alfred University</h2>
+                    <p data-lang-en="City: Alfred, New York" data-lang-ru="город Альфред, штат Нью-Йорк">город Альфред, штат Нью-Йорк</p>
+                    <button class="university-btn" onclick="openUniversityInfo('alfredOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="alfredOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('alfredOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/alfred.jpg" alt="Alfred University">
-                                </div>
-                                <div class="content">
-                                    <h2>Alfred University</h2>
-                                    <p><strong>Цена:</strong> $30,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Программы по искусству и дизайну</li>
-                                        <li>Уютная атмосфера небольшого городка</li>
-                                        <li>Доступная стоимость обучения</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.alfred.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('alfredOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/alfred.jpg" alt="Alfred University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Alfred University" data-lang-ru="Alfred University">Alfred University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$30,000 per year" data-lang-ru="$30,000 в год">$30,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Art and design programs" data-lang-ru="Программы по искусству и дизайну">Программы по искусству и дизайну</li>
+                              <li data-lang-en="Cozy small town atmosphere" data-lang-ru="Уютная атмосфера небольшого городка">Уютная атмосфера небольшого городка</li>
+                              <li data-lang-en="Affordable tuition" data-lang-ru="Доступная стоимость обучения">Доступная стоимость обучения</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.alfred.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/canisius.jpg" alt="Image 12">
-                    <h2>Canisius University</h2>
-                    <p>город Буффало, штат Нью-Йорк</p>
-                    <button class="university-btn" onclick="openUniversityInfo('canisiusOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Canisius University" data-lang-ru="Canisius University">Canisius University</h2>
+                    <p data-lang-en="City: Buffalo, New York" data-lang-ru="город Буффало, штат Нью-Йорк">город Буффало, штат Нью-Йорк</p>
+                    <button class="university-btn" onclick="openUniversityInfo('canisiusOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="canisiusOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('canisiusOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/canisius.jpg" alt="Canisius University">
-                                </div>
-                                <div class="content">
-                                    <h2>Canisius University</h2>
-                                    <p><strong>Цена:</strong> $34,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Сильные программы MBA</li>
-                                        <li>Расположение рядом с Ниагарским водопадом</li>
-                                        <li>Культурное разнообразие</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.canisius.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('canisiusOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/canisius.jpg" alt="Canisius University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Canisius University" data-lang-ru="Canisius University">Canisius University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$34,000 per year" data-lang-ru="$34,000 в год">$34,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Strong MBA programs" data-lang-ru="Сильные программы MBA">Сильные программы MBA</li>
+                              <li data-lang-en="Location near Niagara Falls" data-lang-ru="Расположение рядом с Ниагарским водопадом">Расположение рядом с Ниагарским водопадом</li>
+                              <li data-lang-en="Cultural diversity" data-lang-ru="Культурное разнообразие">Культурное разнообразие</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.canisius.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/saintlouis.jpg" alt="Image 13">
-                    <h2>Saint Louis University</h2>
-                    <p>город Сент-Луис, штат Миссури</p>
-                    <button class="university-btn" onclick="openUniversityInfo('saintlouisOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Saint Louis University" data-lang-ru="Saint Louis University">Saint Louis University</h2>
+                    <p data-lang-en="City: St. Louis, Missouri" data-lang-ru="город Сент-Луис, штат Миссури">город Сент-Луис, штат Миссури</p>
+                    <button class="university-btn" onclick="openUniversityInfo('saintlouisOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="saintlouisOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('saintlouisOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/saintlouis.jpg" alt="Saint Louis University">
-                                </div>
-                                <div class="content">
-                                    <h2>Saint Louis University</h2>
-                                    <p><strong>Цена:</strong> $38,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Исторический кампус</li>
-                                        <li>Медицинские программы высокого уровня</li>
-                                        <li>Активная студенческая жизнь</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.slu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('saintlouisOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/saintlouis.jpg" alt="Saint Louis University">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="Saint Louis University" data-lang-ru="Saint Louis University">Saint Louis University</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$38,000 per year" data-lang-ru="$38,000 в год">$38,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Historical campus" data-lang-ru="Исторический кампус">Исторический кампус</li>
+                              <li data-lang-en="High-level medical programs" data-lang-ru="Медицинские программы высокого уровня">Медицинские программы высокого уровня</li>
+                              <li data-lang-en="Active student life" data-lang-ru="Активная студенческая жизнь">Активная студенческая жизнь</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.slu.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
-                
-                <div class="card" style="background-color: #ffffffc1;">
+                  </div>
+                  
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/scranton.jpg" alt="Image 14">
-                    <h2>University of Scranton</h2>
-                    <p>г. Скрэнтон, шт. Пенсильвания</p>
-                    <button class="university-btn" onclick="openUniversityInfo('scrantonOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="University of Scranton" data-lang-ru="University of Scranton">University of Scranton</h2>
+                    <p data-lang-en="City: Scranton, Pennsylvania" data-lang-ru="г. Скрэнтон, шт. Пенсильвания">г. Скрэнтон, шт. Пенсильвания</p>
+                    <button class="university-btn" onclick="openUniversityInfo('scrantonOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                  
                     <div class="info-overlay" id="scrantonOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('scrantonOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/scranton.jpg" alt="University of Scranton">
-                                </div>
-                                <div class="content">
-                                    <h2>University of Scranton</h2>
-                                    <p><strong>Цена:</strong> $36,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Сильные гуманитарные программы</li>
-                                        <li>Уютный кампус</li>
-                                        <li>Развитая сеть выпускников</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.scranton.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                      <div class="info-popup">
+                        <button class="close-btn" onclick="closeUniversityInfo('scrantonOverlay')">🞬</button>
+                        <div class="popup-body">
+                          <div class="image-container">
+                            <img src=".image/scranton.jpg" alt="University of Scranton">
+                          </div>
+                          <div class="content">
+                            <h2 data-lang-en="University of Scranton" data-lang-ru="University of Scranton">University of Scranton</h2>
+                            <p>
+                              <strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong>
+                              <span data-lang-en="$36,000 per year" data-lang-ru="$36,000 в год">$36,000 в год</span>
+                            </p>
+                            <p>
+                              <strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong>
+                            </p>
+                            <ul>
+                              <li data-lang-en="Strong humanities programs" data-lang-ru="Сильные гуманитарные программы">Сильные гуманитарные программы</li>
+                              <li data-lang-en="Cozy campus" data-lang-ru="Уютный кампус">Уютный кампус</li>
+                              <li data-lang-en="Well-developed alumni network" data-lang-ru="Развитая сеть выпускников">Развитая сеть выпускников</li>
+                            </ul>
+                          </div>
                         </div>
+                        <a href="https://www.scranton.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
                 
-                <div class="card" style="background-color: #ffffffc1;">
+                  <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/duquesne.jpg" alt="Image 15">
-                    <h2>Duquesne University</h2>
-                    <p>город Питтсбург, штат Пенсильвания</p>
-                    <button class="university-btn" onclick="openUniversityInfo('duquesneOverlay')">Подробнее</button>
+                    <h2 data-lang-en="Duquesne University" data-lang-ru="Duquesne University">Duquesne University</h2>
+                    <p data-lang-en="City: Pittsburgh, Pennsylvania" data-lang-ru="город Питтсбург, штат Пенсильвания">город Питтсбург, штат Пенсильвания</p>
+                    <button class="university-btn" onclick="openUniversityInfo('duquesneOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="duquesneOverlay">
                         <div class="info-popup">
@@ -454,26 +550,26 @@
                                     <img src=".image/duquesne.jpg" alt="Duquesne University">
                                 </div>
                                 <div class="content">
-                                    <h2>Duquesne University</h2>
-                                    <p><strong>Цена:</strong> $37,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Duquesne University" data-lang-ru="Duquesne University">Duquesne University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$37,000 per year" data-lang-ru="$37,000 в год">$37,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Красивая архитектура кампуса</li>
-                                        <li>Сильные программы в области здравоохранения</li>
-                                        <li>Развитая студенческая инфраструктура</li>
+                                        <li data-lang-en="Beautiful campus architecture" data-lang-ru="Красивая архитектура кампуса">Красивая архитектура кампуса</li>
+                                        <li data-lang-en="Strong healthcare programs" data-lang-ru="Сильные программы в области здравоохранения">Сильные программы в области здравоохранения</li>
+                                        <li data-lang-en="Developed student infrastructure" data-lang-ru="Развитая студенческая инфраструктура">Развитая студенческая инфраструктура</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.duq.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.duq.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/nationallouis.jpg" alt="Image 16">
-                    <h2>National Louis University</h2>
-                    <p>город Чикаго, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo('nationallouisOverlay')">Подробнее</button>
+                    <h2 data-lang-en="National Louis University" data-lang-ru="National Louis University">National Louis University</h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('nationallouisOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="nationallouisOverlay">
                         <div class="info-popup">
@@ -483,26 +579,26 @@
                                     <img src=".image/nationallouis.jpg" alt="National Louis University">
                                 </div>
                                 <div class="content">
-                                    <h2>National Louis University</h2>
-                                    <p><strong>Цена:</strong> $32,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="National Louis University" data-lang-ru="National Louis University">National Louis University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$32,000 per year" data-lang-ru="$32,000 в год">$32,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Расположение в центре Чикаго</li>
-                                        <li>Гибкие программы обучения</li>
-                                        <li>Сильная поддержка студентов</li>
+                                        <li data-lang-en="Located in downtown Chicago" data-lang-ru="Расположение в центре Чикаго">Расположение в центре Чикаго</li>
+                                        <li data-lang-en="Flexible study programs" data-lang-ru="Гибкие программы обучения">Гибкие программы обучения</li>
+                                        <li data-lang-en="Strong student support" data-lang-ru="Сильная поддержка студентов">Сильная поддержка студентов</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.nl.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.nl.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/roosevelt.jpg" alt="Image 17">
-                    <h2>Roosevelt University</h2>
-                    <p>город Чикаго, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo('rooseveltOverlay')">Подробнее</button>
+                    <h2 data-lang-en="Roosevelt University" data-lang-ru="Roosevelt University">Roosevelt University</h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('rooseveltOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="rooseveltOverlay">
                         <div class="info-popup">
@@ -512,26 +608,26 @@
                                     <img src=".image/roosevelt.jpg" alt="Roosevelt University">
                                 </div>
                                 <div class="content">
-                                    <h2>Roosevelt University</h2>
-                                    <p><strong>Цена:</strong> $33,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Roosevelt University" data-lang-ru="Roosevelt University">Roosevelt University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$33,000 per year" data-lang-ru="$33,000 в год">$33,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Программы в области бизнеса и искусства</li>
-                                        <li>Удобное расположение</li>
-                                        <li>Кампус с современными удобствами</li>
+                                        <li data-lang-en="Programs in business and arts" data-lang-ru="Программы в области бизнеса и искусства">Программы в области бизнеса и искусства</li>
+                                        <li data-lang-en="Convenient location" data-lang-ru="Удобное расположение">Удобное расположение</li>
+                                        <li data-lang-en="Modern campus amenities" data-lang-ru="Кампус с современными удобствами">Кампус с современными удобствами</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.roosevelt.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.roosevelt.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/californiastatesanbernardino.jpg" alt="Image 18">
-                    <h2>California State University</h2>
-                    <p>штат Калифорния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('californiastateOverlay')">Подробнее</button>
+                    <h2 data-lang-en="California State University" data-lang-ru="California State University">California State University</h2>
+                    <p data-lang-en="State: California" data-lang-ru="штат Калифорния">штат Калифорния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('californiastateOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="californiastateOverlay">
                         <div class="info-popup">
@@ -541,141 +637,143 @@
                                     <img src=".image/californiastatesanbernardino.jpg" alt="California State University">
                                 </div>
                                 <div class="content">
-                                    <h2>California State University</h2>
-                                    <p><strong>Цена:</strong> $28,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="California State University" data-lang-ru="California State University">California State University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$28,000 per year" data-lang-ru="$28,000 в год">$28,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Разнообразные программы обучения</li>
-                                        <li>Красивая природа Калифорнии</li>
-                                        <li>Развитая инфраструктура</li>
+                                        <li data-lang-en="Diverse study programs" data-lang-ru="Разнообразные программы обучения">Разнообразные программы обучения</li>
+                                        <li data-lang-en="Beautiful California nature" data-lang-ru="Красивая природа Калифорнии">Красивая природа Калифорнии</li>
+                                        <li data-lang-en="Developed infrastructure" data-lang-ru="Развитая инфраструктура">Развитая инфраструктура</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.csusb.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.csusb.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="card" style="background-color: #ffffffc1;">
+                    <img src=".image/duquesne.jpg" alt="Image 15">
+                    <h2 data-lang-en="Duquesne University" data-lang-ru="Duquesne University">Duquesne University</h2>
+                    <p data-lang-en="City: Pittsburgh, Pennsylvania" data-lang-ru="город Питтсбург, штат Пенсильвания">город Питтсбург, штат Пенсильвания</p>
+                    <button class="university-btn" onclick="openUniversityInfo('duquesneOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+                
+                    <div class="info-overlay" id="duquesneOverlay">
+                        <div class="info-popup">
+                            <button class="close-btn" onclick="closeUniversityInfo('duquesneOverlay')">🞬</button>
+                            <div class="popup-body">
+                                <div class="image-container">
+                                    <img src=".image/duquesne.jpg" alt="Duquesne University">
+                                </div>
+                                <div class="content">
+                                    <h2 data-lang-en="Duquesne University" data-lang-ru="Duquesne University">Duquesne University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$37,000 per year" data-lang-ru="$37,000 в год">$37,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
+                                    <ul>
+                                        <li data-lang-en="Beautiful campus architecture" data-lang-ru="Красивая архитектура кампуса">Красивая архитектура кампуса</li>
+                                        <li data-lang-en="Strong healthcare programs" data-lang-ru="Сильные программы в области здравоохранения">Сильные программы в области здравоохранения</li>
+                                        <li data-lang-en="Developed student infrastructure" data-lang-ru="Развитая студенческая инфраструктура">Развитая студенческая инфраструктура</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://www.duq.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
-                    <img src=".image/radford.jpg" alt="Image 19">
-                    <h2>Radford University</h2>
-                    <p>город Радфорд, штат Вирджиния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('radfordOverlay')">Подробнее</button>
+                    <img src=".image/nationallouis.jpg" alt="Image 16">
+                    <h2 data-lang-en="National Louis University" data-lang-ru="National Louis University">National Louis University</h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('nationallouisOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
-                    <div class="info-overlay" id="radfordOverlay">
+                    <div class="info-overlay" id="nationallouisOverlay">
                         <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('radfordOverlay')">🞬</button>
+                            <button class="close-btn" onclick="closeUniversityInfo('nationallouisOverlay')">🞬</button>
                             <div class="popup-body">
                                 <div class="image-container">
-                                    <img src=".image/radford.jpg" alt="Radford University">
+                                    <img src=".image/nationallouis.jpg" alt="National Louis University">
                                 </div>
                                 <div class="content">
-                                    <h2>Radford University</h2>
-                                    <p><strong>Цена:</strong> $27,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="National Louis University" data-lang-ru="National Louis University">National Louis University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$32,000 per year" data-lang-ru="$32,000 в год">$32,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Индивидуальный подход к обучению</li>
-                                        <li>Уютный кампус</li>
-                                        <li>Сильные программы в области науки</li>
+                                        <li data-lang-en="Located in downtown Chicago" data-lang-ru="Расположение в центре Чикаго">Расположение в центре Чикаго</li>
+                                        <li data-lang-en="Flexible study programs" data-lang-ru="Гибкие программы обучения">Гибкие программы обучения</li>
+                                        <li data-lang-en="Strong student support" data-lang-ru="Сильная поддержка студентов">Сильная поддержка студентов</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.radford.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.nl.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
-                    <img src=".image/westcliff.jpg" alt="Image 20">
-                    <h2>Westcliff University</h2>
-                    <p>город Ирвин, штат Калифорния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('westcliffOverlay')">Подробнее</button>
+                    <img src=".image/roosevelt.jpg" alt="Image 17">
+                    <h2 data-lang-en="Roosevelt University" data-lang-ru="Roosevelt University">Roosevelt University</h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('rooseveltOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
-                    <div class="info-overlay" id="westcliffOverlay">
+                    <div class="info-overlay" id="rooseveltOverlay">
                         <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('westcliffOverlay')">🞬</button>
+                            <button class="close-btn" onclick="closeUniversityInfo('rooseveltOverlay')">🞬</button>
                             <div class="popup-body">
                                 <div class="image-container">
-                                    <img src=".image/westcliff.jpg" alt="Westcliff University">
+                                    <img src=".image/roosevelt.jpg" alt="Roosevelt University">
                                 </div>
                                 <div class="content">
-                                    <h2>Westcliff University</h2>
-                                    <p><strong>Цена:</strong> $29,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Roosevelt University" data-lang-ru="Roosevelt University">Roosevelt University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$33,000 per year" data-lang-ru="$33,000 в год">$33,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Современные программы MBA</li>
-                                        <li>Разнообразие международных студентов</li>
-                                        <li>Инновационный подход к обучению</li>
+                                        <li data-lang-en="Programs in business and arts" data-lang-ru="Программы в области бизнеса и искусства">Программы в области бизнеса и искусства</li>
+                                        <li data-lang-en="Convenient location" data-lang-ru="Удобное расположение">Удобное расположение</li>
+                                        <li data-lang-en="Modern campus amenities" data-lang-ru="Кампус с современными удобствами">Кампус с современными удобствами</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.westcliff.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.roosevelt.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
-                    <img src=".image/trine.jpg" alt="Image 21">
-                    <h2>Trine University</h2>
-                    <p>город Ангола, штат Индиана</p>
-                    <button class="university-btn" onclick="openUniversityInfo('trineOverlay')">Подробнее</button>
+                    <img src=".image/californiastatesanbernardino.jpg" alt="Image 18">
+                    <h2 data-lang-en="California State University" data-lang-ru="California State University">California State University</h2>
+                    <p data-lang-en="State: California" data-lang-ru="штат Калифорния">штат Калифорния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('californiastateOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
-                    <div class="info-overlay" id="trineOverlay">
+                    <div class="info-overlay" id="californiastateOverlay">
                         <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('trineOverlay')">🞬</button>
+                            <button class="close-btn" onclick="closeUniversityInfo('californiastateOverlay')">🞬</button>
                             <div class="popup-body">
                                 <div class="image-container">
-                                    <img src=".image/trine.jpg" alt="Trine University">
+                                    <img src=".image/californiastatesanbernardino.jpg" alt="California State University">
                                 </div>
                                 <div class="content">
-                                    <h2>Trine University</h2>
-                                    <p><strong>Цена:</strong> $26,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="California State University" data-lang-ru="California State University">California State University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$28,000 per year" data-lang-ru="$28,000 в год">$28,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Сильные инженерные программы</li>
-                                        <li>Маленькие классы</li>
-                                        <li>Дружелюбное сообщество</li>
+                                        <li data-lang-en="Diverse study programs" data-lang-ru="Разнообразные программы обучения">Разнообразные программы обучения</li>
+                                        <li data-lang-en="Beautiful California nature" data-lang-ru="Красивая природа Калифорнии">Красивая природа Калифорнии</li>
+                                        <li data-lang-en="Developed infrastructure" data-lang-ru="Развитая инфраструктура">Развитая инфраструктура</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.trine.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.csusb.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="card" style="background-color: #ffffffc1;">
-                    <img src=".image/floridainstitute.jpg" alt="Image 22">
-                    <h2>Florida Institute of Technology</h2>
-                    <p>город Мельбурн, штат Флорида</p>
-                    <button class="university-btn" onclick="openUniversityInfo('floridainstituteOverlay')">Подробнее</button>
-                
-                    <div class="info-overlay" id="floridainstituteOverlay">
-                        <div class="info-popup">
-                            <button class="close-btn" onclick="closeUniversityInfo('floridainstituteOverlay')">🞬</button>
-                            <div class="popup-body">
-                                <div class="image-container">
-                                    <img src=".image/floridainstitute.jpg" alt="Florida Institute of Technology">
-                                </div>
-                                <div class="content">
-                                    <h2>Florida Institute of Technology</h2>
-                                    <p><strong>Цена:</strong> $37,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
-                                    <ul>
-                                        <li>Сильные программы в области технологий и авиации</li>
-                                        <li>Прекрасное расположение на побережье</li>
-                                        <li>Возможности для исследований</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="https://www.fit.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
-                        </div>
-                    </div>
-                </div>
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/goldengate.jpg" alt="Image 23">
-                    <h2>GoldenGate University</h2>
-                    <p>г.Сан-Франциско,Калифорния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('goldengateOverlay')">Подробнее</button>
+                    <h2 data-lang-en="GoldenGate University" data-lang-ru="GoldenGate University">GoldenGate University</h2>
+                    <p data-lang-en="City: San Francisco, California" data-lang-ru="г.Сан-Франциско, Калифорния">г.Сан-Франциско, Калифорния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('goldengateOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="goldengateOverlay">
                         <div class="info-popup">
@@ -685,26 +783,26 @@
                                     <img src=".image/goldengate.jpg" alt="GoldenGate University">
                                 </div>
                                 <div class="content">
-                                    <h2>GoldenGate University</h2>
-                                    <p><strong>Цена:</strong> $30,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="GoldenGate University" data-lang-ru="GoldenGate University">GoldenGate University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$30,000 per year" data-lang-ru="$30,000 в год">$30,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Расположение в центре Сан-Франциско</li>
-                                        <li>Гибкие графики обучения</li>
-                                        <li>Поддержка студентов на высоком уровне</li>
+                                        <li data-lang-en="Location in the heart of San Francisco" data-lang-ru="Расположение в центре Сан-Франциско">Расположение в центре Сан-Франциско</li>
+                                        <li data-lang-en="Flexible study schedules" data-lang-ru="Гибкие графики обучения">Гибкие графики обучения</li>
+                                        <li data-lang-en="High level of student support" data-lang-ru="Поддержка студентов на высоком уровне">Поддержка студентов на высоком уровне</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.ggu.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.ggu.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/arizona.jpg" alt="Image 24">
-                    <h2>Arizona University</h2>
-                    <p>Лэйк Хавасу сити, штат Аризона</p>
-                    <button class="university-btn" onclick="openUniversityInfo('arizonaOverlay')">Подробнее</button>
+                    <h2 data-lang-en="Arizona University" data-lang-ru="Arizona University">Arizona University</h2>
+                    <p data-lang-en="City: Lake Havasu City, Arizona" data-lang-ru="Лэйк Хавасу сити, штат Аризона">Лэйк Хавасу сити, штат Аризона</p>
+                    <button class="university-btn" onclick="openUniversityInfo('arizonaOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="arizonaOverlay">
                         <div class="info-popup">
@@ -714,26 +812,26 @@
                                     <img src=".image/arizona.jpg" alt="Arizona University">
                                 </div>
                                 <div class="content">
-                                    <h2>Arizona University</h2>
-                                    <p><strong>Цена:</strong> $29,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Arizona University" data-lang-ru="Arizona University">Arizona University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$29,000 per year" data-lang-ru="$29,000 в год">$29,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Красивое расположение возле озера</li>
-                                        <li>Разнообразные учебные программы</li>
-                                        <li>Современные лаборатории</li>
+                                        <li data-lang-en="Beautiful location near a lake" data-lang-ru="Красивое расположение возле озера">Красивое расположение возле озера</li>
+                                        <li data-lang-en="Variety of academic programs" data-lang-ru="Разнообразные учебные программы">Разнообразные учебные программы</li>
+                                        <li data-lang-en="Modern laboratories" data-lang-ru="Современные лаборатории">Современные лаборатории</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.arizona.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.arizona.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/truman.jpg" alt="Image 25">
-                    <h2>Truman University</h2>
-                    <p>город Кирксвилле, штат Миссури</p>
-                    <button class="university-btn" onclick="openUniversityInfo('trumanOverlay')">Подробнее</button>
+                    <h2 data-lang-en="Truman University" data-lang-ru="Truman University">Truman University</h2>
+                    <p data-lang-en="City: Kirksville, Missouri" data-lang-ru="город Кирксвилле, штат Миссури">город Кирксвилле, штат Миссури</p>
+                    <button class="university-btn" onclick="openUniversityInfo('trumanOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="trumanOverlay">
                         <div class="info-popup">
@@ -743,26 +841,26 @@
                                     <img src=".image/truman.jpg" alt="Truman University">
                                 </div>
                                 <div class="content">
-                                    <h2>Truman University</h2>
-                                    <p><strong>Цена:</strong> $25,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Truman University" data-lang-ru="Truman University">Truman University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$25,000 per year" data-lang-ru="$25,000 в год">$25,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Высокий уровень преподавания</li>
-                                        <li>Поддержка талантливых студентов</li>
-                                        <li>Тесное сообщество студентов</li>
+                                        <li data-lang-en="High quality teaching" data-lang-ru="Высокий уровень преподавания">Высокий уровень преподавания</li>
+                                        <li data-lang-en="Support for talented students" data-lang-ru="Поддержка талантливых студентов">Поддержка талантливых студентов</li>
+                                        <li data-lang-en="Close-knit student community" data-lang-ru="Тесное сообщество студентов">Тесное сообщество студентов</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.truman.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.truman.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/depaul.jpg" alt="Image 26">
-                    <h2>De Paul University</h2>
-                    <p>город Чикаго, штат Иллинойс</p>
-                    <button class="university-btn" onclick="openUniversityInfo('depaulOverlay')">Подробнее</button>
+                    <h2 data-lang-en="DePaul University" data-lang-ru="De Paul University">De Paul University</h2>
+                    <p data-lang-en="City: Chicago, Illinois" data-lang-ru="город Чикаго, штат Иллинойс">город Чикаго, штат Иллинойс</p>
+                    <button class="university-btn" onclick="openUniversityInfo('depaulOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="depaulOverlay">
                         <div class="info-popup">
@@ -772,26 +870,27 @@
                                     <img src=".image/depaul.jpg" alt="De Paul University">
                                 </div>
                                 <div class="content">
-                                    <h2>De Paul University</h2>
-                                    <p><strong>Цена:</strong> $34,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="DePaul University" data-lang-ru="De Paul University">De Paul University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$34,000 per year" data-lang-ru="$34,000 в год">$34,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Удобное расположение в центре города</li>
-                                        <li>Программы в области бизнеса и технологий</li>
-                                        <li>Современные кампусы</li>
+                                        <li data-lang-en="Convenient location in the city center" data-lang-ru="Удобное расположение в центре города">Удобное расположение в центре города</li>
+                                        <li data-lang-en="Programs in business and technology" data-lang-ru="Программы в области бизнеса и технологий">Программы в области бизнеса и технологий</li>
+                                        <li data-lang-en="Modern campuses" data-lang-ru="Современные кампусы">Современные кампусы</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.depaul.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.depaul.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
                 
+                
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/marymount.jpg" alt="Image 27">
-                    <h2>Marymount University</h2>
-                    <p>город Арлингтон, штат Вирджиния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('marymountOverlay')">Подробнее</button>
+                    <h2 data-lang-en="Marymount University" data-lang-ru="Marymount University">Marymount University</h2>
+                    <p data-lang-en="City: Arlington, Virginia" data-lang-ru="город Арлингтон, штат Вирджиния">город Арлингтон, штат Вирджиния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('marymountOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
                 
                     <div class="info-overlay" id="marymountOverlay">
                         <div class="info-popup">
@@ -801,20 +900,21 @@
                                     <img src=".image/marymount.jpg" alt="Marymount University">
                                 </div>
                                 <div class="content">
-                                    <h2>Marymount University</h2>
-                                    <p><strong>Цена:</strong> $31,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Marymount University" data-lang-ru="Marymount University">Marymount University</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$31,000 per year" data-lang-ru="$31,000 в год">$31,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Близость к Вашингтону</li>
-                                        <li>Сильные программы в области медицины</li>
-                                        <li>Технологическая инфраструктура</li>
+                                        <li data-lang-en="Close to Washington D.C." data-lang-ru="Близость к Вашингтону">Близость к Вашингтону</li>
+                                        <li data-lang-en="Strong medical programs" data-lang-ru="Сильные программы в области медицины">Сильные программы в области медицины</li>
+                                        <li data-lang-en="Advanced technological infrastructure" data-lang-ru="Технологическая инфраструктура">Технологическая инфраструктура</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://marymount.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://marymount.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
+                
                 
                 
             </div>
@@ -825,16 +925,19 @@
     <div id='colleges' class="section3">
         <div class="carousel-container">
             <div class="univers">
-                <h1>COLLEGES</h1>
+                <h1 data-lang-en="COLLEGES" data-lang-ru="КОЛЛЕДЖИ">КОЛЛЕДЖИ</h1>
             </div>
+            
             <button class="nav-button left" onclick="prevSlideColleges()">‹</button>
+            
             <div class="carousel-track">
+                <!-- Menlo College -->
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/menlo.jpg" alt="Menlo College">
-                    <h2>Menlo College</h2>
-                    <p>город Атертон, штат Калифорния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('menloOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Menlo College" data-lang-ru="Menlo College">Menlo College</h2>
+                    <p data-lang-en="City: Atherton, California" data-lang-ru="город Атертон, штат Калифорния">город Атертон, штат Калифорния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('menloOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+    
                     <div class="info-overlay" id="menloOverlay">
                         <div class="info-popup">
                             <button class="close-btn" onclick="closeUniversityInfo('menloOverlay')">🞬</button>
@@ -843,26 +946,28 @@
                                     <img src=".image/menlo.jpg" alt="Menlo College">
                                 </div>
                                 <div class="content">
-                                    <h2>Menlo College</h2>
-                                    <p><strong>Цена:</strong> $45,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Menlo College" data-lang-ru="Menlo College">Menlo College</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$45,000 per year" data-lang-ru="$45,000 в год">$45,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Расположение в сердце Силиконовой долины</li>
-                                        <li>Сильные программы в области бизнеса</li>
-                                        <li>Маленькие классы и индивидуальный подход</li>
+                                        <li data-lang-en="Location in the heart of Silicon Valley" data-lang-ru="Расположение в сердце Силиконовой долины">Расположение в сердце Силиконовой долины</li>
+                                        <li data-lang-en="Strong business programs" data-lang-ru="Сильные программы в области бизнеса">Сильные программы в области бизнеса</li>
+                                        <li data-lang-en="Small classes and personalized approach" data-lang-ru="Маленькие классы и индивидуальный подход">Маленькие классы и индивидуальный подход</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.menlo.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.menlo.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
+    
+                <!-- St. Francis College -->
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/stfrancis.jpg" alt="St. Francis College">
-                    <h2>St. Francis College</h2>
-                    <p>город Бруклин, штат Нью-Йорк</p>
-                    <button class="university-btn" onclick="openUniversityInfo('stfrancisOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="St. Francis College" data-lang-ru="St. Francis College">St. Francis College</h2>
+                    <p data-lang-en="City: Brooklyn, New York" data-lang-ru="город Бруклин, штат Нью-Йорк">город Бруклин, штат Нью-Йорк</p>
+                    <button class="university-btn" onclick="openUniversityInfo('stfrancisOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+    
                     <div class="info-overlay" id="stfrancisOverlay">
                         <div class="info-popup">
                             <button class="close-btn" onclick="closeUniversityInfo('stfrancisOverlay')">🞬</button>
@@ -871,26 +976,28 @@
                                     <img src=".image/stfrancis.jpg" alt="St. Francis College">
                                 </div>
                                 <div class="content">
-                                    <h2>St. Francis College</h2>
-                                    <p><strong>Цена:</strong> $28,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="St. Francis College" data-lang-ru="St. Francis College">St. Francis College</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$28,000 per year" data-lang-ru="$28,000 в год">$28,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Расположение в центре Нью-Йорка</li>
-                                        <li>Широкий выбор гуманитарных программ</li>
-                                        <li>Доступное обучение</li>
+                                        <li data-lang-en="Located in the heart of New York" data-lang-ru="Расположение в центре Нью-Йорка">Расположение в центре Нью-Йорка</li>
+                                        <li data-lang-en="Wide range of humanities programs" data-lang-ru="Широкий выбор гуманитарных программ">Широкий выбор гуманитарных программ</li>
+                                        <li data-lang-en="Affordable tuition" data-lang-ru="Доступное обучение">Доступное обучение</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.sfc.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.sfc.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Lake WIT -->
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/lakewit.jpg" alt="Lake WIT">
-                    <h2>Lake WIT</h2>
-                    <p>город Милуоки, штат Висконсин</p>
-                    <button class="university-btn" onclick="openUniversityInfo('lakewitOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Lake WIT" data-lang-ru="Lake WIT">Lake WIT</h2>
+                    <p data-lang-en="City: Milwaukee, Wisconsin" data-lang-ru="город Милуоки, штат Висконсин">город Милуоки, штат Висконсин</p>
+                    <button class="university-btn" onclick="openUniversityInfo('lakewitOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+    
                     <div class="info-overlay" id="lakewitOverlay">
                         <div class="info-popup">
                             <button class="close-btn" onclick="closeUniversityInfo('lakewitOverlay')">🞬</button>
@@ -899,26 +1006,28 @@
                                     <img src=".image/lakewit.jpg" alt="Lake WIT">
                                 </div>
                                 <div class="content">
-                                    <h2>Lake WIT</h2>
-                                    <p><strong>Цена:</strong> $20,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Lake WIT" data-lang-ru="Lake WIT">Lake WIT</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$20,000 per year" data-lang-ru="$20,000 в год">$20,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Хорошие технические программы</li>
-                                        <li>Современные лаборатории</li>
-                                        <li>Дружелюбное сообщество</li>
+                                        <li data-lang-en="Good technical programs" data-lang-ru="Хорошие технические программы">Хорошие технические программы</li>
+                                        <li data-lang-en="Modern laboratories" data-lang-ru="Современные лаборатории">Современные лаборатории</li>
+                                        <li data-lang-en="Friendly community" data-lang-ru="Дружелюбное сообщество">Дружелюбное сообщество</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.wit.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.wit.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Bellevue College -->
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/bellevue.jpg" alt="Bellevue College">
-                    <h2>Bellevue College</h2>
-                    <p>город Бельвью, штат Вашингтон</p>
-                    <button class="university-btn" onclick="openUniversityInfo('bellevueOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="Bellevue College" data-lang-ru="Bellevue College">Bellevue College</h2>
+                    <p data-lang-en="City: Bellevue, Washington" data-lang-ru="город Бельвью, штат Вашингтон">город Бельвью, штат Вашингтон</p>
+                    <button class="university-btn" onclick="openUniversityInfo('bellevueOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+    
                     <div class="info-overlay" id="bellevueOverlay">
                         <div class="info-popup">
                             <button class="close-btn" onclick="closeUniversityInfo('bellevueOverlay')">🞬</button>
@@ -927,26 +1036,28 @@
                                     <img src=".image/bellevue.jpg" alt="Bellevue College">
                                 </div>
                                 <div class="content">
-                                    <h2>Bellevue College</h2>
-                                    <p><strong>Цена:</strong> $22,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="Bellevue College" data-lang-ru="Bellevue College">Bellevue College</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$22,000 per year" data-lang-ru="$22,000 в год">$22,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Программы с акцентом на IT</li>
-                                        <li>Близость к Сиэтлу</li>
-                                        <li>Доступное общежитие</li>
+                                        <li data-lang-en="Programs focused on IT" data-lang-ru="Программы с акцентом на IT">Программы с акцентом на IT</li>
+                                        <li data-lang-en="Proximity to Seattle" data-lang-ru="Близость к Сиэтлу">Близость к Сиэтлу</li>
+                                        <li data-lang-en="Affordable dorms" data-lang-ru="Доступное общежитие">Доступное общежитие</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.bellevuecollege.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.bellevuecollege.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
+    
+                <!-- De Anza College -->
                 <div class="card" style="background-color: #ffffffc1;">
                     <img src=".image/deanza.jpg" alt="De Anza College">
-                    <h2>De Anza College</h2>
-                    <p>город Купертино, штат Калифорния</p>
-                    <button class="university-btn" onclick="openUniversityInfo('deanzaOverlay')">Подробнее</button>
-                
+                    <h2 data-lang-en="De Anza College" data-lang-ru="De Anza College">De Anza College</h2>
+                    <p data-lang-en="City: Cupertino, California" data-lang-ru="город Купертино, штат Калифорния">город Купертино, штат Калифорния</p>
+                    <button class="university-btn" onclick="openUniversityInfo('deanzaOverlay')" data-lang-en="Learn More" data-lang-ru="Подробнее">Подробнее</button>
+    
                     <div class="info-overlay" id="deanzaOverlay">
                         <div class="info-popup">
                             <button class="close-btn" onclick="closeUniversityInfo('deanzaOverlay')">🞬</button>
@@ -955,133 +1066,137 @@
                                     <img src=".image/deanza.jpg" alt="De Anza College">
                                 </div>
                                 <div class="content">
-                                    <h2>De Anza College</h2>
-                                    <p><strong>Цена:</strong> $8,000 в год</p>
-                                    <p><strong>Плюсы:</strong></p>
+                                    <h2 data-lang-en="De Anza College" data-lang-ru="De Anza College">De Anza College</h2>
+                                    <p><strong data-lang-en="Price:" data-lang-ru="Цена:">Цена:</strong> <span data-lang-en="$16,000 per year" data-lang-ru="$16,000 в год">$16,000 в год</span></p>
+                                    <p><strong data-lang-en="Advantages:" data-lang-ru="Плюсы:">Плюсы:</strong></p>
                                     <ul>
-                                        <li>Отличное место для начала обучения</li>
-                                        <li>Перевод в университеты Калифорнии</li>
-                                        <li>Удобное расположение</li>
+                                        <li data-lang-en="Excellent STEM programs" data-lang-ru="Отличные STEM программы">Отличные STEM программы</li>
+                                        <li data-lang-en="Strong transfer programs to universities" data-lang-ru="Сильные программы перевода в университеты">Сильные программы перевода в университеты</li>
+                                        <li data-lang-en="Located in Silicon Valley" data-lang-ru="Расположение в Силиконовой долине">Расположение в Силиконовой долине</li>
                                     </ul>
                                 </div>
                             </div>
-                            <a href="https://www.deanza.edu/" target="_blank" class="official-site-btn">Официальный сайт</a>
+                            <a href="https://www.deanza.edu/" target="_blank" class="official-site-btn" data-lang-en="Official Website" data-lang-ru="Официальный сайт">Официальный сайт</a>
                         </div>
                     </div>
                 </div>
             </div>
+    
             <button class="nav-button right" onclick="nextSlideColleges()">›</button>
         </div>
     </div>
+    
 
     <section id="about" class="section">
-        <h1 class="section-title">ПОЧЕМУ ELITE ACADEMY?</h1>
-
+        <h1 class="section-title" data-lang-en="WHY ELITE ACADEMY?" data-lang-ru="ПОЧЕМУ ELITE ACADEMY?">ПОЧЕМУ ELITE ACADEMY?</h1>
+    
         <div class="info-block">
             <div class="info-item">
-                <span class="tag">#ОТПРАВИЛИ БОЛЕЕ 500 СТУДЕНТОВ В АМЕРИКУ!</span>
-                <p>Наша компания помогла уже более 500 студентам сдать правильно документы и поступить в лучшие вузы.</p>
+                <span class="tag" data-lang-en="#SENT OVER 500 STUDENTS TO THE USA!" data-lang-ru="#ОТПРАВИЛИ БОЛЕЕ 500 СТУДЕНТОВ В АМЕРИКУ!">#ОТПРАВИЛИ БОЛЕЕ 500 СТУДЕНТОВ В АМЕРИКУ!</span>
+                <p data-lang-en="Our company has already helped more than 500 students submit the correct documents and get into the best universities." data-lang-ru="Наша компания помогла уже более 500 студентам сдать правильно документы и поступить в лучшие вузы.">Наша компания помогла уже более 500 студентам сдать правильно документы и поступить в лучшие вузы.</p>
             </div>
             <div class="info-item">
-                <span class="tag">#ЗАЧИСЛЕНИЕ В ТОПОВЫЕ ВУЗЫ СО СКИДКОЙ</span>
-                <p>Мы помогаем студентам не только поступить, но и получить гранты и стипендии, благодаря высоким результатам на тесте Дуолинго и качественно написанным рекомендательным, мотивационным письмам</p>
+                <span class="tag" data-lang-en="#ADMISSION TO TOP UNIVERSITIES WITH DISCOUNTS" data-lang-ru="#ЗАЧИСЛЕНИЕ В ТОПОВЫЕ ВУЗЫ СО СКИДКОЙ">#ЗАЧИСЛЕНИЕ В ТОПОВЫЕ ВУЗЫ СО СКИДКОЙ</span>
+                <p data-lang-en="We help students not only get admitted, but also obtain grants and scholarships due to high results on the Duolingo test and well-written recommendation and motivational letters." data-lang-ru="Мы помогаем студентам не только поступить, но и получить гранты и стипендии, благодаря высоким результатам на тесте Дуолинго и качественно написанным рекомендательным, мотивационным письмам">Мы помогаем студентам не только поступить, но и получить гранты и стипендии, благодаря высоким результатам на тесте Дуолинго и качественно написанным рекомендательным, мотивационным письмам</p>
             </div>
             <div class="info-item">
-                <span class="tag">#ПОДАЧА В НЕОГРАНИЧЕННОЕ КОЛИЧЕСТВО УНИВЕРСИТЕТОВ</span>
-                <p>Каждому студенту предоставляется возможность подать документы в неограниченное количество программ из нашей обширной базы, включающей более 500 универститетов и колледжей в США и Италии</p>
+                <span class="tag" data-lang-en="#APPLICATION TO UNLIMITED NUMBER OF UNIVERSITIES" data-lang-ru="#ПОДАЧА В НЕОГРАНИЧЕННОЕ КОЛИЧЕСТВО УНИВЕРСИТЕТОВ">#ПОДАЧА В НЕОГРАНИЧЕННОЕ КОЛИЧЕСТВО УНИВЕРСИТЕТОВ</span>
+                <p data-lang-en="Each student is provided with the opportunity to apply to an unlimited number of programs from our extensive database, which includes more than 500 universities and colleges in the USA and Italy." data-lang-ru="Каждому студенту предоставляется возможность подать документы в неограниченное количество программ из нашей обширной базы, включающей более 500 универститетов и колледжей в США и Италии">Каждому студенту предоставляется возможность подать документы в неограниченное количество программ из нашей обширной базы, включающей более 500 универститетов и колледжей в США и Италии</p>
             </div>
             <div class="info-item">
-                <span class="tag">#ИНДИВИДУАЛЬНАЯ ПОДГОТОВКА К DUOLINGO ENGLISH-TEST</span>
-                <p>Благодаря нашей уникальной методике студенты достигают высоких результатов.</p>
+                <span class="tag" data-lang-en="#INDIVIDUAL PREPARATION FOR DUOLINGO ENGLISH TEST" data-lang-ru="#ИНДИВИДУАЛЬНАЯ ПОДГОТОВКА К DUOLINGO ENGLISH-TEST">#ИНДИВИДУАЛЬНАЯ ПОДГОТОВКА К DUOLINGO ENGLISH-TEST</span>
+                <p data-lang-en="Thanks to our unique methodology, students achieve high results." data-lang-ru="Благодаря нашей уникальной методике студенты достигают высоких результатов.">Благодаря нашей уникальной методике студенты достигают высоких результатов.</p>
             </div>
             <div class="info-item">
-                <span class="tag">#ПОЛНОЕ ПРОХОЖДЕНИЕ ВСЕГО ПРОЦЕССА СТРОГО ИНДИВИДУАЛЬНО</span>
-                <p>Мы предоставим вам на каждый этап вашего поступления отдельного ментора.</p>
+                <span class="tag" data-lang-en="#FULL PASSAGE OF THE ENTIRE PROCESS STRICTLY INDIVIDUALLY" data-lang-ru="#ПОЛНОЕ ПРОХОЖДЕНИЕ ВСЕГО ПРОЦЕССА СТРОГО ИНДИВИДУАЛЬНО">#ПОЛНОЕ ПРОХОЖДЕНИЕ ВСЕГО ПРОЦЕССА СТРОГО ИНДИВИДУАЛЬНО</span>
+                <p data-lang-en="We will provide you with a separate mentor for each stage of your admission." data-lang-ru="Мы предоставим вам на каждый этап вашего поступления отдельного ментора.">Мы предоставим вам на каждый этап вашего поступления отдельного ментора.</p>
             </div>
             <div class="info-item">
-                <span class="tag">#ИНДИВИДУАЛЬНАЯ И ПРАВИЛЬНАЯ ПОДГОТОВКА К ИНТЕРВЬЮ - МОСК ИНТЕРВЬЮ</span>
-                <p>Квалифицированные ментора найдут индивидуальный подход к каждому ученику.</p>
+                <span class="tag" data-lang-en="#INDIVIDUAL AND CORRECT PREPARATION FOR INTERVIEWS - MOSC INTERVIEW" data-lang-ru="#ИНДИВИДУАЛЬНАЯ И ПРАВИЛЬНАЯ ПОДГОТОВКА К ИНТЕРВЬЮ - МОСК ИНТЕРВЬЮ">#ИНДИВИДУАЛЬНАЯ И ПРАВИЛЬНАЯ ПОДГОТОВКА К ИНТЕРВЬЮ - МОСК ИНТЕРВЬЮ</span>
+                <p data-lang-en="Qualified mentors will find an individual approach to each student." data-lang-ru="Квалифицированные ментора найдут индивидуальный подход к каждому ученику.">Квалифицированные ментора найдут индивидуальный подход к каждому ученику.</p>
             </div>
         </div>
     </section>
+    
 
 
     <section id="about" class="programs">
-        <h1>ПРОГРАММЫ ОБУЧЕНИЯ</h1>
+        <h1 data-lang-en="TRAINING PROGRAMS" data-lang-ru="ПРОГРАММЫ ОБУЧЕНИЯ">ПРОГРАММЫ ОБУЧЕНИЯ</h1>
         <div class="programs-container">
-        <!-- Bachelor's Degree -->
-        <div class="program-item">
-            <div class="program-header">
-            <h2>Bachelor's Degree</h2>
+            <!-- Bachelor's Degree -->
+            <div class="program-item">
+                <div class="program-header">
+                    <h2 data-lang-en="Bachelor's Degree" data-lang-ru="Bachelor's Degree">Bachelor's Degree</h2>
+                </div>
+                <ol>
+                    <li data-lang-en="4 years of study" data-lang-ru="4 года обучения">4 года обучения</li>
+                    <li data-lang-en="Flexible schedule" data-lang-ru="Гибкий график">Гибкий график</li>
+                    <li data-lang-en="Discounts up to 90%" data-lang-ru="Скидки до 90%">Скидки до 90%</li>
+                    <li data-lang-en="Higher education" data-lang-ru="Высшее образование">Высшее образование</li>
+                    <li data-lang-en="Contract: $10k, $15k and above" data-lang-ru="Контракт: $10k, $15k и выше">Контракт: $10k, $15k и выше</li>
+                </ol>
             </div>
-            <ol>
-            <li>4 года обучения</li>
-            <li>Гибкий график</li>
-            <li>Скидки до 90%</li>
-            <li>Высшее образование</li>
-            <li>Контракт: $10k, $15k и выше</li>
-            </ol>
-        </div>
     
-        <!-- Associate Degree -->
-        <div class="program-item">
-            <div class="program-header">
-            <h2>Associate Degree</h2>
+            <!-- Associate Degree -->
+            <div class="program-item">
+                <div class="program-header">
+                    <h2 data-lang-en="Associate Degree" data-lang-ru="Associate Degree">Associate Degree</h2>
+                </div>
+                <ol>
+                    <li data-lang-en="2+2 scheme: 2 years in college, 2 years in university" data-lang-ru="Схема 2+2: 2 года в колледже, 2 года в университете">Схема 2+2: 2 года в колледже, 2 года в университете</li>
+                    <li data-lang-en="Minimal document requirements" data-lang-ru="Минимальные требования по документам">Минимальные требования по документам</li>
+                    <li data-lang-en="Contract: $8k, $10k" data-lang-ru="Контракт: $8k, $10k">Контракт: $8k, $10k</li>
+                </ol>
             </div>
-            <ol>
-            <li>Схема 2+2: 2 года в колледже, 2 года в университете</li>
-            <li>Минимальные требования по документам</li>
-            <li>Контракт: $8k, $10k</li>
-            </ol>
-        </div>
     
-        <!-- High School Completion -->
-        <div class="program-item">
-            <div class="program-header">
-            <h2>High School Completion</h2>
+            <!-- High School Completion -->
+            <div class="program-item">
+                <div class="program-header">
+                    <h2 data-lang-en="High School Completion" data-lang-ru="High School Completion">High School Completion</h2>
+                </div>
+                <ol>
+                    <li data-lang-en="2 years of study + 1 year in college" data-lang-ru="2 года обучения + 1 год колледжа">2 года обучения + 1 год колледжа</li>
+                    <li data-lang-en="100% continuation of studies in top universities" data-lang-ru="100% продолжение обучения в топовых ВУЗах">100% продолжение обучения в топовых ВУЗах</li>
+                    <li data-lang-en="Contract: $8k, $12k" data-lang-ru="Контракт: $8k, $12k">Контракт: $8k, $12k</li>
+                </ol>
             </div>
-            <ol>
-            <li>2 года обучения + 1 год колледжа</li>
-            <li>100% продолжение обучения в топовых ВУЗах</li>
-            <li>Контракт: $8k, $12k</li>
-            </ol>
-        </div>
     
-        <!-- Master's Degree -->
-        <div class="program-item">
-            <div class="program-header">
-            <h2>Master' s    Degree</h2>
+            <!-- Master's Degree -->
+            <div class="program-item">
+                <div class="program-header">
+                    <h2 data-lang-en="Master's Degree" data-lang-ru="Master' s Degree">Master's Degree</h2>
+                </div>
+                <ol>
+                    <li data-lang-en="2 years of study" data-lang-ru="2 года обучения">2 года обучения</li>
+                    <li data-lang-en="Opportunity to change profession" data-lang-ru="Возможность смены профессии">Возможность смены профессии</li>
+                    <li data-lang-en="1-2 years for job search and internships" data-lang-ru="1-2 года на поиск работы и стажировку">1-2 года на поиск работы и стажировку</li>
+                    <li data-lang-en="Contract: $15k, $20k" data-lang-ru="Контракт: $15k, $20k">Контракт: $15k, $20k</li>
+                </ol>
             </div>
-            <ol>
-            <li>2 года обучения</li>
-            <li>Возможность смены профессии</li>
-            <li>1-2 года на поиск работы и стажировку</li>
-            <li>Контракт: $15k, $20k</li>
-            </ol>
-        </div>
         </div>
     </section>
+    
 
 
     <section id="about" class="admission-steps">
-        <h1 class="admission-header">ПРОЦЕСС ПОСТУПЛЕНИЯ</h1>
+        <h1 class="admission-header" data-lang-en="ADMISSION PROCESS" data-lang-ru="ПРОЦЕСС ПОСТУПЛЕНИЯ">ПРОЦЕСС ПОСТУПЛЕНИЯ</h1>
     
         <div class="admission-step active" id="admission-step-1">
             <div class="admission-step-number">1</div>
             <div class="admission-step-background" style="background-image: url('.image/step1.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Подписание договора</h2>
-                <p class="admission-step-description">Чтобы закрепить наши договоренности и приступить к подготовке.</p>
+                <h2 class="admission-step-title" data-lang-en="Signing the Contract" data-lang-ru="Подписание договора">Подписание договора</h2>
+                <p class="admission-step-description" data-lang-en="To confirm our agreements and start preparing." data-lang-ru="Чтобы закрепить наши договоренности и приступить к подготовке.">Чтобы закрепить наши договоренности и приступить к подготовке.</p>
             </div>
         </div>
     
-        <!-- Шаг 2 -->
+        <!-- Step 2 -->
         <div class="admission-step" id="admission-step-2">
             <div class="admission-step-number">2</div>
             <div class="admission-step-background" style="background-image: url('.image/step2.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Английские курсы</h2>
-                <p class="admission-step-description">Укрепляем знания английского языка, чтобы вы уверенно сдали международные тесты.</p>
+                <h2 class="admission-step-title" data-lang-en="English Courses" data-lang-ru="Английские курсы">Английские курсы</h2>
+                <p class="admission-step-description" data-lang-en="Strengthen your English skills to confidently pass international tests." data-lang-ru="Укрепляем знания английского языка, чтобы вы уверенно сдали международные тесты.">Укрепляем знания английского языка, чтобы вы уверенно сдали международные тесты.</p>
             </div>
         </div>
     
@@ -1089,8 +1204,8 @@
             <div class="admission-step-number">3</div>
             <div class="admission-step-background" style="background-image: url('.image/step3.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Подготовка к тесту DUOLINGO</h2>
-                <p class="admission-step-description">Помогаем подготовиться к сдаче международного языкового экзамена.</p>
+                <h2 class="admission-step-title" data-lang-en="Preparation for DUOLINGO Test" data-lang-ru="Подготовка к тесту DUOLINGO">Подготовка к тесту DUOLINGO</h2>
+                <p class="admission-step-description" data-lang-en="Helping you prepare for the international language exam." data-lang-ru="Помогаем подготовиться к сдаче международного языкового экзамена.">Помогаем подготовиться к сдаче международного языкового экзамена.</p>
             </div>
         </div>
     
@@ -1098,8 +1213,8 @@
             <div class="admission-step-number">4</div>
             <div class="admission-step-background" style="background-image: url('.image/step4.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Сбор документов</h2>
-                <p class="admission-step-description">Собираем все документы для подачи в университеты.</p>
+                <h2 class="admission-step-title" data-lang-en="Document Collection" data-lang-ru="Сбор документов">Сбор документов</h2>
+                <p class="admission-step-description" data-lang-en="Collecting all the documents for university application." data-lang-ru="Собираем все документы для подачи в университеты.">Собираем все документы для подачи в университеты.</p>
             </div>
         </div>
     
@@ -1107,8 +1222,8 @@
             <div class="admission-step-number">5</div>
             <div class="admission-step-background" style="background-image: url('.image/step5.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Подбор программы и университета</h2>
-                <p class="admission-step-description">Выбираем подходящие программы и учебные заведения.</p>
+                <h2 class="admission-step-title" data-lang-en="Program and University Selection" data-lang-ru="Подбор программы и университета">Подбор программы и университета</h2>
+                <p class="admission-step-description" data-lang-en="Selecting suitable programs and universities." data-lang-ru="Выбираем подходящие программы и учебные заведения.">Выбираем подходящие программы и учебные заведения.</p>
             </div>
         </div>
     
@@ -1116,8 +1231,8 @@
             <div class="admission-step-number">6</div>
             <div class="admission-step-background" style="background-image: url('.image/step6.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Отправка документов</h2>
-                <p class="admission-step-description">Подготавливаем и отправляем все необходимые документы в университеты.</p>
+                <h2 class="admission-step-title" data-lang-en="Document Submission" data-lang-ru="Отправка документов">Отправка документов</h2>
+                <p class="admission-step-description" data-lang-en="Preparing and sending all necessary documents to universities." data-lang-ru="Подготавливаем и отправляем все необходимые документы в университеты.">Подготавливаем и отправляем все необходимые документы в университеты.</p>
             </div>
         </div>
     
@@ -1125,8 +1240,8 @@
             <div class="admission-step-number">7</div>
             <div class="admission-step-background" style="background-image: url('.image/step7.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Получение пригласительных писем</h2>
-                <p class="admission-step-description">Ожидаем и обрабатываем официальные приглашения от университетов.</p>
+                <h2 class="admission-step-title" data-lang-en="Receiving Invitation Letters" data-lang-ru="Получение пригласительных писем">Получение пригласительных писем</h2>
+                <p class="admission-step-description" data-lang-en="Waiting for and processing official invitations from universities." data-lang-ru="Ожидаем и обрабатываем официальные приглашения от университетов.">Ожидаем и обрабатываем официальные приглашения от университетов.</p>
             </div>
         </div>
     
@@ -1134,8 +1249,8 @@
             <div class="admission-step-number">8</div>
             <div class="admission-step-background" style="background-image: url('.image/step8.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Заполнение анкеты DS-160</h2>
-                <p class="admission-step-description">Помогаем заполнить анкету для визового собеседования.</p>
+                <h2 class="admission-step-title" data-lang-en="DS-160 Form Completion" data-lang-ru="Заполнение анкеты DS-160">Заполнение анкеты DS-160</h2>
+                <p class="admission-step-description" data-lang-en="Helping to fill out the form for the visa interview." data-lang-ru="Помогаем заполнить анкету для визового собеседования.">Помогаем заполнить анкету для визового собеседования.</p>
             </div>
         </div>
     
@@ -1143,8 +1258,8 @@
             <div class="admission-step-number">9</div>
             <div class="admission-step-background" style="background-image: url('.image/step9.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Подготовка к визовому интервью</h2>
-                <p class="admission-step-description">Проводим тренировки для успешного прохождения интервью.</p>
+                <h2 class="admission-step-title" data-lang-en="Visa Interview Preparation" data-lang-ru="Подготовка к визовому интервью">Подготовка к визовому интервью</h2>
+                <p class="admission-step-description" data-lang-en="Conducting training for a successful interview." data-lang-ru="Проводим тренировки для успешного прохождения интервью.">Проводим тренировки для успешного прохождения интервью.</p>
             </div>
         </div>
     
@@ -1152,10 +1267,11 @@
             <div class="admission-step-number">10</div>
             <div class="admission-step-background" style="background-image: url('.image/step10.jpg');"></div>
             <div class="admission-step-content">
-                <h2 class="admission-step-title">Отправка в США</h2>
-                <p class="admission-step-description">Готовимся к вашему отъезду и началу обучения в Америке.</p>
+                <h2 class="admission-step-title" data-lang-en="Departure to the USA" data-lang-ru="Отправка в США">Отправка в США</h2>
+                <p class="admission-step-description" data-lang-en="Preparing for your departure and start of studies in the USA." data-lang-ru="Готовимся к вашему отъезду и началу обучения в Америке.">Готовимся к вашему отъезду и началу обучения в Америке.</p>
             </div>
         </div>
+    
     
         <div class="admission-indicators">
             <span class="admission-indicator active"></span>
@@ -1171,72 +1287,82 @@
         </div>
     
         <div class="admission-navigation">
-            <button id="admission-prevBtn">Назад</button>
-            <button id="admission-nextBtn">Далее</button>
+            <button id="admission-prevBtn" data-lang-en="Back" data-lang-ru="Назад">Назад</button>
+            <button id="admission-nextBtn" data-lang-en="Next" data-lang-ru="Далее">Далее</button>
+            
         </div>
     </section>
 
     <section id="students" class="section4">
         <div class="container">
-            <h1 class="section-title">STUDENTS IN USA</h1>
-            <h2 class="section-subtitle">Узнайте, как наши студенты наслаждаются жизнью и учёбой в США</h2>
-            <h2 class="section-subtitle">Наведите на фотографию для информации ⊡</h2>
+            <h1 class="section-title" data-lang-en="Students in the USA" data-lang-ru="СТУДЕНТЫ В США">СТУДЕНТЫ В США</h1>
+            <h2 class="section-subtitle" data-lang-en="See how our students enjoy life and studies in the USA" data-lang-ru="Узнайте, как наши студенты наслаждаются жизнью и учёбой в США">Узнайте, как наши студенты наслаждаются жизнью и учёбой в США</h2>
+            <h2 class="section-subtitle" data-lang-en="Hover over the photo for more information ⊡" data-lang-ru="Наведите на фотографию для информации ⊡">Наведите на фотографию для информации ⊡</h2>
+            
             <div class="gallery" id="gallery">
                 <!-- First 4 photos -->
                 <div class="gallery-item">
                     <img src=".image/student1.jpg" alt="Баель">
                     <div class="overlay">
-                        <p>Баель - парень с Нооката, проходил полное обучение в онлайн формате, сдал Duolingo тест на 105 баллов и учится в Bellevue college</p>
+                        <p data-lang-en="Bael - is a guy from Nookat, completed full training online, passed the Duolingo test with 105 points and is studying at Bellevue college" data-lang-ru="Баель - парень с Нооката, проходил полное обучение в онлайн формате, сдал Duolingo тест на 105 баллов и учится в Bellevue college">Баель - парень с Нооката, проходил полное обучение в онлайн формате, сдал Duolingo тест на 105 баллов и учится в Bellevue college</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src=".image/student2.jpg" alt="Амир">
                     <div class="overlay">
-                        <p>Амир - за счет своих навыков по баскетболу поступил в более 20 вузов и получил огромные скидки. На данный момент учится в Kalamazoo college</p>
+                        <p data-lang-en="Amir - thanks to his basketball skills, he got into more than 20 universities and received huge discounts. He is currently studying at Kalamazoo college" data-lang-ru="Амир - за счет своих навыков по баскетболу поступил в более 20 вузов и получил огромные скидки. На данный момент учится в Kalamazoo college">Амир - за счет своих навыков по баскетболу поступил в более 20 вузов и получил огромные скидки. На данный момент учится в Kalamazoo college</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src=".image/student3.jpg" alt="Student 3">
+                    <img src=".image/student3.jpg" alt="Айбек">
                     <div class="overlay">
-                        <p>Айбек - все процессы поступления прошел всего за полтора месяца и улетел. Учится в Bellevue college</p>
+                        <p data-lang-en="Aybek - completed all the admission processes in just a month and a half and flew out. He is studying at Bellevue college" data-lang-ru="Айбек - все процессы поступления прошел всего за полтора месяца и улетел. Учится в Bellevue college">Айбек - все процессы поступления прошел всего за полтора месяца и улетел. Учится в Bellevue college</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src=".image/student4.jpg" alt="Ислам">
                     <div class="overlay">
-                        <p>Ислам - не смотря на то, что у него Российское гражданство, получил визу. Сдал Duolingo на 115 баллов и улетел в Чикаго</p>
+                        <p data-lang-en="Islam - despite having Russian citizenship, he received a visa. He passed Duolingo with 115 points and flew to Chicago" data-lang-ru="Ислам - не смотря на то, что у него Российское гражданство, получил визу. Сдал Duolingo на 115 баллов и улетел в Чикаго">Ислам - не смотря на то, что у него Российское гражданство, получил визу. Сдал Duolingo на 115 баллов и улетел в Чикаго</p>
                     </div>
                 </div>
             </div>
-            <button id="show-more" class="show-more">Показать больше▼</button>
-            <button id="hide-more" class="hide-more" style="display: none;">Скрыть⮌</button>
+    
+            <button id="show-more" class="show-more" data-lang-en="Show More" data-lang-ru="Показать больше">Показать больше</button>
+            <button id="hide-more" class="hide-more" style="display: none;" data-lang-en="Hide" data-lang-ru="Скрыть">Скрыть</button>
         </div>
     </section>
+    
       
       
     
         
-      <footer id="contact">
+    <footer id="contact">
         <footer class="site-footer">
             <div class="footer-container">
                 <!-- О компании -->
                 <div class="footer-section footer-about">
-                    <h2>О нас</h2>
-                    <p>Elite Academy помогает студентам достигать мечты, получая образование в США. Мы предлагаем профессиональный подход, индивидуальную поддержку и помощь на всех этапах поступления.</p>
+                    <h2 data-lang-en="About Us" data-lang-ru="О нас">О нас</h2>
+                    <p data-lang-en="Elite Academy helps students achieve their dreams of getting an education in the USA. We offer a professional approach, personalized support, and assistance at all stages of admission." data-lang-ru="Elite Academy помогает студентам достигать мечты, получая образование в США. Мы предлагаем профессиональный подход, индивидуальную поддержку и помощь на всех этапах поступления.">
+                        Elite Academy помогает студентам достигать мечты, получая образование в США. Мы предлагаем профессиональный подход, индивидуальную поддержку и помощь на всех этапах поступления.
+                    </p>
                 </div>
     
                 <!-- Контактная информация -->
                 <div class="footer-section footer-contact">
-                    <h2>Контакты</h2>
+                    <h2 data-lang-en="Contacts" data-lang-ru="Контакты">Контакты</h2>
                     <ul>
-                        <li><strong>Телефон:</strong> <a href="tel:+996555720712">+996 555 720 712</a></li>
-                        <li><strong>Email:</strong> <a href="mailto:apply@eliteacademy.international">eliteacademykg@gmail.com</a></li>
-                        <li><strong>Адрес:</strong> ул.Исы Ахунбаева 169, БЦ Бинокль
+                        <li><strong data-lang-en="Phone:" data-lang-ru="Телефон:">Телефон:</strong> <a href="tel:+996555720712">+996 555 720 712</a></li>
+                        <li><strong data-lang-en="Email:" data-lang-ru="Email:">Email:</strong> <a href="mailto:apply@eliteacademy.international">eliteacademykg@gmail.com</a></li>
+                        <li><strong data-lang-en="Address:" data-lang-ru="Адрес:">Адрес:</strong> ул.Исы Ахунбаева 169, БЦ Бинокль</li>
+                        <li><strong data-lang-en="GET A CONSULTATION RIGHT NOW" data-lang-ru="ПОЛУЧИ КОНСУЛЬТАЦИЮ ПРЯМО СЕЙЧАЙ">ПОЛУЧИ КОНСУЛЬТАЦИЮ ПРЯМО СЕЙЧАЙ</strong></li>
+                        <button class="cta-button" onclick="toggleForm()" data-lang-en="Consultation" data-lang-ru="Консультация">Консультация</button>
+                    </ul>
+                    <!-- <button class="cta-button" onclick="toggleForm()" data-lang-en="Consultation" data-lang-ru="Консультация">Консультация</button> -->
                 </div>
     
                 <!-- Социальные сети -->
                 <div class="footer-section footer-social">
-                    <h2>Мы в соцсетях</h2>
+                    <h2 data-lang-en="We are on social media" data-lang-ru="Мы в соцсетях">Мы в соцсетях</h2>
                     <div class="social-icons">
                         <a href="https://www.tiktok.com/@eliteacademy_kg?_t=ZS-8t2yxk0UgcR&_r=1" target="_blank" class="social-icon">
                             <img src=".image/logo-tiktok.png" alt="TikTok">
@@ -1253,7 +1379,7 @@
     
             <!-- Карта -->
             <div class="map-container">
-                <h2>Мы на карте</h2>
+                <h2 data-lang-en="We are on the map" data-lang-ru="Мы на карте">Мы на карте</h2>
                 <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
                 <script charset="utf-8">
                     new DGWidgetLoader({
@@ -1280,7 +1406,9 @@
     
             <!-- Copyright -->
             <div class="footer-bottom">
-                <p>&copy; 2024 Elite Academy. Все права защищены.</p>
+                <p data-lang-en="© 2024 Elite Academy. All rights reserved." data-lang-ru="© 2024 Elite Academy. Все права защищены.">
+                    © 2024 Elite Academy. Все права защищены.
+                </p>
             </div>
         </footer>
     </footer>
