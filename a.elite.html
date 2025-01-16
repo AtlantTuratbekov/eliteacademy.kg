@@ -75,38 +75,44 @@
     </section>
     
     <!-- ФОРМА -->
-      <div class="overlay-bg" id="overlay" onclick="toggleForm()"></div>
-      <button class="close-button" onclick="toggleForm()">×</button>
-      <div class="form-container" id="form-container">
-        <h2 data-lang-en="" data-lang-ru="">ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.</h2>
+    <div class="overlay-bg" id="overlay" onclick="toggleForm()"></div>
+    <button class="close-button" onclick="toggleForm()">×</button>
+    <div class="form-container" id="form-container">
+        <h2 data-lang-en="FILL OUT THE FORM AND WE WILL CONTACT YOU FOR A FREE CONSULTATION." 
+            data-lang-ru="ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.">
+            ЗАПОЛНИ АНКЕТУ, И МЫ СВЯЖЕМСЯ С ТОБОЙ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ.
+        </h2>
         <form>
-          <input data-lang-en="" data-lang-ru="" type="text" placeholder="Имя" required>
-          <input data-lang-en="" data-lang-ru="" type="number" placeholder="Возраст" required>
-          <input data-lang-en="" data-lang-ru="" list="english-levels" placeholder="Уровень английского" required>
-          <datalist id="english-levels">
-            <option value="А1 (Beginner) начальный уровень">
-            <option value="А2 (Elementary) элементарный уровень">
-            <option value="В1 (Pre-Intermediate) ниже-среднего">
-            <option value="В2 (Intermediate) средний уровень">
-            <option value="С1 (Upper-Intermediate) или выше-среднего">
-            <option value="С2 (Advanced) продвинутый уровень">
-          </datalist>
-          <input list="regions" placeholder="Область проживания" required>
-          <datalist id="regions">
-            <option value="г. Бишкек">
-            <option value="Чуйская область">
-            <option value="Ошская область">
-            <option value="г. Ош">
-            <option value="Джалал-Абадская область">
-            <option value="Нарынская область">
-            <option value="Таласская область">
-            <option value="Иссык-Кульская область">
-            <option value="Баткенская область">
-          </datalist>
-          <input data-lang-en="" data-lang-ru="" type="tel" placeholder="Номер телефона" required>
-          <button data-lang-en="" data-lang-ru="" type="submit">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+            <input data-lang-en="Name" data-lang-ru="Имя" type="text" placeholder="Имя" required>
+            <input data-lang-en="Age" data-lang-ru="Возраст" type="number" placeholder="Возраст" required>
+            <input data-lang-en="English Level" data-lang-ru="Уровень английского" list="english-levels" placeholder="Уровень английского" required>
+            <datalist id="english-levels">
+                <option data-lang-en="A1 (Beginner) basic level" data-lang-ru="А1 (Beginner) начальный уровень" value="А1 (Beginner) начальный уровень">
+                <option data-lang-en="A2 (Elementary) elementary level" data-lang-ru="А2 (Elementary) элементарный уровень" value="А2 (Elementary) элементарный уровень">
+                <option data-lang-en="B1 (Pre-Intermediate) below average" data-lang-ru="В1 (Pre-Intermediate) ниже-среднего" value="В1 (Pre-Intermediate) ниже-среднего">
+                <option data-lang-en="B2 (Intermediate) average level" data-lang-ru="В2 (Intermediate) средний уровень" value="В2 (Intermediate) средний уровень">
+                <option data-lang-en="C1 (Upper-Intermediate) or above average" data-lang-ru="С1 (Upper-Intermediate) или выше-среднего" value="С1 (Upper-Intermediate) или выше-среднего">
+                <option data-lang-en="C2 (Advanced) advanced level" data-lang-ru="С2 (Advanced) продвинутый уровень" value="С2 (Advanced) продвинутый уровень">
+            </datalist>
+            <input data-lang-en="Region" data-lang-ru="Область проживания" list="regions" placeholder="Область проживания" required>
+            <datalist id="regions">
+                <option data-lang-en="Bishkek" data-lang-ru="г. Бишкек" value="г. Бишкек">
+                <option data-lang-en="Chuy Region" data-lang-ru="Чуйская область" value="Чуйская область">
+                <option data-lang-en="Osh Region" data-lang-ru="Ошская область" value="Ошская область">
+                <option data-lang-en="Osh City" data-lang-ru="г. Ош" value="г. Ош">
+                <option data-lang-en="Jalal-Abad Region" data-lang-ru="Джалал-Абадская область" value="Джалал-Абадская область">
+                <option data-lang-en="Naryn Region" data-lang-ru="Нарынская область" value="Нарынская область">
+                <option data-lang-en="Talas Region" data-lang-ru="Таласская область" value="Таласская область">
+                <option data-lang-en="Issyk-Kul Region" data-lang-ru="Иссык-Кульская область" value="Иссык-Кульская область">
+                <option data-lang-en="Batken Region" data-lang-ru="Баткенская область" value="Баткенская область">
+            </datalist>
+            <input data-lang-en="Phone Number" data-lang-ru="Номер телефона" type="tel" placeholder="Номер телефона" required>
+            <button data-lang-en="FREE CONSULTATION" data-lang-ru="БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ" type="submit">
+                БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+            </button>
         </form>
-      </div>
+    </div>
+    
 
       <!-- НОВОСТИ -->
       <section id="news" class="news-section">
@@ -1295,7 +1301,7 @@
 
     <section id="students" class="section4">
         <div class="container">
-            <h1 class="section-title" data-lang-en="Students in the USA" data-lang-ru="СТУДЕНТЫ В США">СТУДЕНТЫ В США</h1>
+            <h1 class="section-title" data-lang-en="STUDENTS IN THE USA" data-lang-ru="СТУДЕНТЫ В США">СТУДЕНТЫ В США</h1>
             <h2 class="section-subtitle" data-lang-en="See how our students enjoy life and studies in the USA" data-lang-ru="Узнайте, как наши студенты наслаждаются жизнью и учёбой в США">Узнайте, как наши студенты наслаждаются жизнью и учёбой в США</h2>
             <h2 class="section-subtitle" data-lang-en="Hover over the photo for more information ⊡" data-lang-ru="Наведите на фотографию для информации ⊡">Наведите на фотографию для информации ⊡</h2>
             

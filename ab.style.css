@@ -859,9 +859,9 @@ header {
 .nav-button {
     position: absolute;
     top: 50%;
-    background-color: #a3a3a3be;
+    background-color: #ffffffdd;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -872,20 +872,20 @@ header {
     font-size: 24px;
     transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.711);
 }
 
 /* Эффект увеличения кнопки при наведении */
 .nav-button:hover {
-    background-color: #555;
+    background-color: #ffffffdd;
     transform: scale(1.0); /* Только увеличиваем кнопку без изменения положения */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.792);
 }
 
 /* Эффект при нажатии */
 .nav-button:active {
     transform: scale(1); /* Поддерживает стабильный размер при нажатии */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.711);
 }
 
 .nav-button.left {
@@ -1000,9 +1000,9 @@ header {
 .nav-button {
     position: absolute;
     top: 50%;
-    background-color: #a3a3a3be;
+    background-color: #ffffffdd;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -1013,20 +1013,20 @@ header {
     font-size: 24px;
     transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.711);
 }
 
 /* Эффект увеличения кнопки при наведении */
 .nav-button:hover {
-    background-color: #555;
+    background-color: #ffffffdd;
     transform: scale(1.0); /* Только увеличиваем кнопку без изменения положения */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.711);
 }
 
 /* Эффект при нажатии */
 .nav-button:active {
     transform: scale(1); /* Поддерживает стабильный размер при нажатии */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.711);
 }
 
 .nav-button.left {
@@ -1781,7 +1781,7 @@ header {
 
 .lang-container {
   position: fixed;
-  top: 100px; /* Расстояние от верхнего края экрана (чтобы кнопки не перекрывали хедер) */
+  top: 70px; /* Расстояние от верхнего края экрана (чтобы кнопки не перекрывали хедер) */
   right: 20px; /* Расстояние от правого края экрана */
   display: flex;
   gap: 10px;
@@ -1790,8 +1790,9 @@ header {
 
 .lang-switcher {
   background-color: transparent;
-  border: 1px solid #007bff;
-  color: #007bff;
+  border-radius: 10px;
+  border: 1px solid #5cb1e0;
+  color: #5cb1e0;
   font-size: 16px;
   padding: 10px;
   cursor: pointer;
@@ -1799,7 +1800,7 @@ header {
 }
 
 .lang-switcher:hover {
-  background-color: #007bff;
+  background-color: #5cb1e0;
   color: #fff;
 }
 
