@@ -8,7 +8,7 @@
 body {
   font-family: "Manrope";
   line-height: 1.6;
-  padding: 0 40px; /* Отступы по бокам для всего сайта */
+  padding: 0; /* Отступы по бокам для всего сайта */
   background: 
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Темный полупрозрачный слой */
       url('images/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
