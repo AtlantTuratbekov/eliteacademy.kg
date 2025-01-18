@@ -136,7 +136,7 @@ header {
     height: 100%;
     background:
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), /* Прозрачный градиент снизу */
-    url('images/all.bg.jpg') no-repeat center center / cover; /* Фон-изображение */
+    url('/usr/share/nginx/html/images/all.bg.jpg') no-repeat center center / cover; /* Фон-изображение */
     transform: scaleY(0); /* Изначально хайлайтер невидим */
     transform-origin: top; /* Начало анимации сверху */
     transition: transform 1.2s ease, opacity 0.5s ease 1.2s;
