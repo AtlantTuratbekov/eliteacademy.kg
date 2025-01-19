@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Damn';
+  src: url('fonts/Damn.woff2') format('woff2'),
+       url('fonts/DAMN.ttf') format('woff'),
+       url('fonts/Damn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Damn', sans-serif;
+}
+
 
 body {
   font-family: "Manrope";
@@ -42,8 +55,8 @@ header {
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 15px;
 }
 
 /* Контейнер для логотипа */
@@ -62,8 +75,8 @@ header {
 }
 
 .logo-box img {
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Название академии */
@@ -136,7 +149,7 @@ header {
     height: 100%;
     background:
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), /* Прозрачный градиент снизу */
-    url('/usr/share/nginx/html/images/all.bg.jpg') no-repeat center center / cover; /* Фон-изображение */
+    url('images/all.bg.jpg') no-repeat center center / cover; /* Фон-изображение */
     transform: scaleY(0); /* Изначально хайлайтер невидим */
     transform-origin: top; /* Начало анимации сверху */
     transition: transform 1.2s ease, opacity 0.5s ease 1.2s;
@@ -173,13 +186,20 @@ header {
     max-width: 800px; /* Ограничиваем ширину текста, если нужно */
   }
 
+  @media (max-width: 1280px) {
+    .text-section {
+      font-size: 18px;
+    }
+
+
+  }
 
   /* Навигация */
   .nav-links {
-    font-size: 18px;
+    font-size: 15px;
     display: flex;
     flex-wrap: wrap; /* Позволяет перенос ссылок */
-    gap: 20px;
+    gap: 17px;
     justify-content: space-between; /* Равномерное распределение */
   }
   
@@ -200,13 +220,6 @@ header {
   /* Текст кнопки Home */
   .nav-links .nav-text {
     margin-left: 5px; /* Отступ от значка */
-  }
-  
-  /* Медиазапрос для планшетов и телефонов */
-  @media (max-width: 768px) {
-    .nav-links .nav-text {
-      display: none; /* Скрывает текст "Home" */
-    }
   }
   
   /* Эффект для активной ссылки */
@@ -235,46 +248,26 @@ header {
   }
   
   /* Медиазапросы для уменьшения текста навигации на планшетах */
-@media (max-width: 1124px) {
+@media (max-width: 1280px) {
   .nav-links {
-    gap: 15px; /* Уменьшаем расстояние между ссылками */
+    gap: 3px; /* Уменьшаем расстояние между ссылками */
   }
 
   .nav-links a {
-    font-size: 15px; /* Уменьшаем размер текста */
-  }
-}
-
-/* Медиазапросы для уменьшения текста навигации на телефонах */
-@media (max-width: 1024px) {
-  .nav-links {
-    gap: 10px; /* Еще меньшее расстояние между ссылками */
-  }
-
-  .nav-links a {
-    font-size: 10px; /* Еще меньше размер текста */
-  }
-}
-
-/* Медиазапросы для очень маленьких экранов (например, 480px и меньше) */
-@media (max-width: 480px) {
-  .nav-links a {
-    font-size: 12px; /* Минимальный размер текста */
+    font-size: 13px; /* Уменьшаем размер текста */
   }
 }
 
 
-  /* Фон с изображением */
-    /* Фон с изображением */
   .background-image {
     background:
       linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), /* Прозрачный градиент снизу */
       url('images/header.jpg') no-repeat center center / cover; /* Фон-изображение */
-    height: 100vh; /* Высота на весь экран */
-    width: 100%; /* Ширина на весь экран */
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем внутренние отступы */
-    position: relative; /* Обеспечиваем правильное позиционирование элементов внутри */
+    height: 100vh;
+    width: 100%; 
+    margin: 0;
+    padding: 0; 
+    position: relative; 
   }
 
 /* Темный оверлей для контраста */
@@ -554,7 +547,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   font-weight: 95; /* Самый тонкий вес шрифта, если он поддерживается */
   margin: 20px 0;
@@ -665,7 +658,7 @@ header {
     top: 15px;
     text-align: center;
     color: white;
-    font-family: "Damn", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
     font-size: 7em;
     font-weight: 95;
     margin:0;
@@ -776,7 +769,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   font-weight: 95;
   margin: 20px 0;
@@ -922,7 +915,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -933,7 +926,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1063,7 +1056,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1128,17 +1121,6 @@ header {
   text-align: left;
 }
 
-/* Адаптивность для мобильных устройств
-@media (max-width: 768px) {
-  .program-item {
-    width: 90%;
-  }
-
-  .programs h1 {
-    font-size: 2em;
-  }
-} */
-
 
 
 .section4 {
@@ -1155,7 +1137,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1233,6 +1215,10 @@ header {
 
 .show-more:hover, .hide-more:hover {
   background-color: #376f8e;
+}
+
+.hidden {
+  display: none;
 }
 
 
@@ -1444,7 +1430,7 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: "Damn", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1802,4 +1788,11 @@ header {
 
 .lang-switcher:focus {
   outline: none;
+}
+
+@media (max-width: 1180px) {
+  .lang-container {
+    font-size: 12;
+    gap: 8px; /* Уменьшаем расстояние между ссылками */
+  }
 }
