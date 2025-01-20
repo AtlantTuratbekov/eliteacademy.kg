@@ -926,12 +926,13 @@ header {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
   text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
+
 
 .card {
     display: flex;
