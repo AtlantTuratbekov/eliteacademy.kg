@@ -1163,7 +1163,7 @@ header {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -1202,6 +1202,10 @@ header {
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
 }
 
+.hidden {
+  display: none;
+}
+
 .show-more, .hide-more {
   margin-top: 20px;
   padding: 10px 20px;
@@ -1218,9 +1222,6 @@ header {
   background-color: #376f8e;
 }
 
-.hidden {
-  display: none;
-}
 
 
 
@@ -1469,7 +1470,7 @@ header {
 
 .admission-step-title {
     position: relative;
-    left: -25px;
+    justify-content: center;
     font-family:  "Manrope", sans-serif;
     font-size: 34px;
     color: #ffffff;
@@ -1496,7 +1497,7 @@ header {
 
 .admission-step-description {
     position: relative;
-    /* left: 0px; */
+    justify-content: center;
     font-size: 16px;
     color: #fff;
     line-height: 1.6;
