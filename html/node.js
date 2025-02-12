@@ -396,6 +396,17 @@ hideMoreButton.addEventListener('click', () => {
     showMoreButton.style.display = 'inline-block';
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  // Скрываем все элементы, начиная с пятого
+  galleryItems.forEach((item, index) => {
+      if (index >= 4) {
+          item.classList.add('hidden');
+      }
+  });
+});
+
 
 
 
@@ -464,16 +475,16 @@ function showMap() {
 
 
 
-if (window.innerWidth <= 984) {
-  document.body.innerHTML = `
-    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-      <img src="images/logo1.png" alt="Логотип" style="width: 150px; margin-bottom: 20px;">
-      <h1>Сайт недоступен на мобильных устройствах и планшетах</h1>
-      <p>Пожалуйста, посетите нас с компьютера или ноутбука для лучшего опыта.</p>
-    </div>
-  `;
-  document.body.style.backgroundColor = "#f4f4f4";
-}
+// if (window.innerWidth <= 984) {
+//   document.body.innerHTML = `
+//     <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+//       <img src="images/logo1.png" alt="Логотип" style="width: 150px; margin-bottom: 20px;">
+//       <h1>Сайт недоступен на мобильных устройствах и планшетах</h1>
+//       <p>Пожалуйста, посетите нас с компьютера или ноутбука для лучшего опыта.</p>
+//     </div>
+//   `;
+//   document.body.style.backgroundColor = "#f4f4f4";
+// }
 
 
 
