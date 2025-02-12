@@ -27,6 +27,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
@@ -706,6 +707,60 @@ header.shrink-header .nav-links a {
     margin-left: 150px;
 }
 
+@media (max-width: 768px) {
+  .section h1 {
+    font-size: 2.5em;
+    text-shadow: 0px 0px 10px #06406699;
+    color: #064066; /* Синий цвет текста */
+    margin-bottom: 15px;
+  }
+
+  .info-block {
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 15px;
+    height: auto;
+    box-shadow: 0 2px 8px #06406699;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .info-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .tag {
+    font-size: 1.1em;
+    color: #064066; /* Синий цвет для тега */
+    margin-bottom: 10px; /* Отступ снизу, чтобы тег был наверху */
+  }
+
+  .info-item p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+}
+
+
 
 
 
@@ -999,6 +1054,8 @@ header.shrink-header .nav-links a {
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
+
+
 /* Общие стили для секции */
 .programs {
   background: url('images/all.bg.white.jpg') no-repeat center center fixed; /* Указываем фон-картину */
@@ -1081,6 +1138,43 @@ header.shrink-header .nav-links a {
   line-height: 1.8;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .programs h1 {
+    font-size: 3em; /* Уменьшаем заголовок для мобильных */
+    text-shadow: 0px 0px 10px #064066d1;
+  }
+
+  .programs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 15px; /* Отступы между карточками */
+  }
+
+  .program-item {
+    width: 100%; /* Растягиваем карточку на всю ширину колонки */
+    padding: 15px; /* Делаем отступы компактнее */
+    border-radius: 15px;
+  }
+
+  .program-header h2 {
+    font-size: 1.4em; /* Немного уменьшаем заголовок */
+    padding: 8px;
+  }
+
+  .program-item ol li {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-container {
+    grid-template-columns: 1fr; /* Для маленьких экранов — одна колонка */
+  }
+}
+
 
 
 
@@ -1182,6 +1276,31 @@ header.shrink-header .nav-links a {
   transform: scale(1.2);
   background-color: #5cb1e0;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.593);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки для телефонов */
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .gallery-item {
+    border-radius: 15px; /* Делаем углы чуть менее округлыми */
+  }
+
+  .gallery-item .overlay {
+    padding: 10px; /* Меньше отступов для лучшего отображения */
+  }
+
+  .section4 h1 {
+    font-size: 3em; /* Уменьшаем размер заголовка */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); /* Делаем тень мягче */
+  }
+
+  .section4 h2 {
+    font-size: 1.1em; /* Уменьшаем подзаголовок */
+    margin-bottom: 20px; /* Делаем отступы меньше */
+  }
 }
 
 
@@ -1488,7 +1607,7 @@ header.shrink-header .nav-links a {
 }
 
 .admission-navigation button:hover:enabled {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #064066;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.593);
 }
@@ -1518,6 +1637,55 @@ header.shrink-header .nav-links a {
 .admission-indicator:hover{
   transform: scale(1.3);
 }
+
+@media (max-width: 768px) {
+  .admission-header {
+    font-size: 3em; /* Уменьшаем размер заголовка */
+    text-shadow: 0px 0px 10px #064066af; /* Смягчаем тень */
+  }
+
+  .admission-step {
+    width: 90%; /* Делаем блок шире на мобильных, чтобы он занимал почти весь экран */
+    border-radius: 20px; /* Скругляем углы */
+  }
+
+  .admission-step-background {
+    height: 250px; /* Уменьшаем высоту изображения */
+  }
+
+  .admission-step-title {
+    font-size: 24px; /* Уменьшаем заголовок шага */
+  }
+
+  .admission-step-description {
+    font-size: 14px; /* Уменьшаем текст описания */
+    line-height: 1.4;
+  }
+
+  .admission-step-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px; /* Уменьшаем нумерацию */
+  }
+
+  .admission-navigation button {
+    padding: 14px 24px; /* Делаем кнопки больше */
+    font-size: 18px; /* Увеличиваем шрифт кнопок */
+    border-radius: 50px; /* Оставляем округлые */
+  }
+
+  .admission-indicator {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+  }
+
+  .admission-indicator.active {
+    transform: scale(1.5);
+  }
+}
+
 
 
 
