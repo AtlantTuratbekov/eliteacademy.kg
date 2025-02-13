@@ -13,15 +13,13 @@
   font-style: normal;
 }
 
+
 body {
   font-family: 'Damn', sans-serif;
-}
-
-
-body {
   font-family: "Manrope";
   line-height: 1.6;
   background: #fff;
+  overflow-x: hidden;
 }
 
 
@@ -362,16 +360,6 @@ header.shrink-header .nav-links a {
     color: white;
   }
 
-  @media (max-width: 1124px) {
-    .cta-button {
-      gap: 10px; /* Уменьшаем расстояние между ссылками */
-    }
-  
-    .cta-button {
-      font-size: 16px; /* Уменьшаем размер текста */
-    }
-  }
-  
 
   /* Контейнер текста */
   .highlighted-head {
@@ -427,10 +415,70 @@ header.shrink-header .nav-links a {
     font-family: "Manrope", sans-serif;
     font-size: 7px;
     color: #fff;
-    /* margin: 0px;
-    padding: 0px; */
     transition: opacity 1.5s ease;
   }
+
+@media (max-width: 768px) {
+  .highlighted-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Сохраняем выравнивание текста слева */
+    justify-content: center;
+    margin:auto; /* Центрируем блок */
+    width: 80%; /* Устанавливаем ширину блока */
+    padding-left: 0;
+  }
+
+  /* Строки текста */
+  .line {
+    position: relative;
+    font-weight: normal;
+    font-family: "Manrope", sans-serif;
+    color: #064066;
+    overflow: hidden;
+    font-size: 24px; /* Уменьшаем размер шрифта */
+    line-height: 1.2;
+    opacity: 0;
+    transform-origin: left;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+
+  /* Хайлайтер */
+  .line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.2s ease;
+    z-index: -1;
+  }
+
+  /* Анимация появления текста и хайлайтера */
+  .line.show::before {
+    transform: scaleX(1);
+  }
+
+  .line.show {
+    opacity: 1;
+  }
+
+  /* Для нижнего текста меньший размер и белый цвет */
+  .line.description {
+    line-height: 1.2;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px; /* Увеличиваем шрифт для нижнего текста */
+    color: #fff;
+    transition: opacity 1.5s ease;
+  }
+}
+
+
+
 
 
   .form-container {
@@ -734,13 +782,6 @@ header.shrink-header .nav-links a {
     margin-bottom: 10px;
   }
 
-  .info-item img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    margin-left: 0;
-  }
-
   .info-text {
     display: flex;
     flex-direction: column; /* Располагаем элементы по вертикали */
@@ -749,7 +790,7 @@ header.shrink-header .nav-links a {
   }
 
   .tag {
-    font-size: 1.1em;
+    font-size: 0.9em;
     color: #064066; /* Синий цвет для тега */
     margin-bottom: 10px; /* Отступ снизу, чтобы тег был наверху */
   }
@@ -1462,6 +1503,89 @@ header.shrink-header .nav-links a {
   opacity: 1;
   pointer-events: all;
 }
+
+/* Стиль для мобильных устройств */
+@media (max-width: 768px) {
+  .site-footer {
+    background-size: cover;
+    padding: 20px 10px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Одноколоночный макет на мобильных */
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center; /* Центрируем контейнеры, но текст внутри будет слева */
+  }
+
+  .footer-section h2,
+  .map-container h2 {
+    font-size: 1.2em;
+    text-align: left; /* Заголовок прижат к левой части */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.562);
+    margin-left: 20px; /* Добавляем немного отступа слева */
+  }
+
+  .footer-contact ul {
+    font-size: 0.9em; /* Уменьшаем размер шрифта для мобильных */
+    line-height: 1.6;
+    text-align: left; /* Контакты выровнены по левому краю */
+    padding: 0;
+    margin-left: 20px; /* Добавляем немного отступа слева */
+  }
+
+  .footer-social .social-icons,
+  .footer-contact .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #5cb2e0d0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .social-icon img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+  .map-container {
+    width: 100%; /* Убираем фиксированную ширину для карты */
+    height: 250px; /* Уменьшаем высоту карты */
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .map-overlay p {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    text-align: center; /* Текст в оверлее будет по центру */
+  }
+
+  .footer-about p {
+    font-size: 0.9em; /* Уменьшаем размер текста в разделе "О нас" */
+    line-height: 1.5;
+    text-align: left; /* Текст прижат к левому краю */
+    margin-left: 20px; /* Добавляем отступ слева */
+  }
+
+  .footer-bottom {
+    font-size: 0.8em;
+    color: #dcdcdc;
+    text-align: center; /* Центрируем нижний текст */
+  }
+}
+
+
 
 
 /* Нижняя часть футера */
