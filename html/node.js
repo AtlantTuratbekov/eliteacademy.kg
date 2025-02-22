@@ -588,3 +588,14 @@ function switchLanguage(lang) {
 
 
 
+// Функция для переключения состояния меню
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.overlay');
+  
+  // Переключаем класс "open" для навигации
+  navLinks.classList.toggle('open');
+  
+  // Переключаем оверлей
+  overlay.classList.toggle('active');
+}
