@@ -317,6 +317,13 @@ header.shrink-header .nav-links a {
     position: relative; 
   }
 
+  @media (max-width: 1160px) {
+    .background-image {
+      display: none;
+    }
+  }
+  
+
 .overlay {
   position: absolute; /* или fixed, если хочешь, чтобы всегда был виден */
   top: 0;
@@ -429,38 +436,12 @@ header.shrink-header .nav-links a {
     transition: opacity 1.5s ease;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1160px) {
     .overlay {
-      padding: 10px;
-    }
-  
-    .content {
-      max-width: 95%;
-      padding: 15px;
-    }
-  
-    .highlighted-head {
-      align-items: center; /* Центрируем текст */
-      text-align: center;
-      padding-left: 0; /* Убираем отступ слева */
-      margin-top: 50px; /* Уменьшаем верхний отступ */
-    }
-  
-    .line {
-      font-size: 28px; /* Уменьшаем размер заголовков */
-    }
-  
-    .line.description {
-      font-size: 12px; /* Чуть увеличиваем описание */
-    }
-  
-    .cta-button {
-      font-size: 16px;
-      padding: 8px 16px;
+      display: none;
     }
   }
   
-
 
 
   .form-container {
@@ -672,6 +653,7 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .news-section {
+    margin-top: 100px;
     padding: 40px 15px; /* Уменьшаем отступы для мобильных устройств */
   }
 
@@ -793,29 +775,25 @@ header.shrink-header .nav-links a {
 
   .info-item {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 100%;
-    width: 100%;
-    padding: 10px 15px;
-    height: auto;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    text-align: left; /* Текст тоже выравниваем по левому краю */
+    width: 90%; /* Сделает блок шире */
+    max-width: 800px; /* Ограничит максимальную ширину */
+    padding: 15px;
     box-shadow: 0 2px 8px #06406699;
-    text-align: left;
     margin-bottom: 10px;
   }
 
   .info-text {
-    display: flex;
-    flex-direction: column; /* Располагаем элементы по вертикали */
-    justify-content: flex-start;
-    flex: 1;
+    font-size: 0.9em;
   }
 
   .tag {
-    font-size: 0.9em;
-    color: #064066; /* Синий цвет для тега */
-    margin-bottom: 10px; /* Отступ снизу, чтобы тег был наверху */
+    font-size: 1em;
+    font-weight: bold;
+    color: #064066;
+    margin-bottom: 5px; /* Отступ после тега */
   }
 
   .info-item p {
@@ -992,9 +970,10 @@ header.shrink-header .nav-links a {
   .card {
     min-width: 90%; /* Растягиваем карточки */
     padding: 15px;
-    margin: 10px auto; /* Центрируем */
+    margin: 30px auto; /* Увеличенный отступ между карточками */
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
-  }
+}
+
 
   .card img {
     height: 150px; /* Фиксируем высоту изображений */
@@ -2052,7 +2031,6 @@ header.shrink-header .nav-links a {
 }
 
 .official-site-btn {
-  margin-top: 20px;
   background-color: #075183;
   color: white;
   padding: 10px 15px;
@@ -2067,6 +2045,47 @@ header.shrink-header .nav-links a {
 
 .official-site-btn:hover {
   background-color: #064066;
+}
+
+
+@media (max-width: 768px) {
+  .popup-body {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    height: auto; /* Блок должен занимать всю доступную высоту */
+    gap: 20px; /* Расстояние между элементами */
+    padding: 20px; /* Отступы */
+  }
+
+  .image-container {
+    width: 100%; /* Картинка займет всю ширину */
+    height: 60%; /* Картинка занимает 60% высоты блока */
+    object-fit: cover; /* Картинка будет покрывать контейнер */
+  }
+
+  .popup-body .content {
+    flex-grow: 1; /* Текст будет растягиваться, чтобы заполнить оставшуюся часть */
+    padding: 20px;
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+
+  .official-site-btn {
+    background-color: #075183;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center; /* Центрирование кнопки */
+    margin-top: 20px; /* Отступ сверху от текста */
+  }
+
+  .official-site-btn:hover {
+    background-color: #064066;
+  }
 }
 
 
