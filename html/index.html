@@ -29,9 +29,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Questrial&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <title>Elite Academy</title>
-    <meta name="description" content="Помогаем студентам поступить в университеты Америки. Услуги для абитуриентов, подготовка к тесту Duolingo, визовая поддержка.">
-    <meta name="keywords" content="Америка, обучение в США, университеты Америки, поступление в США, Elite Academy Бишкек, обучение в США для студентов из Кыргызстана, подготовка к Duolingo, визовое интервью для США, студенческая виза в США, высшее образование в Америке, стипендии для обучения в США, курсы английского в Бишкеке, подготовка к SAT, TOEFL для студентов Кыргызстана, языковые курсы в Америке, помощь в поступлении в вузы США, образование за границей, университеты США для кыргызских студентов, магистратура в США, бакалавриат в Америке, консультации по поступлению в США, документы для поступления в США, обучение в колледжах США, программы обмена для студентов Кыргызстана, обучение в США после школы, как учиться в США после учебы, учеба в США после университета, курсы английского Бишкек, обучение в США для студентов из Бишкека, подготовка к экзаменам в Бишкеке, помощь студентам из Кыргызстана, американские университеты для кыргызстанцев, образовательные программы США, учеба за границей для студентов из Бишкека, Elite Academy, Элит Академи, Учеба в США АМЕРИКЕ">
+    <title>Elite Academy - Обучение за рубежом, программы, стоимость, поступление</title>
+    <meta name="description" content="Обучение за рубежом. Помогаем студентам поступить в университеты Америки. Услуги для абитуриентов, подготовка к тесту Duolingo, визовая поддержка.">
+    <meta name="keywords" content="Обучение за рубежом. Америка, обучение в США, университеты Америки, поступление в США, Elite Academy Бишкек, обучение в США для студентов из Кыргызстана, подготовка к Duolingo, визовое интервью для США, студенческая виза в США, высшее образование в Америке, стипендии для обучения в США, курсы английского в Бишкеке, подготовка к SAT, TOEFL для студентов Кыргызстана, языковые курсы в Америке, помощь в поступлении в вузы США, образование за границей, университеты США для кыргызских студентов, магистратура в США, бакалавриат в Америке, консультации по поступлению в США, документы для поступления в США, обучение в колледжах США, программы обмена для студентов Кыргызстана, обучение в США после школы, как учиться в США после учебы, учеба в США после университета, курсы английского Бишкек, обучение в США для студентов из Бишкека, подготовка к экзаменам в Бишкеке, помощь студентам из Кыргызстана, американские университеты для кыргызстанцев, образовательные программы США, учеба за границей для студентов из Бишкека, Elite Academy, Элит Академи, Учеба в США АМЕРИКЕ">
     <meta name="yandex-verification" content="327b07a8ba686a27"/>
     <link rel="icon" href="images/logo.png">
 </head>
@@ -63,6 +63,19 @@
             <a data-lang-en="Contact" data-lang-ru="Контакты" href="#contact" class="nav-item">Контакты</a>
         </nav>
       </header>
+
+      <div id="popup" class="popup">
+        <p data-lang-en="Have questions? Click the button below for a free consultation!" 
+           data-lang-ru="Остались вопросы? Нажмите на кнопку ниже, чтобы получить бесплатную консультацию!">
+          Остались вопросы? Нажмите на кнопку ниже, чтобы получить бесплатную консультацию!
+        </p>
+        
+        <button class="cta-button" onclick="toggleForm()" data-lang-en="Consultation" data-lang-ru="Консультация">Консультация</button>
+        
+        <button onclick="closePopup()" class="close-btn">✖</button>
+      </div>
+      
+      
 
       <div class="intro-overlay">
         <img src="images/logo-large.png" alt="Учеба за рубежом" class="logo">
@@ -123,6 +136,19 @@
     </div>
     
 
+    <section class="consult-section">
+        <h2 data-lang-en="Have questions? Let's solve them!" data-lang-ru="Есть вопрос — получи ответ!">Есть вопрос — получи ответ!</h2>
+        <p data-lang-en="Get personalized help from our specialists. It's fast and free!" 
+           data-lang-ru="Получите персональную помощь от наших специалистов. Быстро и бесплатно!">
+          Получите персональную помощь от наших специалистов. Быстро и бесплатно!
+        </p>
+        <button class="cta-button" onclick="toggleForm()" 
+                data-lang-en="Consultation" data-lang-ru="Консультация">
+          Консультация
+        </button>
+    </section>
+      
+
       <!-- НОВОСТИ -->
       <section id="news" class="news-section">
         <div class="container">
@@ -168,16 +194,6 @@
                     data-lang-ru="УНИВЕРСИТЕТЫ">
                   УНИВЕРСИТЕТЫ
                 </h1>
-                <h2 class="section-subtitle" 
-                    data-lang-en="Elite Academy will ensure admission to top American universities" 
-                    data-lang-ru="Elite-Academy позаботится о поступлении в топовые ВУЗы Америки">
-                  Elite-Academy позаботится о поступлении в топовые ВУЗы Америки
-                </h2>
-                <h4 class="section-subtitle" 
-                    data-lang-en="Here you can find out which universities are more convenient for you to apply to and which options suit you best." 
-                    data-lang-ru="Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.">
-                  Здесь вы сможете узнать, в какие университеты вам будет удобнее поступить и какие варианты подходят именно вам.
-                </h4>
               </div>
               
             <button class="nav-button left" onclick="prevSlide()">‹</button>
@@ -1496,7 +1512,7 @@
                         <a href="https://www.instagram.com/eliteacademy.kg?igsh=MWFvNmgza2hhMnNnYw==" target="_blank" class="social-icon">
                             <img src="images/inst.png" alt="Instagram">
                         </a>
-                        <a href="https://l.instagram.com/?u=https%3A%2F%2Ft.me%2F%2BlkQYOY2DD41lM2E6%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZdeOm2ZNemSVqpH0qh_N4cgMORgC7v8jSHH7e97Ikkj6vc-2mUoJmwWDA_aem_jZvgHkm1pjv2MAFaT50kZQ&e=AT22MplawmQM85g-YjepS4bKk_uFmTdOWrdOgY03NtcjIfN2xbZXwHqcFkuelCE3LQLiR9_QQaxXfVj5O0n2swcTUXE1YzmlINJrpgs" target="_blank" class="social-icon">
+                        <a href="https://t.me/+lkQYOY2DD41lM2E6?fbclid=PAZXh0bgNhZW0CMTEAAaevlLpdGpbly2B_rJi22a4mXNfeylYEvAFqdPtfPcitNIxvgqSCzh_6ONqpdg_aem_mB3C_LCgF-Di3iHIjBpbLw" target="_blank" class="social-icon">
                             <img src="images/telegram1.png" alt="Telegram">
                         </a>
                     </div>

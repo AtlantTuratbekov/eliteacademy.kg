@@ -599,3 +599,20 @@ function toggleMenu() {
   // Переключаем оверлей
   overlay.classList.toggle('active');
 }
+
+
+
+
+
+
+
+// консультация
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("popup").style.display = "block";
+  }, 1000);
+});
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}

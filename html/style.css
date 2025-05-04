@@ -17,9 +17,11 @@
 
 body {
   font-family: 'Damn', sans-serif;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   line-height: 1.6;
-  background: #fff;
+  background: url('images/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -350,16 +352,6 @@ header.shrink-header .nav-links a {
   text-align: center;
 }
 
-/* Подзаголовок */
-.subtitle {
-  font-family: "Oswald", sans-serif;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  line-height: 1.4;
-  color: #ddd;
-}
-
 
   /* Кнопка */
   .cta-button {
@@ -382,6 +374,7 @@ header.shrink-header .nav-links a {
 
   /* Контейнер текста */
   .highlighted-head {
+    font-family:  "Manrope", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Текст размещаем слева */
@@ -554,7 +547,7 @@ header.shrink-header .nav-links a {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   font-weight: 95;
   margin:0;
@@ -653,33 +646,47 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .news-section {
+    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin-top: 100px;
     padding: 40px 15px; /* Уменьшаем отступы для мобильных устройств */
   }
 
   .section-title {
+    background-attachment: scroll;
+    background-position: center top;
     font-size: 3.5em; /* Уменьшаем размер заголовка */
     margin: 0;
   }
 
   .news-items {
+    background-attachment: scroll;
+    background-position: center top;
     grid-template-columns: 1fr; /* Меняем на одну колонку для мобильных */
     gap: 15px; /* Уменьшаем расстояние между элементами */
   }
 
   .news-item {
+    background-attachment: scroll;
+    background-position: center top;
     padding: 15px; /* Уменьшаем отступы внутри карточек */
   }
 
   .news-image {
+    background-attachment: scroll;
+    background-position: center top;
     height: 300px; /* Уменьшаем высоту изображений */
   }
 
   .news-title {
+    background-attachment: scroll;
+    background-position: center top;
     font-size: 20px; /* Уменьшаем размер заголовков новостей */
   }
 
   .news-description {
+    background-attachment: scroll;
+    background-position: center top;
     font-size: 14px; /* Уменьшаем размер текста */
   }
 
@@ -707,7 +714,7 @@ header.shrink-header .nav-links a {
     top: 15px;
     text-align: center;
     color: #064066;
-    font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+    font-family: "Damn", sans-serif;
     font-size: 7em;
     font-weight: 95;
     margin:0;
@@ -762,6 +769,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .section h1 {
+    background: url('images/mobile-wht-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-size: 2.5em;
     text-shadow: 0px 0px 10px #06406699;
     color: #064066; /* Синий цвет текста */
@@ -952,6 +961,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .carousel-container {
+    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 60vh; /* Фиксируем высоту */
     padding: 20px 0; /* Уменьшаем внутренние отступы */
   }
@@ -972,7 +983,7 @@ header.shrink-header .nav-links a {
     padding: 15px;
     margin: 30px auto; /* Увеличенный отступ между карточками */
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
-}
+  }
 
 
   .card img {
@@ -1023,7 +1034,7 @@ header.shrink-header .nav-links a {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1141,6 +1152,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .carousel-container {
+    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 100vh; /* Уменьшаем минимальную высоту */
   }
 
@@ -1202,7 +1215,7 @@ header.shrink-header .nav-links a {
   top: 15px;
   text-align: center;
   color: #064066;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1269,6 +1282,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .programs h1 {
+    background: url('images/mobile-wht-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-size: 3em; /* Уменьшаем заголовок для мобильных */
     text-shadow: 0px 0px 10px #064066d1;
   }
@@ -1320,7 +1335,7 @@ header.shrink-header .nav-links a {
   top: 15px;
   text-align: center;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1331,6 +1346,7 @@ header.shrink-header .nav-links a {
   font-size: 1.5em;
   margin-bottom: 40px;
   color: #dcdcdc;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
 }
 
 .gallery {
@@ -1347,6 +1363,7 @@ header.shrink-header .nav-links a {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s, box-shadow 0.3s;
+  height: 450px; /* фиксированная высота */
 }
 
 .gallery-item img {
@@ -1408,6 +1425,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 930px) {
   .gallery {
+    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     grid-template-columns: repeat(3, 1fr); /* 2 колонки для телефонов */
     gap: 10px; /* Уменьшаем расстояние между элементами */
   }
@@ -1423,8 +1442,11 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .gallery {
+    background-attachment: scroll;
+    background-position: center top;
     grid-template-columns: repeat(2, 1fr); /* 2 колонки для телефонов */
     gap: 10px; /* Уменьшаем расстояние между элементами */
+
   }
 
   .gallery-item {
@@ -1527,7 +1549,7 @@ header.shrink-header .nav-links a {
   background-color: #5cb2e0d0;
   border-radius: 50%;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .social-icon img {
@@ -1609,6 +1631,8 @@ header.shrink-header .nav-links a {
 /* Стиль для мобильных устройств */
 @media (max-width: 768px) {
   .site-footer {
+    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     background-size: cover;
     padding: 20px 10px;
     font-family: 'Arial', sans-serif;
@@ -1739,7 +1763,7 @@ header.shrink-header .nav-links a {
   top: 15px;
   text-align: center;
   color: #064066;
-  font-family: -apple-system, BlinkMacSystemFont, "Damn", sans-serif;
+  font-family: "Damn", sans-serif;
   font-size: 7em;
   margin: 20px 0;
   font-weight: 95;
@@ -1866,6 +1890,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .admission-header {
+    background: url('images/mobile-wht-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-size: 3em; /* Уменьшаем размер заголовка */
     text-shadow: 0px 0px 10px #064066af; /* Смягчаем тень */
   }
@@ -2050,6 +2076,8 @@ header.shrink-header .nav-links a {
 
 @media (max-width: 768px) {
   .popup-body {
+    background-attachment: scroll;
+    background-position: center top;
     display: flex;
     flex-direction: column; /* Элементы располагаются вертикально */
     height: auto; /* Блок должен занимать всю доступную высоту */
@@ -2194,5 +2222,102 @@ header.shrink-header .nav-links a {
   .lang-container {
     font-size: 12;
     gap: 8px; /* Уменьшаем расстояние между ссылками */
+  }
+}
+
+
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.819);
+  border: 1px solid #ccc;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 300px;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+
+.popup p {
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #333;
+}
+
+.cta-button {
+  background-color: #5cb1e0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5cb1e0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.consult-section {
+  background-color: rgba(255, 255, 255, 0.819);
+  font-family:  "Manrope", sans-serif;
+  font-size: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.consult-section h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.consult-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .consult-section {
+    background-attachment: scroll;
+    background-position: center top;
+    margin: 120px 16px 40px 16px; /* верхний отступ увеличен */
+    padding: 32px 16px;
+    font-size: 15px;
+  }
+
+  .consult-section h2 {
+    font-size: 20px;
+  }
+
+  .consult-section p {
+    font-size: 15px;
   }
 }
