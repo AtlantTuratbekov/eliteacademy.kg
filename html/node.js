@@ -610,9 +610,43 @@ function toggleMenu() {
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.getElementById("popup").style.display = "block";
-  }, 1000);
+  }, 2000);
 });
 
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Отзывы
+const swiper = new Swiper('.reviews-slider', {
+  slidesPerView: 3,     
+  spaceBetween: 30,   
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,            
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    }
+  }
+});

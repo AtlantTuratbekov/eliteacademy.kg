@@ -36,7 +36,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9997;
   display: flex;
   justify-content: space-between; /* Разделение элементов */
   align-items: center; /* Выравнивание элементов по вертикали */
@@ -535,171 +535,135 @@ header.shrink-header .nav-links a {
   }
 
 
-.news-section {
-  padding: 60px 20px;
-  background: url('images/all.bg.jpg') no-repeat center center fixed; /* Указываем фон-картину */
-  background-size: cover; /* Растягиваем изображение на весь экран */
-  height: 100%;
-}
-
-.section-title {
-  position: relative;
-  top: 15px;
-  text-align: center;
-  color: white;
-  font-family: "Damn", sans-serif;
-  font-size: 7em;
-  font-weight: 95;
-  margin:0;
-  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.892);
-}
-
-.news-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.news-item {
-    background-color: #ffffffc6;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.news-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.news-image {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.news-title {
-    font-size: 24px;
-    font-family: "Manrope", sans-serif;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.news-description {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.read-more {
-    display: inline-block;
-    font-size: 16px;
-    color: #fff;
-    background-color: #064066;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    box-shadow: #0000006f;
-}
-
-.read-more:hover {
-    background-color: #3d009c;
-}
-
-.read-more-red {
-    display: inline-block;
-    font-size: 16px;
-    color: #fff;
-    background-color: #ff0000;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.read-more-red:hover {
-    background-color: #830000;
-}
-
-.toggle-text {
-  background: none;
-  border: none;
-  color: #000000;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: color 0.3s;
-}
-
-.toggle-text:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .news-section {
-    background: url('images/mobile-bg.jpg') no-repeat center center fixed;
+  .reviews-section {
+    padding: 60px 20px;
+    background: url('images/all.bg.white.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin-top: 100px;
-    padding: 40px 15px; /* Уменьшаем отступы для мобильных устройств */
+    height: 100%;
   }
 
-  .section-title {
-    background-attachment: scroll;
-    background-position: center top;
-    font-size: 3.5em; /* Уменьшаем размер заголовка */
-    margin: 0;
+  .reviews-section h1 {
+      position: relative;
+      top: 15px;
+      text-align: center;
+      color: #064066;
+      font-family: "Damn", sans-serif;
+      font-size: 7em;
+      margin: 20px 0;
+      font-weight: 95;
+      text-shadow: 0px 0px 20px #064066d1;
   }
-
-  .news-items {
-    background-attachment: scroll;
-    background-position: center top;
-    grid-template-columns: 1fr; /* Меняем на одну колонку для мобильных */
-    gap: 15px; /* Уменьшаем расстояние между элементами */
+  
+  .reviews-slider {
+    padding: 60px 20px; /* добавил боковые отступы */
+    position: relative;
+    overflow: visible;  /* позволяет теням выходить за границы */
   }
-
-  .news-item {
-    background-attachment: scroll;
-    background-position: center top;
-    padding: 15px; /* Уменьшаем отступы внутри карточек */
+  
+  .review-item {
+    background: #5cb2e06a;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
   }
-
-  .news-image {
-    background-attachment: scroll;
-    background-position: center top;
-    height: 300px; /* Уменьшаем высоту изображений */
+  
+  .review-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 15px;
   }
-
-  .news-title {
-    background-attachment: scroll;
-    background-position: center top;
-    font-size: 20px; /* Уменьшаем размер заголовков новостей */
+  
+  .review-title {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
-
-  .news-description {
-    background-attachment: scroll;
-    background-position: center top;
-    font-size: 14px; /* Уменьшаем размер текста */
+  
+  .review-text {
+    font-size: 16px;
+    color: #0a0a0a;
+    margin-bottom: 15px;
   }
-
-  .read-more, .read-more-red {
-    font-size: 14px; /* Уменьшаем размер текста на кнопках */
-    padding: 8px 16px; /* Уменьшаем padding */
+  
+  .read-more {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
-
-  .toggle-text {
-    font-size: 12px; /* Уменьшаем размер текста кнопки */
+  
+  .read-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   }
-}
-
+  
+  .swiper-button-prev, .swiper-button-next {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff00cc, #3333ff); /* Градиент */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    content: ''; /* Swiper сам вставляет стрелку */
+    border-radius: 10%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-shadow: 0 2px 15px rgba(255, 255, 255, 0.984); /* Белая тень */
+  }
+  
+  .swiper-button-prev:hover, .swiper-button-next:hover {
+    transform: scale(1.1);
+  }
+  
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .reviews-section {
+      padding: 40px 15px;
+    }
+  
+    .reviews-section h1 {
+      font-size: 3em;
+      margin: 10px 0;
+      top: 10px;
+    }
+  
+    .review-title {
+      font-size: 18px;
+    }
+  
+    .review-text {
+      font-size: 15px;
+    }
+  
+    .read-more {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 16px;
+    }
+  }
 
 
 .section {
@@ -768,13 +732,16 @@ header.shrink-header .nav-links a {
 }
 
 @media (max-width: 768px) {
+  .section {
+    min-height: auto; /* убрали фиксированную высоту */
+    padding: 20px 0 10px 0; /* верх 20px, низ 10px */
+  }
   .section h1 {
     background: url('images/mobile-wht-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     font-size: 2.5em;
     text-shadow: 0px 0px 10px #06406699;
     color: #064066; /* Синий цвет текста */
-    margin-bottom: 15px;
   }
 
   .info-block {
@@ -963,8 +930,8 @@ header.shrink-header .nav-links a {
   .carousel-container {
     background: url('images/mobile-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    min-height: 60vh; /* Фиксируем высоту */
-    padding: 20px 0; /* Уменьшаем внутренние отступы */
+    min-height: auto; /* убрали фиксированную высоту */
+    padding: 20px 0 10px 0; /* верх 20px, низ 10px */
   }
 
   .carousel h1, 
@@ -1154,7 +1121,8 @@ header.shrink-header .nav-links a {
   .carousel-container {
     background: url('images/mobile-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh; /* Уменьшаем минимальную высоту */
+    min-height: auto; /* убрали фиксированную высоту */
+    padding: 20px 0 10px 0; /* верх 20px, низ 10px */
   }
 
   .carousel h1, 
@@ -1281,6 +1249,10 @@ header.shrink-header .nav-links a {
 }
 
 @media (max-width: 768px) {
+  .programs {
+    min-height: auto; /* убрали фиксированную высоту */
+    padding: 20px 0 10px 0; /* верх 20px, низ 10px */
+  }
   .programs h1 {
     background: url('images/mobile-wht-bg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -1315,6 +1287,7 @@ header.shrink-header .nav-links a {
 @media (max-width: 480px) {
   .programs-container {
     grid-template-columns: 1fr; /* Для маленьких экранов — одна колонка */
+    padding: 0 10px
   }
 }
 
@@ -2195,7 +2168,7 @@ header.shrink-header .nav-links a {
   right: 20px; /* Расстояние от правого края экрана */
   display: flex;
   gap: 10px;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .lang-switcher {
