@@ -1200,8 +1200,8 @@ header.shrink-header .nav-links a {
 
 /* Карточка программы */
 .program-item {
-  background-color: #ffffff;
-  border: 3px solid #064066;
+  background-color: #ffffffd1;
+  border: 3px solid #0640669a;
   border-radius: 20px;
   width: 300px;
   padding: 20px;
@@ -1223,7 +1223,7 @@ header.shrink-header .nav-links a {
 .program-header h2 {
   font-size: 1.6em;
   font-family: 'Manrope', sans-serif;
-  background-color: #064066;
+  background-color: #064066d4;
   color: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -1263,6 +1263,7 @@ header.shrink-header .nav-links a {
   .programs-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    padding-inline: 10px;
     gap: 15px; /* Отступы между карточками */
   }
 
@@ -1748,7 +1749,7 @@ header.shrink-header .nav-links a {
     display: none;
     width: 800px;
     margin: 0 auto;
-    border: solid 3px #064066;
+    border: solid 5px #0640666a;
     border-radius: 35px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.719);
@@ -2224,19 +2225,23 @@ header.shrink-header .nav-links a {
 }
 
 .cta-button {
-  background-color: #5cb1e0;
-  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
-  padding: 10px 18px;
-  font-size: 15px;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(45deg, #5cb1e0, #29b4ff ); /* градиент Instagram-style */
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, background 0.6s ease;
 }
 
 .cta-button:hover {
-  background-color: #5cb1e0;
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #29b4ff, #5cb1e0); /* меняем направление градиента */
 }
+
 
 .close-btn {
   position: absolute;
@@ -2259,23 +2264,53 @@ header.shrink-header .nav-links a {
   font-size: 16px;
   padding: 40px 20px;
   text-align: center;
-  border-radius: 12px;
+  border-radius: 20px;
   max-width: 800px;
   margin: 40px auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.832);
 }
 
 .consult-section h2 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  color: #333;
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #222;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2c769e, #006399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 0.8s ease forwards;
 }
 
 .consult-section p {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 24px;
   color: #555;
+  line-height: 1.6;
+  animation: fadeInUp 1s ease forwards;
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @media (max-width: 600px) {
   .consult-section {
